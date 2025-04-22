@@ -1,0 +1,341 @@
+﻿.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.lblOrdenamiento {
+    cursor: pointer;
+}
+
+.imgOrdenamiento {
+    width: 17px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    font-size: 11px;
+    height: 35px !important;
+    font-weight: bold;
+}
+
+.bg-light {
+    background-color: transparent !important;
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+.nav-link:hover {
+    background-color: #9293c8!important;
+    color: white;
+}
+
+.form-check {
+    text-align: left;
+}
+
+.form-control {
+    font-size: 11px;
+}
+
+.borders-none {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    margin-top: 4px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3A2860;
+    border-color: #3A2860;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #9293c8;
+        border-color: #9293c8;
+    }
+
+.btn:hover {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #5a6268 !important;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: #ee8013;
+    color: white;
+    border-color: #ee8013;
+}
+
+
+    .btn-secondary:hover {
+        background-color: #1e0056;
+        color: white;
+        border-color: #1e0056;
+    }
+
+
+.btn-search {
+    height: 32px !important;
+}
+
+.imgSearch {
+    width: 70%;
+    margin-left: -2%;
+    margin-top: -4px
+}
+
+.imgDelete {
+    width: 20px;
+    margin-left: -30%;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: system-ui !important;
+}
+
+
+.label, b {
+    color: #8B8A8A;
+    font-weight: bold;
+    font-size: 11px;
+    font-family:system-ui !important;
+}
+
+.label-title {
+    color: #3A2860;
+    font-weight: bold;
+    font-family: system-ui !important;
+}
+
+.divLeft {
+    background-color: #F2F0ED;
+    background-size: contain;
+}
+
+.divRight {
+    background-color: white;
+    background-size: contain;
+}
+
+.btn-menu {
+    background-color: #3A2860;
+    color: white;
+    width: 135px !important;
+    text-align: center;
+    border-radius: 0px 0px 8px 8px;
+    font-size: 13px;
+}
+
+.menuOpciones {
+    /*background-color: #3A2860;*/
+    color: white;
+    width: 120px !important;
+    text-align: center;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none !important;
+    /*border: 1px solid #3A2860;*/
+}
+
+.modal-content {
+    background-color: #F2F0ED;
+    color: #8B8A8A;
+}
+
+.btn-cancelar {
+    background-color: #666B6E;
+}
+
+.footer {
+    background-color: rgb(55, 47, 96);
+    width: 100%;
+    height: 20px;
+}
+
+.alert {
+    padding: .25rem 1.05rem !important;
+    height: 30px !important;
+    visibility: hidden;
+    height: 2px;
+    position: absolute;
+}
+
+.divAlert {
+    margin-top: 5px;
+    position: relative;
+    font-size: 11px;
+}
+
+.horizontalLine {
+    height: 1px;
+    width: 100%;
+    background-color: #9293c8;
+    margin-top: 8px;
+}
+
+.table {
+    width: 100%;
+}
+
+.tableAgenda td {
+    padding: 0px !important;
+}
+
+.table {
+    text-align: center;
+    width: 100%;
+    padding: 0px;
+    font-size: 11px;
+    color: black;
+}
+
+    .table tr th {
+        background-color: #9293c8;
+        color: white;
+        padding: .35rem;
+    }
+
+    .table tr td {
+        padding: .35rem;
+    }
+
+    .table tr:hover {
+        background-color: #9293c8;
+        color: white !important;
+        font-size: 11px;
+    }
+
+.tableImg {
+    width: 20px;
+    cursor: pointer;
+}
+
+.divPaginador {
+    width: 40px;
+    height: 25px;
+    float: left;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 4px 4px 4px 4px;
+    border-color: white;
+}
+
+.divPaginaActual {
+    background-color: white;
+    color: #9293c8;
+}
+
+/*.divOtraPagina {
+}*/
+
+    .divOtraPagina:hover {
+        background-color: #5a6268;
+    }
+
+.dropbtn {
+    /*background-color: #3498DB;*/
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    /*background-color: #3A2860;*/
+    border-radius: 8px 8px 8px 8px;
+}
+
+.dropdown-content {
+    /*font-weight: bold;*/
+    color: white !important;
+    display: none;
+    position: absolute;
+    background-color: #3A2860;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    border-radius: 8px 8px 8px 8px;
+}
+
+    .dropdown-content a {
+        /*color: black;*/
+        padding: 4px 9px;
+        text-decoration: none;
+        display: block;
+        color: white;
+    }
+
+.dropdown a:hover {
+    background-color: #9293c8!important;
+    color: white !important;
+}
+
+.show {
+    display: block;
+}
+
+.submenu {
+    height: 30px;
+    color: white !important;
+    background-color: #3A2860;
+}
+
+    .submenu:hover {
+        background-color: #9293c8!important;
+    }
+
+#divPatologia {
+    background-color: #9293c8;
+    text-align: center;
+    color: white !important;
+}
+
+.imgVisor {
+    width: 20px;
+}
+
+.imgNotificacion {
+    width: 25px;
+    margin-top: 0px;
+}
+
+#modalWorklist {
+    overflow: scroll;
+}
+
+.lblInformar{
+    color: black;
+}
+
+.lblLupa {
+    color: black;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.lblPaginas {
+    color: #3A2860;
+}

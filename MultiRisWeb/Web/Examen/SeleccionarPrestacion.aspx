@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SeleccionarPrestacion.aspx.cs" Inherits="MultiRisWeb.Web.Examen.SeleccionarPrestacion" %>

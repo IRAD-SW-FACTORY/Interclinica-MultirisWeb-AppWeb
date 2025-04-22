@@ -1,0 +1,130 @@
+
+.invox-hide {
+    display: none !important;
+}
+
+.invox-progress-login {
+    min-width: 6ch;
+    height: 15px;
+    pointer-events: none;
+    background-color: #f1f1f1 !important;
+}
+
+.invox-progress-login>span:first-child {
+    display: none;
+}
+
+.invox-progress-login>span:nth-child(2) {
+    border-radius: 2px;
+    background-color: var(--invox-highlight-normal-color);
+    display: inherit;
+    color: white;
+}
+
+.invox-microphone {
+    cursor: pointer !important;
+}
+
+.invox-microphone>span:first-child {
+    /*icon element*/
+    background-position: 0 0;
+    background-position: no-repeat;
+}
+
+.invox-microphone>span:nth-child(2) {
+    /*label element*/
+}
+
+.invox-microphone-paused {
+    background-image: url("images/mic-off.svg") !important;
+}
+
+.invox-microphone-running {
+    background-image: url("images/mic-on.svg") !important;
+}
+
+.invox-microphone-muted {
+    background-image: url("images/mic-mute.svg") !important;
+}
+
+
+.invox-vumeter {
+    min-width: 6ch;
+    display: none;
+    pointer-events: none;
+    background-color: #f1f1f1 !important;
+    border-radius: 2px !important;
+}
+
+.invox-vumeter>span:first-child {
+    display: none;
+}
+
+.invox-vumeter>span:nth-child(2) {
+    overflow: hidden;
+    height: 15px;
+    border-radius: 2px;
+    background-color: #3adf3a;
+    padding: 0;
+    margin: 0;
+    display: inherit;
+}
+
+.invox-textbar {
+    display: none;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.invox-textbar>span:first-child {
+    /*icon element*/
+    display: none;
+}
+
+.invox-textbar>span:nth-child(2) {
+    /*label element*/
+    display: inherit;
+
+}
+
+.invox-status-bar {}
+
+.invox-status-info {
+    color: var(--invox-shadow-normal-color) !important;
+}
+
+.invox-status-success {
+    color: #2ed51f !important;
+}
+
+.invox-status-error {
+    color: red !important;
+}
+
+.invox-status-warning {
+    color: orange !important;
+}
+
+.invox-dictation-bar {}
+
+.invox-dictation-accepted {
+    color: green !important;
+}
+
+.invox-dictation-partial {
+    color: blue !important;
+}
+
+.invox-dictation-rejected {
+    color: black !important;
+}
+
+.invox-dictation-command {
+    color: blue !important;
+}
+
+.invox-dictation-macro {
+    color: blue !important;
+}

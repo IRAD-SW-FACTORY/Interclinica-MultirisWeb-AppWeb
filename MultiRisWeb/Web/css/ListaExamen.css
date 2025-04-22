@@ -1,0 +1,27 @@
+﻿#pExamenBloqueado{
+    font-weight: bold;
+}
+
+.header {
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    /*background-color: White;*/
+}
+
+.form-control-institucion{
+    width: 140px;
+}
+
+#btnAddendum{
+    visibility: visible !important;
+}
+
+.ocultar-div {
+    visibility: hidden !important;
+}
+
+.oculta-columna {
+    visibility: collapse;
+    display: none;
+}

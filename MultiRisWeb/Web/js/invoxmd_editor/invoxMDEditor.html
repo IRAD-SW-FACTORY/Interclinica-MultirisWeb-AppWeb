@@ -1,0 +1,14 @@
+<!doctype html><html xmlns="http://www.w3.org/1999/xhtml" style="height: 100%"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>INVOX Medical Web Editor</title><!--[if lt IE 9]>
+	<script type="text/javascript" src="js/json3.min.js"></script>
+	<![endif]--><script type="text/javascript" src="profile.js" charset="UTF-8"></script><script type="text/javascript" src="js/jquery.min.js" charset="UTF-8"></script><script type="text/javascript" src="js/ckeditor/ckeditor.js" charset="UTF-8"></script><script type="text/javascript" src="js/rangyinputs-jquery.js" charset="UTF-8"></script><script type="text/javascript" src="js/swfobject.js" charset="UTF-8"></script><script type="text/javascript" src="js/invoxmd.min.js" charset="UTF-8"></script><script type="text/javascript" src="js/toastr.min.js" charset="UTF-8"></script><script type="text/javascript" src="js/toastr.config.js" charset="UTF-8"></script><script type="text/javascript" src="control.min.js" charset="UTF-8"></script><link rel="stylesheet" href="js/toastr.min.css"></head><body style="height: 100%;"><div id="editor1" style="height: 75%;"></div><script>if (location.protocol === "file:") {
+            Invox.ShowLocalSampleError();
+        }
+        CKEDITOR.appendTo('editor1', {
+            allowedContent: true,
+            on: {
+                'instanceReady': function (evt) {
+                    var clientHeight = document.getElementById('editor1').clientHeight;
+                    evt.editor.resize("100%", clientHeight);
+                }
+            }
+        });</script><div id="recorder"><a href="//get.adobe.com/es/flashplayer/"><img alt="Download flash" src="//wwwimages.adobe.com/content/dam/Adobe/en/legal/logo/160x41_get_flashplayer.gif"></a></div></body></html>

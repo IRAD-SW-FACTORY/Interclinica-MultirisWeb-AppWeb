@@ -1,0 +1,2512 @@
+{ 
+    "sexo":[
+      {
+        "cod": "NI",
+        "nombre": "No informado"
+      },
+      {
+        "cod": "F",
+        "nombre": "Femenino"
+      },
+      {
+        "cod": "M",
+        "nombre": "Masculino"
+      }
+    ],
+
+    "prestaciones": [
+      {
+        "cod": "103",
+        "nombre": "Marcelo Zamorano"
+      },
+      {
+        "cod": "111",
+        "nombre": "Macarena Torres :: Consulta Nutricional"
+      },
+      {
+        "cod": "109",
+        "nombre": "Alejandro Avendaño"
+      },
+      {
+        "cod": "1011",
+        "nombre": "MET-1P :: Nutri 2"
+      },
+      {
+        "cod": "0601013",
+        "nombre": "Estimulación Electrica"
+      },
+      {
+        "cod": "1017",
+        "nombre": "MET-3P :: Psico 1"
+      },
+      {
+        "cod": "1026",
+        "nombre": "MET-4P :: M1 ME 1"
+      },
+      {
+        "cod": "1034",
+        "nombre": "MET-4P :: M2 MCG 1"
+      },
+      {
+        "cod": "1042",
+        "nombre": "MET-4P :: M4 HG 4"
+      },
+      {
+        "cod": "1050",
+        "nombre": "MET-5P :: 32-36 HG 3"
+      },
+      {
+        "cod": "8097",
+        "nombre": "MET- 6M :: M1 Nutri 1 "
+      },
+      {
+        "cod": "8105",
+        "nombre": "MET -6M :: M1 IM 1"
+      },
+      {
+        "cod": "8113",
+        "nombre": "MET -6M :: M3 ME 3"
+      },
+      {
+        "cod": "8121",
+        "nombre": "MET -6M :: M4 MF 4"
+      },
+      {
+        "cod": "2010",
+        "nombre": "Kinesica 10 Sesiones"
+      },
+      {
+        "cod": "2006",
+        "nombre": "Kinesica 6 Sesiones"
+      },
+      {
+        "cod": "2016",
+        "nombre": "Kinesica 16 Sesiones"
+      },
+      {
+        "cod": "2024",
+        "nombre": "Kinesica 24 Sesiones"
+      },
+      {
+        "cod": "8085",
+        "nombre": "MET-4M :: M2 Nutri 2"
+      },
+      {
+        "cod": "101",
+        "nombre": "Victor Garcia Jara"
+      },
+      {
+        "cod": "114",
+        "nombre": "Roxana Fuentes"
+      },
+      {
+        "cod": "501",
+        "nombre": "Calorimetria Indirecta"
+      },
+      {
+        "cod": "1010",
+        "nombre": "MET-1P :: Nutri 1"
+      },
+      {
+        "cod": "0601012",
+        "nombre": "TENS"
+      },
+      {
+        "cod": "0601022",
+        "nombre": "Masoterapia"
+      },
+      {
+        "cod": "1016",
+        "nombre": "MET-3P :: Nutri 1"
+      },
+      {
+        "cod": "1025",
+        "nombre": "MET-4P :: M1 Psico 1"
+      },
+      {
+        "cod": "1033",
+        "nombre": "MET-4P :: M2 MF 1"
+      },
+      {
+        "cod": "1041",
+        "nombre": "MET-4P :: M4 MF 4"
+      },
+      {
+        "cod": "1049",
+        "nombre": "MET-5P :: 32-36 Enf 2"
+      },
+      {
+        "cod": "1087",
+        "nombre": "MET-8P :: I.Nutrióloga"
+      },
+      {
+        "cod": "8104",
+        "nombre": "MET -6M :: M1 MA 1"
+      },
+      {
+        "cod": "8112",
+        "nombre": "MET -6M :: M3 Nutri 3"
+      },
+      {
+        "cod": "8120",
+        "nombre": "MET -6M :: M4 IM 4"
+      },
+      {
+        "cod": "511",
+        "nombre": "Curacion Simple"
+      },
+      {
+        "cod": "2005",
+        "nombre": "Kinesica 5 Sesiones"
+      },
+      {
+        "cod": "2015",
+        "nombre": "Kinesica 15 Sesiones"
+      },
+      {
+        "cod": "2023",
+        "nombre": "Kinesica 23 Sesiones"
+      },
+      {
+        "cod": "8084",
+        "nombre": "MET-4M :: M1 IM2"
+      },
+      {
+        "cod": "104",
+        "nombre": "Mauricio D´Acuña"
+      },
+      {
+        "cod": "118",
+        "nombre": "Macarena Barahona"
+      },
+      {
+        "cod": "111",
+        "nombre": "Enrique Lanzarini"
+      },
+      {
+        "cod": "1012",
+        "nombre": "MET-1P :: Enf 1"
+      },
+      {
+        "cod": "0601027",
+        "nombre": "Tracción Vertical"
+      },
+      {
+        "cod": "0601025",
+        "nombre": "Tecnicas de Facilitacion / Inhibicion"
+      },
+      {
+        "cod": "1018",
+        "nombre": "MET-3P :: ME 1"
+      },
+      {
+        "cod": "1027",
+        "nombre": "MET-4P :: M1 Bio 1"
+      },
+      {
+        "cod": "1035",
+        "nombre": "MET-4P :: M2 HG 1"
+      },
+      {
+        "cod": "1043",
+        "nombre": "MET-5P :: 24-28 Nutri 1"
+      },
+      {
+        "cod": "1082",
+        "nombre": "MET-8P :: 1er Cirujano"
+      },
+      {
+        "cod": "8098",
+        "nombre": "MET -6M :: M1 Psico 1 "
+      },
+      {
+        "cod": "8106",
+        "nombre": "MET -6M :: M1 MF 1"
+      },
+      {
+        "cod": "8114",
+        "nombre": "MET -6M :: M3 Bio 3"
+      },
+      {
+        "cod": "8138",
+        "nombre": "MET-8M :: 1er Cirujano"
+      },
+      {
+        "cod": "2001",
+        "nombre": "Kinesica 1 Sesión"
+      },
+      {
+        "cod": "2007",
+        "nombre": "Kinesica 7 Sesiones"
+      },
+      {
+        "cod": "2017",
+        "nombre": "Kinesica 17 Sesiones"
+      },
+      {
+        "cod": "2025",
+        "nombre": "Kinesica 25 Sesiones"
+      },
+      {
+        "cod": "8086",
+        "nombre": "MET-4M :: M2 Psico 2"
+      },
+      {
+        "cod": "105",
+        "nombre": "Vicente Carrasco"
+      },
+      {
+        "cod": "DB1",
+        "nombre": "David Barraza"
+      },
+      {
+        "cod": "126",
+        "nombre": "Maria Paz Bizama"
+      },
+      {
+        "cod": "1013",
+        "nombre": "MET-2P :: Nutri 1"
+      },
+      {
+        "cod": "0601029",
+        "nombre": "Atención Kinesiológica Integral"
+      },
+      {
+        "cod": "0601026",
+        "nombre": "Tecnicas de Relajacion"
+      },
+      {
+        "cod": "1019",
+        "nombre": "MET-3P :: Bio 1"
+      },
+      {
+        "cod": "1028",
+        "nombre": "MET-4P :: M1 Cal 1"
+      },
+      {
+        "cod": "1036",
+        "nombre": "MET-4P :: M3 Nutri 3"
+      },
+      {
+        "cod": "1044",
+        "nombre": "MET-5P :: 24-28 Enf 1"
+      },
+      {
+        "cod": "1083",
+        "nombre": "MET-8P :: 2do Cirujano"
+      },
+      {
+        "cod": "8099",
+        "nombre": "MET -6M :: M1 ME 1"
+      },
+      {"cod": "8107",
+        "nombre": "MET -6M :: M2 Nutri 2"
+      },
+      {
+        "cod": "8115",
+        "nombre": "MET -6M :: M3 MF 3"
+      },
+      {
+        "cod": "8139",
+        "nombre": "MET-8M :: 2do Cirujano"
+      },
+      {
+        "cod": "2002",
+        "nombre": "Kinésica 2 Sesión"
+      },
+      {
+        "cod": "2008",
+        "nombre": "Kinesica 8 Sesiones"
+      },
+      {
+        "cod": "2018",
+        "nombre": "Kinesica 18 Sesiones"
+      },
+      {
+        "cod": "2022",
+        "nombre": "Kinesica 22 Sesiones"
+      },
+      {
+        "cod": "8087",
+        "nombre": "MET-4M :: M2 ENF 2"
+      },
+      {
+        "cod": "106",
+        "nombre": "Roberto Muñoz"
+      },
+      {
+        "cod": "500",
+        "nombre": "Bioimpedancia"
+      },
+      {
+        "cod": "502",
+        "nombre": "Capacidad Fisica de Trabajo"
+      },
+      {
+        "cod": "0601001",
+        "nombre": "Evaluacion Kinesiologica"
+      },
+      {
+        "cod": "0601017",
+        "nombre": "Ejercicios Respiratorios"
+      },
+      {
+        "cod": "601028",
+        "nombre": "Entrenamiento Cardiorespitarorio"
+      },
+      {
+        "cod": "1020",
+        "nombre": "MET-3P :: Cal 1"
+      },
+      {
+        "cod": "1029",
+        "nombre": "MET-4P :: M1 Ecg 1"
+      },
+      {
+        "cod": "1037",
+        "nombre": "MET-4P :: M3 Psico 3"
+      },
+      {
+        "cod": "1045",
+        "nombre": "MET-5P :: 24-28 HG 1"
+      },
+      {
+        "cod": "1084",
+        "nombre": "MET-8P :: 3er Cirujano"
+      },
+      {
+        "cod": "8100",
+        "nombre": "MET -6M :: M1 Bio 1"
+      },
+      {
+        "cod": "8108",
+        "nombre": "MET -6M :: M2 Psico 2"
+      },
+      {
+        "cod": "8116",
+        "nombre": "MET -6M :: M4 Nutri 4"
+      },
+      {"cod": "8140",
+        "nombre": "MET-8M :: 3er Cirujano"
+      },
+      {
+        "cod": "2012",
+        "nombre": "Kinesica 12 Sesiones"
+      },
+      {
+        "cod": "2009",
+        "nombre": "Kinesica 9 Sesiones"
+      },
+      {
+        "cod": "2019",
+        "nombre": "Kinesica 19 Sesiones"
+      },
+      {
+        "cod": "8080",
+        "nombre": "MET-4M :: M1 Nutri 1"
+      },
+      {
+        "cod": "8088",
+        "nombre": "MET-4M :: M2 MF 2"
+      },
+      {
+        "cod": "102",
+        "nombre": "Cristian Tabilo Garcia"
+      },
+      {
+        "cod": "115",
+        "nombre": "Karen Joustra :: Enfermera Diabetes"
+      },
+      {
+        "cod": "506",
+        "nombre": "Test de Intolerancia Alimentaria"
+      },
+      {
+        "cod": "514",
+        "nombre": "Inyección Varios"
+      },
+      {
+        "cod": "0601011",
+        "nombre": "Ultrasonido"
+      },
+      {
+        "cod": "0601021",
+        "nombre": "Manipulación Osteopatica"
+      },
+      {
+        "cod": "1015",
+        "nombre": "MET-2P :: Psico 1"
+      },
+      {
+        "cod": "1024",
+        "nombre": "MET-4P :: M1 Nutri 1"
+      },
+      {
+        "cod": "1032",
+        "nombre": "MET-4P :: M2 Enf 2"
+      },
+      {
+        "cod": "1040",
+        "nombre": "MET-4P :: M4 Enf 4"
+      },
+      {
+        "cod": "1048",
+        "nombre": "MET-5P :: 32-36 Nutri 3"
+      },
+      {
+        "cod": "1086",
+        "nombre": "MET-8P :: Arsenalera"
+      },
+      {
+        "cod": "8103",
+        "nombre": "MET -6M :: M1 ECG 1"
+      },
+      {
+        "cod": "8111",
+        "nombre": "MET -6M :: M2 MF 2"
+      },
+      {
+        "cod": "8119",
+        "nombre": "MET -6M :: M4 CFT 4"
+      },
+      {
+        "cod": "8143",
+        "nombre": "MET-8M :: I-Nutrióloga"
+      },
+      {
+        "cod": "2004",
+        "nombre": "Kinesica 4 Sesiones"
+      },
+      {
+        "cod": "2014",
+        "nombre": "Kinesica 14 Sesiones"
+      },
+      {
+        "cod": "2021",
+        "nombre": "Kinesica 21 Sesiones"
+      },
+      {
+        "cod": "8083",
+        "nombre": "MET-4M :: M1 MF 1"
+      },
+      {
+        "cod": "100",
+        "nombre": "Gloria Bustos"
+      },
+      {
+        "cod": "113",
+        "nombre": "Javiera Lopez"
+      },
+      {
+        "cod": "505",
+        "nombre": "Monitor Continuo de Glicemia"
+      },
+      {
+        "cod": "MA",
+        "nombre": "Monitor de Actividad"
+      },
+      {
+        "cod": "0601005",
+        "nombre": "Infrarojo - Compresas"
+      },
+      {
+        "cod": "0601020",
+        "nombre": "Entrenamiento Protexico Extremidades"
+      },
+      {
+        "cod": "1014",
+        "nombre": "MET-2P :: Nutri 2"
+      },
+      {
+        "cod": "1022",
+        "nombre": "MET-3P :: MA 1"
+      },
+      {
+        "cod": "1031",
+        "nombre": "MET-4P :: M2 Nutri 2"
+      },
+      {
+        "cod": "1039",
+        "nombre": "MET-4P :: M4 Nutri 4"
+      },
+      {
+        "cod": "1047",
+        "nombre": "MET-5P :: 28-32 Nutri 2"
+      },
+      {
+        "cod": "8102",
+        "nombre": "MET -6M :: M1 CFT 1"
+      },
+      {
+        "cod": "8110",
+        "nombre": "MET -6M :: M2 BIO 2"
+      },
+      {
+        "cod": "8118",
+        "nombre": "MET -6M :: M4 Bio 4"
+      },
+      {
+        "cod": "8142",
+        "nombre": "MET-8M :: Arsenalera"
+      },
+      {
+        "cod": "2003",
+        "nombre": "Kinesica 3 Sesiones"
+      },
+      {
+        "cod": "2013",
+        "nombre": "Kinesica 13 Sesiones"
+      },
+      {
+        "cod": "2002",
+        "nombre": "Kinesica 2 Sesiones"
+      },
+      {
+        "cod": "8082",
+        "nombre": "MET-4M :: M1 ENF 1"
+      },
+      {
+        "cod": "8090",
+        "nombre": "MET-4M :: M3 Psico 3"
+      },
+      {
+        "cod": "107",
+        "nombre": "Javier Farias"
+      },
+      {
+        "cod": "504",
+        "nombre": "ElectroCardiograma"
+      },
+      {
+        "cod": "503",
+        "nombre": "Hemoblobina Glicosilada"
+      },
+      {
+        "cod": "0601003",
+        "nombre": "Examen de la Funcion Pulmonar"
+      },
+      {
+        "cod": "0601018",
+        "nombre": "Ejercicios Ergometricos"
+      },
+      {
+        "cod": "0601030",
+        "nombre": "Drenaje Postural Bronquiales"
+      },
+      {
+        "cod": "1021",
+        "nombre": "MET-3P :: Ecg 1"
+      },
+      {
+        "cod": "1030",
+        "nombre": "MET-4P :: M1 MA 1"
+      },
+      {
+        "cod": "1038",
+        "nombre": "MET-4P :: M3 MF 3"
+      },
+      {
+        "cod": "1046",
+        "nombre": "MET-5P :: 28-32 Nutri 2"
+      },
+      {
+        "cod": "1085",
+        "nombre": "MET-8P :: Anestesista"
+      },
+      {
+        "cod": "8101",
+        "nombre": "MET -6M :: M1 CAL 1"
+      },
+      {
+        "cod": "8109",
+        "nombre": "MET -6M :: M2 ME 2"
+      },
+      {
+        "cod": "8117",
+        "nombre": "MET -6M :: M4 ME 4"
+      },
+      {
+        "cod": "8141",
+        "nombre": "MET-8M :: Anestesista"
+      },
+      {
+        "cod": "2000",
+        "nombre": "Sesion Diaria Kinesica"
+      },
+      {
+        "cod": "2011",
+        "nombre": "Kinesica 11 Sesiones"
+      },
+      {
+        "cod": "2020",
+        "nombre": "Kinesica 20 Sesiones"
+      },
+      {
+        "cod": "8081",
+        "nombre": "MET-4M :: M1 Psico 1"
+      },
+      {
+        "cod": "8089",
+        "nombre": "MET-4M :: M3 Nutri 3"
+      },
+      {
+        "cod": "8093",
+        "nombre": "MET-4M :: M3 IM 3"
+      },
+      {
+        "cod": "8126",
+        "nombre": "MET-7M :: Dia3 Enf 2"
+      },
+      {
+        "cod": "8131",
+        "nombre": "MET-7M :: Dia8 ME 4"
+      },
+      {
+        "cod": "2100",
+        "nombre": "Sesion Diaria Kinesica Medimel"
+      },
+      {
+        "cod": "1073",
+        "nombre": "MET-7P :: Dia1 ME 1"
+      },
+      {
+        "cod": "1081",
+        "nombre": "MET-7P :: Dia12 HG 2"
+      },
+      {
+        "cod": "116",
+        "nombre": "Carlos Toloza"
+      },
+      {
+        "cod": "1058",
+        "nombre": "MET-6P :: M2 Psico 2"
+      },
+      {
+        "cod": "1066",
+        "nombre": "MET-6P :: M6 Bio 6"
+      },
+      {
+        "cod": "117",
+        "nombre": "Amanda Valenzuela :: Consulta Nutricional"
+      },
+      {
+        "cod": "122",
+        "nombre": "Boletas Clinica Dr. Tabilo"
+      },
+      {
+        "cod": "3000",
+        "nombre": "Sesión Diaria de Curación"
+      },
+      {
+        "cod": "1091",
+        "nombre": "MET-7GC :: Enfemera"
+      },
+      {
+        "cod": "1092",
+        "nombre": "MET-7GC :: Otro Especialista"
+      },
+      {
+        "cod": "130",
+        "nombre": "Axel Araya"
+      },
+      {
+        "cod": "534",
+        "nombre": "EEG Digital 1 Hora"
+      },
+      {
+        "cod": "546",
+        "nombre": "Electromiografia Cualquier Región"
+      },
+      {
+        "cod": "554",
+        "nombre": "EEG Monitoreo 24 Horas"
+      },
+      {
+        "cod": "141",
+        "nombre": "Margarita Enberg"
+      },
+      {
+        "cod": "4107",
+        "nombre": "AP. CARBON ACTIVADO CON PLATA 6.5 X 10.5 CM"
+      },
+      {
+        "cod": "8092",
+        "nombre": "MET-4M :: M3 HG 3"
+      },
+      {
+        "cod": "8125",
+        "nombre": "MET-7M :: Dia1 HG 1"
+      },
+      {
+        "cod": "2048",
+        "nombre": "Kinesica 48 Sesiones"
+      },
+      {
+        "cod": "1072",
+        "nombre": "MET-7P :: Dia1 Enf 1"
+      },
+      {
+        "cod": "1080",
+        "nombre": "MET-7P :: Dia12 ME 2"
+      },
+      {
+        "cod": "8180",
+        "nombre": "P-MET8M"
+      },
+      {
+        "cod": "1057",
+        "nombre": "MET-6P :: M2 Nutri 2"
+      },
+      {
+        "cod": "1065",
+        "nombre": "MET-6P :: M6 Psico 6"
+      },
+      {
+        "cod": "518",
+        "nombre": "Holter de Presion Arterial"
+      },
+      {
+        "cod": "121",
+        "nombre": "Náyane Collío"
+      },
+      {
+        "cod": "3008",
+        "nombre": "Programa Curacion 8"
+      },
+      {
+        "cod": "1090",
+        "nombre": "MET-7GC :: Nutricionista"
+      },
+      {
+        "cod": "1099",
+        "nombre": "MET-7GC :: Monitoreo Continuo de Glicemia"
+      },
+      {
+        "cod": "137",
+        "nombre": "Ricardo Soto"
+      },
+      {
+        "cod": "533",
+        "nombre": "EEG Estandar con Privacion de Sueño (CPS)"
+      },
+      {
+        "cod": "545",
+        "nombre": "Estudio Polisomnografico del Sueño"
+      },
+      {
+        "cod": "553",
+        "nombre": "Test de Latencia"
+      },
+      {
+        "cod": "140",
+        "nombre": "Julio Caamaño"
+      },
+      {
+        "cod": "4106",
+        "nombre": "AP. CARBON ACTIVADO CON PLATA 19 X 10.5 CM"
+      },
+      {
+        "cod": "4122",
+        "nombre": "AP. NO ADHERENTE DIGITAL CON PETROLATO 3 CM"
+      },
+      {
+        "cod": "8096",
+        "nombre": "MET-4M :: M3 MF 4"
+      },
+      {
+        "cod": "8129",
+        "nombre": "MET-7M :: Dia5 ME 3"
+      },
+      {
+        "cod": "8134",
+        "nombre": "MET-7M :: Dia12 Enf 6"
+      },
+      {
+        "cod": "2103",
+        "nombre": "Kinesica 12 M3 Medimel"
+      },
+      {
+        "cod": "1076",
+        "nombre": "MET-7P :: Dia5 Enf 3"
+      },
+      {
+        "cod": "2300",
+        "nombre": "Infiltracion Trauma"
+      },
+      {
+        "cod": "1053",
+        "nombre": "MET-6P :: M1 Bio 1"
+      },
+      {
+        "cod": "1061",
+        "nombre": "MET-6P :: M3 Bio 3"
+      },
+      {
+        "cod": "515",
+        "nombre": "Educacion Sanofi"
+      },
+      {
+        "cod": "",
+        "nombre": "Educación Insulina Glucometro"
+      },
+      {
+        "cod": "108",
+        "nombre": "Francisco Cartajena Barreda"
+      },
+      {
+        "cod": "4000",
+        "nombre": "Pack 11 Gelatein"
+      },
+      {
+        "cod": "1095",
+        "nombre": "MET-7GC :: EcoAbdominal"
+      },
+      {
+        "cod": "127",
+        "nombre": "Agustin Brante"
+      },
+      {
+        "cod": "133",
+        "nombre": "Daniela Gonzalez"
+      },
+      {
+        "cod": "541",
+        "nombre": "EEG Temporales Anteriores"
+      },
+      {
+        "cod": "549",
+        "nombre": "Estudio Polisomnografico del Sueño"
+      },
+      {
+        "cod": "557",
+        "nombre": "Estimulacion Magnetica Transcraneana"
+      },
+      {
+        "cod": "601",
+        "nombre": "Insumos médicos"
+      },
+      {
+        "cod": "4116",
+        "nombre": "AP. NO ADHERENTE CON PETROLATO 7.5 X 20.3 CM"
+      },
+      {
+        "cod": "8094",
+        "nombre": "MET-4M :: M3 MF 3"
+      },
+      {
+        "cod": "8127",
+        "nombre": "MET-7M :: Dia3 ME 2"
+      },
+      {
+        "cod": "8132",
+        "nombre": "MET-7M :: Dia10 Enf 5"
+      },
+      {
+        "cod": "2101",
+        "nombre": "Kinesica 12 M1 Medimel"
+      },
+      {
+        "cod": "1074",
+        "nombre": "MET-7P :: Dia1 HG 1"
+      },
+      {
+        "cod": "112",
+        "nombre": "Paola Madrid C. :: Consulta Nutricional"
+      },
+      {
+        "cod": "1051",
+        "nombre": "MET-6P :: M1 Nutri 1"
+      },
+      {
+        "cod": "1059",
+        "nombre": "MET-6P :: M2 CFT 1"
+      },
+      {
+        "cod": "1067",
+        "nombre": "MET-6P :: M6 Cal 6"
+      },
+      {
+        "cod": "519",
+        "nombre": "Control de Glicemias"
+      },
+      {
+        "cod": "123",
+        "nombre": "Boletas Clinica Dr. Garcia"
+      },
+      {
+        "cod": "531",
+        "nombre": "Ondas de Choque"
+      },
+      {
+        "cod": "1093",
+        "nombre": "MET-7GC :: Examenes de Sangre"
+      },
+      {
+        "cod": "1098",
+        "nombre": "MET-7GC :: Holter de Presion Arterial"
+      },
+      {
+        "cod": "128",
+        "nombre": "Alejandra Contreras"
+      },
+      {
+        "cod": "535",
+        "nombre": "EEG Digital 2 Horas"
+      },
+      {
+        "cod": "547",
+        "nombre": "Monitorizacion con CPAP"
+      },
+      {
+        "cod": "555",
+        "nombre": "EEG Portatil Urgente"
+      },
+      {
+        "cod": "142",
+        "nombre": "Micke De Arco Espinosa"
+      },
+      {
+        "cod": "4117",
+        "nombre": "AP. NO ADHERENTE CON PETROLATO 7.5 X 40.6 CM"
+      },
+      {
+        "cod": "8091",
+        "nombre": "MET-4M :: M3 Enf 3"
+      },
+      {
+        "cod": "8124",
+        "nombre": "MET-7M :: Dia1 ME 1"
+      },
+      {
+        "cod": "8137",
+        "nombre": "MET-7M :: Dia12 IM 2"
+      },
+      {
+        "cod": "1071",
+        "nombre": "MET-7P :: Dia1 Nutri 1"
+      },
+      {
+        "cod": "1079",
+        "nombre": "MET-7P :: Dia12 Enf 6"
+      },
+      {
+        "cod": "8170",
+        "nombre": "P-MET7M"
+      },
+      {
+        "cod": "1056",
+        "nombre": "MET-6P :: M1 MA 1"
+      },
+      {
+        "cod": "1064",
+        "nombre": "MET-6P :: M5 Nutri 5"
+      },
+      {
+        "cod": "119",
+        "nombre": "David Barraza"
+      },
+      {
+        "cod": "125",
+        "nombre": "Ivan Galleguillos"
+      },
+      {
+        "cod": "526",
+        "nombre": "Curacion Avanzada"
+      },
+      {
+        "cod": "1089",
+        "nombre": "MET-7GC :: Medico General"
+      },
+      {
+        "cod": "129",
+        "nombre": "Angelica Montecinos"
+      },
+      {
+        "cod": "532",
+        "nombre": "EEG Estandar (30 Min)"
+      },
+      {
+        "cod": "544",
+        "nombre": "Monitorizacion con Saturacion"
+      },
+      {
+        "cod": "552",
+        "nombre": "EEG Holter 24 Horas"
+      },
+      {
+        "cod": "139",
+        "nombre": "Alejandro Villalon"
+      },
+      {
+        "cod": "4118",
+        "nombre": "AP. NO ADHERENTE CON PETROLATO 7.5 X 7.5 CM"
+      },
+      {
+        "cod": "4121",
+        "nombre": "AP. NO ADHERENTE DIGITAL CON PETROLATO 2.8 CM"
+      },
+      {
+        "cod": "4130",
+        "nombre": "AP. TRANSPARENTE 10 X 12 CM"
+      },
+      {
+        "cod": "8095",
+        "nombre": "MET-4M :: M4 ENF 4"
+      },
+      {
+        "cod": "8128",
+        "nombre": "MET-7M :: Dia5 Enf 3"
+      },
+      {
+        "cod": "8133",
+        "nombre": "MET-7M :: Dia10 ME 5"
+      },
+      {
+        "cod": "2102",
+        "nombre": "Kinesica 12 M2 Medimel"
+      },
+      {
+        "cod": "1075",
+        "nombre": "MET-7P :: Dia3 Enf 2"
+      },
+      {
+        "cod": "2201",
+        "nombre": "Sesion Kine-Infantil"
+      },
+      {
+        "cod": "1052",
+        "nombre": "MET-6P :: M1 Psico 1"
+      },
+      {
+        "cod": "1060",
+        "nombre": "MET-6P :: M3 Nutri 3"
+      },
+      {
+        "cod": "1061",
+        "nombre": "MET-6P :: M3 Bio 3"
+      },
+      {
+        "cod": "520",
+        "nombre": "Ajuste de Insulinas"
+      },
+      {
+        "cod": "124",
+        "nombre": "Boletas Clinica Dra. Bustos"
+      },
+      {
+        "cod": "1",
+        "nombre": "Revisión de exámenes"
+      },
+      {
+        "cod": "1094",
+        "nombre": "MET-7GC :: ECG"
+      },
+      {
+        "cod": "529",
+        "nombre": "Educación Novo"
+      },
+      {
+        "cod": "132",
+        "nombre": "Daniela Castillo"
+      },
+      {
+        "cod": "540",
+        "nombre": "EEG Estandar con Video Monitoreo por 12 Horas"
+      },
+      {
+        "cod": "548",
+        "nombre": "Monitorizacion con CPAP"
+      },
+      {
+        "cod": "556",
+        "nombre": "Electromiografia"
+      },
+      {
+        "cod": "143",
+        "nombre": "GYSLAINE LAM"
+      },
+      {
+        "cod": "4105",
+        "nombre": "AP. CARBON ACTIVADO CON PLATA 10.5 X 10.5 CM"
+      },
+      {
+        "cod": "8122",
+        "nombre": "MET-7M :: Dia1 Nutri 1"
+      },
+      {
+        "cod": "8130",
+        "nombre": "MET-7M :: Dia8 Enf 4"
+      },
+      {
+        "cod": "8135",
+        "nombre": "MET-7M :: Dia12 ME 6"
+      },
+      {
+        "cod": "2104",
+        "nombre": "Kinesica 12 M4 Medimel"
+      },
+      {
+        "cod": "1077",
+        "nombre": "MET-7P :: Dia8 Enf 4"
+      },
+      {
+        "cod": "8150",
+        "nombre": "P-MET4M"
+      },
+      {
+        "cod": "1054",
+        "nombre": "MET-6P :: M1 Cal 1"
+      },
+      {
+        "cod": "1062",
+        "nombre": "MET-6P :: M4 Nutri 4"
+      },
+      {
+        "cod": "516",
+        "nombre": "Espirometria Basal"
+      },
+      {
+        "cod": "",
+        "nombre": "Coordinación de Cx "
+      },
+      {
+        "cod": "521",
+        "nombre": "Monitor Continuo de Glicemia Abbot"
+      },
+      {
+        "cod": "4001",
+        "nombre": "Pack 21 Gelatein"
+      },
+      {
+        "cod": "1096",
+        "nombre": "MET-7GC :: Fondo de Ojo"
+      },
+      {
+        "cod": "131",
+        "nombre": "Carlos Ñancupil "
+      },
+      {
+        "cod": "135",
+        "nombre": "Orieta Castro"
+      },
+      {
+        "cod": "542",
+        "nombre": "Estudio Polimonografico del Sueño"
+      },
+      {
+        "cod": "550",
+        "nombre": "Electromiografia Cualquier Región"
+      },
+      {
+        "cod": "558",
+        "nombre": "Electromiografía 4 Extremidades "
+      },
+      {
+        "cod": "602",
+        "nombre": "Insumos de enfermería"
+      },
+      {
+        "cod": "4132",
+        "nombre": "AP. TRANSPARENTE 6 X 7 CM"
+      },
+      {
+        "cod": "8123",
+        "nombre": "MET-7M :: Dia1 Enf 1"
+      },
+      {
+        "cod": "8136",
+        "nombre": "MET-7M :: Dia12 HG 2"
+      },
+      {
+        "cod": "2200",
+        "nombre": "Sesión de Acupuntura"
+      },
+      {
+        "cod": "1078",
+        "nombre": "MET-7P :: Dia10 Enf 5"
+      },
+      {
+        "cod": "8160",
+        "nombre": "P-MET6M"
+      },
+      {
+        "cod": "1055",
+        "nombre": "MET-6P :: M1 Ecg 1"
+      },
+      {
+        "cod": "1063",
+        "nombre": "MET-6P :: M4 Psico 4"
+      },
+      {
+        "cod": "517",
+        "nombre": "Espirometria C/B"
+      },
+      {
+        "cod": "120",
+        "nombre": "Victor Olivares"
+      },
+      {
+        "cod": "522",
+        "nombre": "Retiro de Sutura y/o Corchete"
+      },
+      {
+        "cod": "4002",
+        "nombre": "Prosource"
+      },
+      {
+        "cod": "1097",
+        "nombre": "MET-7GC :: Electromiografia"
+      },
+      {
+        "cod": "136",
+        "nombre": "Viviana Tobar"
+      },
+      {
+        "cod": "138",
+        "nombre": "Oscar Veliz"
+      },
+      {
+        "cod": "543",
+        "nombre": "Electromiografia Cualquier Region"
+      },
+      {
+        "cod": "551",
+        "nombre": "Monitorización con Saturación"
+      },
+      {
+        "cod": "134",
+        "nombre": "Karla Villegas"
+      },
+      {
+        "cod": "4120",
+        "nombre": "AP. NO ADHERENTE DIGITAL CON PETROLATO 2.4 CM"
+      },
+      {
+        "cod": "4129",
+        "nombre": "AP. TRANSPARENTE + GASA 8 X 10 CM"
+      },
+      {
+        "cod": "4126",
+        "nombre": "AP. NO ADHERETE CON SILICONA 12.7 X 15 CM"
+      },
+      {
+        "cod": "4133",
+        "nombre": "AP. TRANSPARENTE 8 X 10 CM"
+      },
+      {
+        "cod": "4139",
+        "nombre": "COBAN 7,5 CM"
+      },
+      {
+        "cod": "4143",
+        "nombre": "ESPUMA CRAMBERRY 10 CM X 12 CM"
+      },
+      {
+        "cod": "4148",
+        "nombre": "KALTOSTALT 10X12"
+      },
+      {
+        "cod": "4125",
+        "nombre": "AP. NO ADHERENTE HIDROALG C/PLATA 5 X 5 CM"
+      },
+      {
+        "cod": "4113",
+        "nombre": "AP. HIDROPOLIMERO SUPER ABS. NO ADH 15 X 20 CM"
+      },
+      {
+        "cod": "2",
+        "nombre": "CONSULTA SIN COSTO"
+      },
+      {
+        "cod": "151",
+        "nombre": "JUAN PENDOLA"
+      },
+      {
+        "cod": "530",
+        "nombre": "EDUCACION MEDICAMENTOS AUTOINYECTABLES"
+      },
+      {
+        "cod": "2104190",
+        "nombre": "HALLUX VALGUS O RIGIDUS, TRAT. QUIR. COMPLETO (CUALQUIE"
+      },
+      {
+        "cod": "4004",
+        "nombre": "BOTA DE MARCHA CORTA TALLA S"
+      },
+      {
+        "cod": "4015",
+        "nombre": "TOBILLERA SIMPLE TALLA L"
+      },
+      {
+        "cod": "4023",
+        "nombre": "INMOVILIZADOR RODILLA L 60 CM"
+      },
+      {
+        "cod": "4031",
+        "nombre": "FERULA DIGITA TALLA L"
+      },
+      {
+        "cod": "4039",
+        "nombre": "INMOVILIZADOR HOMBRO TALLA S"
+      },
+      {
+        "cod": "4047",
+        "nombre": "MUÑEQUERA C/PULGAR IZQUIERDO TALLA L"
+      },
+      {
+        "cod": "4055",
+        "nombre": "PACK FRIO/CALOR CODO TALLA UNICA"
+      },
+      {
+        "cod": "4063",
+        "nombre": "BOTA INFANTIL TALLA M"
+      },
+      {
+        "cod": "4127",
+        "nombre": "AP. NO ADHERETE CON SILICONA 7.6 X 11 CM"
+      },
+      {
+        "cod": "4102",
+        "nombre": "AP. ABSORBENTE 10 X 10 CM"
+      },
+      {
+        "cod": "4140",
+        "nombre": "CUTICELL 7.5 CM X 20 CM"
+      },
+      {
+        "cod": "4108",
+        "nombre": "AP. DE COLAGENO CON ALGINATO 10.2 X 11.1 CM"
+      },
+      {
+        "cod": "4149",
+        "nombre": "KIT CURACIÓN CON REGLA ESTÉRIL 89"
+      },
+      {
+        "cod": "4153",
+        "nombre": "SOLFTBAN SYNTHETIC 20 CM X 2.7 M"
+      },
+      {
+        "cod": "4158",
+        "nombre": "URGOSORB AG 10 CM X 10 CM"
+      },
+      {
+        "cod": "145",
+        "nombre": "Mariano Perez"
+      },
+      {
+        "cod": "152",
+        "nombre": "Javier Galvez"
+      },
+      {
+        "cod": "2104159",
+        "nombre": "MENISCECTOMIA U OTRAS INTERVENCIONES POR VIA ARTROSCOPI"
+      },
+      {
+        "cod": "2104093",
+        "nombre": "DEDOS EN GATILLO, TRAT. QUIR., CUALQUIER NUMERO"
+      },
+      {
+        "cod": "4005",
+        "nombre": "BOTA DE MARCHA CORTA TALLA M"
+      },
+      {
+        "cod": "4016",
+        "nombre": "TOBILLERA SIMPLE TALLA XL"
+      },
+      {
+        "cod": "4024",
+        "nombre": "RODILLERA ROM TALLA UNICA"
+      },
+      {
+        "cod": "4032",
+        "nombre": "MUÑEQUERA TALLA M"
+      },
+      {
+        "cod": "4040",
+        "nombre": "INMOVILIZADOR HOMBRO TALLA M"
+      },
+      {
+        "cod": "4048",
+        "nombre": "ABDUCTOR HOMBRO TALLA UNICA"
+      },
+      {
+        "cod": "4056",
+        "nombre": "TALONERA SILICONA TALLA M"
+      },
+      {
+        "cod": "4064",
+        "nombre": "BOTA INFANTIL TALLA L"
+      },
+      {
+        "cod": "4123",
+        "nombre": "AP. NO ADHERENTE DIGITAL PIE CON PETROLADO 2.8 CM"
+      },
+      {
+        "cod": "4138",
+        "nombre": "COBAN 10 CM"
+      },
+      {
+        "cod": "4147",
+        "nombre": "JERINGA 20 ML"
+      },
+      {
+        "cod": "4124",
+        "nombre": "AP. NO ADHERENTE HIDROALG C/PLATA 11 X 11 CM"
+      },
+      {
+        "cod": "4112",
+        "nombre": "AP. HIDROPOLIMERO SUPER ABS. NO ADH 15 X 15 CM"
+      },
+      {
+        "cod": "4119",
+        "nombre": "AP. NO ADHERENTE DIGITAL CON PETROLATO 2 CM"
+      },
+      {
+        "cod": "559",
+        "nombre": "Mix Bio Calo"
+      },
+      {
+        "cod": "4003",
+        "nombre": "MEDICAMENTOS AUTOINYECTABLES"
+      },
+      {
+        "cod": "2104026",
+        "nombre": "TUMORES O QUISTES O LESIONES PSEUDOQUISTICAS O MUSCULAR"
+      },
+      {
+        "cod": "153",
+        "nombre": "Carmen Rojas"
+      },
+      {
+        "cod": "4014",
+        "nombre": "TOBILLERA SIMPLE TALLA M"
+      },
+      {
+        "cod": "4022",
+        "nombre": "INMOVILIZADOR RODILLA L70 CM"
+      },
+      {
+        "cod": "4030",
+        "nombre": "FERULA DIGITA TALLA M"
+      },
+      {
+        "cod": "4038",
+        "nombre": "CABESTRILLO MALLA TALLA XL"
+      },
+      {
+        "cod": "4046",
+        "nombre": "MUÑEQUERA C/PULGAR IZQUIERDO TALLA M"
+      },
+      {
+        "cod": "4054",
+        "nombre": "PACK FRIO/CALOR RODILLA TALLA UNICA"
+      },
+      {
+        "cod": "4062",
+        "nombre": "CABESTRILLO INFANTIL TALLA 12 - 14 AÑO"
+      },
+      {
+        "cod": "4070",
+        "nombre": "INMOVILIZADOR CLAVICULA TALLA L"
+      },
+      {
+        "cod": "4101",
+        "nombre": "ALGOPLAQUE FILM 10 X 10"
+      },
+      {
+        "cod": "4103",
+        "nombre": "AP. ABSORBENTE 10 X 20 CM"
+      },
+      {
+        "cod": "4141",
+        "nombre": "CUTICELL 7.5 CM X 7.5 CM"
+      },
+      {
+        "cod": "4109",
+        "nombre": "AP. DE COLAGENO CON ALGINATO 10.2 X 22.2 CM"
+      },
+      {
+        "cod": "4150",
+        "nombre": "KIT CURACIÓN ESTÉRIL 37"
+      },
+      {
+        "cod": "4154",
+        "nombre": "SUERO FISIOLOGICO 20 ML"
+      },
+      {
+        "cod": "4159",
+        "nombre": "URGOTUL ABSORB 13 CM X 12 CM"
+      },
+      {
+        "cod": "146",
+        "nombre": "Juan Anelli"
+      },
+      {
+        "cod": "3001",
+        "nombre": "Ozonoterapia Local"
+      },
+      {
+        "cod": "2104179",
+        "nombre": "LUXOFRACTURA TOBILLO, CUALQUIER TIPO, OSTEOSINTESIS Y R"
+      },
+      {
+        "cod": "560",
+        "nombre": "PROCEDIMIENTO INFILTRACIÓN ÁCIDO HIALURÓNICO"
+      },
+      {
+        "cod": "4006",
+        "nombre": "BOTA DE MARCHA CORTA TALLA L"
+      },
+      {
+        "cod": "4017",
+        "nombre": "ZAPATO ORTOPEDICO TALLA M"
+      },
+      {
+        "cod": "4025",
+        "nombre": "RODILLERA ESTABILIZADORA TALLA M MI-44"
+      },
+      {
+        "cod": "4033",
+        "nombre": "MUÑEQUERA TALLA L"
+      },
+      {
+        "cod": "4041",
+        "nombre": "INMOVILIZADOR HOMBRO TALLA L"
+      },
+      {
+        "cod": "4049",
+        "nombre": "SOPORTE CODO C/GEL TALLA UNICA"
+      },
+      {
+        "cod": "4057",
+        "nombre": "TALONERA SILICONA TALLA L"
+      },
+      {
+        "cod": "4065",
+        "nombre": "BOTA INFANTIL TALLA XL"
+      },
+      {
+        "cod": "4128",
+        "nombre": "AP. TRANSPARENTE + GASA 10 X 25 CM"
+      },
+      {
+        "cod": "4104",
+        "nombre": "AP. ABSORBENTE 20 X 25 CM"
+      },
+      {
+        "cod": "4142",
+        "nombre": "CUTICELL CLASIC 10 CM X 10 CM"
+      },
+      {
+        "cod": "4110",
+        "nombre": "AP. DE COLAGENO CON ALGINATO 5.1 X 5.1 CM"
+      },
+      {
+        "cod": "4151",
+        "nombre": "KIT EXTRACCIÓN PUNTO 03"
+      },
+      {
+        "cod": "4155",
+        "nombre": "TEGADERM FOAM 3M 10X12"
+      },
+      {
+        "cod": "4160",
+        "nombre": "URGOTUL AG 10 CM X 12 CM"
+      },
+      {
+        "cod": "147",
+        "nombre": "Bruno Camaggi Díaz"
+      },
+      {
+        "cod": "3002",
+        "nombre": "Ozonoerapia Endovenosa"
+      },
+      {
+        "cod": "1103049",
+        "nombre": "HERNIA NUCLEO PULPOSO, ESTENORRAQUIS, ARACNOIDITIS , FI"
+      },
+      {
+        "cod": "561",
+        "nombre": "PROCEDIMIENTO INFILTRACIÓN PRP SIMPLE"
+      },
+      {
+        "cod": "4007",
+        "nombre": "BOTA DE MARCHA LARGA TALLA M"
+      },
+      {
+        "cod": "4010",
+        "nombre": "BOTA ROM TALLA L"
+      },
+      {
+        "cod": "4018",
+        "nombre": "ZAPATO ORTOPEDICO TALLA L"
+      },
+      {
+        "cod": "4026",
+        "nombre": "RODILLERA ESTABILIZADORA TALLA L MI-44"
+      },
+      {
+        "cod": "4034",
+        "nombre": "MUÑEQUERA TALLA XL"
+      },
+      {
+        "cod": "4042",
+        "nombre": "MUÑEQUERA C/PULGAR DERECHO TALLA S"
+      },
+      {
+        "cod": "4050",
+        "nombre": "COLLAR CERVICAL TALLA M"
+      },
+      {
+        "cod": "4058",
+        "nombre": "BASTON MOVIL TALLA UNICA"
+      },
+      {
+        "cod": "4131",
+        "nombre": "AP. TRANSPARENTE 10 X 25 CM"
+      },
+      {
+        "cod": "4137",
+        "nombre": "BACTIGRASS 10 CM X 12 CM"
+      },
+      {
+        "cod": "4146",
+        "nombre": "GASA 7,5 CM X 7,5 CM"
+      },
+      {
+        "cod": "4115",
+        "nombre": "AP. MATRIZ EQUILIBRADORA DE HERIDAD 28 CM"
+      },
+      {
+        "cod": "4111",
+        "nombre": "AP. HIDROPOLIMERO SUPER ABS. NO ADH 11 X 11 CM"
+      },
+      {
+        "cod": "144",
+        "nombre": "Tamara Guerra"
+      },
+      {
+        "cod": "150",
+        "nombre": "Yhurka Yañez Navarrete"
+      },
+      {
+        "cod": "527",
+        "nombre": "CONSULTA ENFERMERIA"
+      },
+      {
+        "cod": "2104181",
+        "nombre": "RUPTURA TENDON DE AQUILES O TIBIAL POSTERIOR, TENORRAFI"
+      },
+      {
+        "cod": "562",
+        "nombre": "PROCEDIMIENTO INFILTRACIÓN PRP DOBLE"
+      },
+      {
+        "cod": "4013",
+        "nombre": "TOBILLERAS C/BARRAS TALLA XL"
+      },
+      {
+        "cod": "4021",
+        "nombre": "INMOVILIZADOR RODILLA S 50 CM"
+      },
+      {
+        "cod": "4029",
+        "nombre": "RODILLERA SIMPLE TALLA L"
+      },
+      {
+        "cod": "4037",
+        "nombre": "CABESTRILLO MALLA TALLA L"
+      },
+      {
+        "cod": "4045",
+        "nombre": "MUÑEQUERA C/PULGAR IZQUIERDO TALLA S"
+      },
+      {
+        "cod": "4053",
+        "nombre": "PACK FRIO/CALOR HOMBRO TALLA UNICA"
+      },
+      {
+        "cod": "4061",
+        "nombre": "CABESTRILLO INFANTIL TALLA 8 - 10 AÑOS"
+      },
+      {
+        "cod": "4069",
+        "nombre": "INMOVILIZADOR CLAVICULA TALLA M"
+      },
+      {
+        "cod": "12345",
+        "nombre": "Axel Rojas"
+      },
+      {
+        "cod": "4135",
+        "nombre": "ATRAUMAN AG 10 CM X 10 CM"
+      },
+      {
+        "cod": "4144",
+        "nombre": "GASA 10 CM X 10 CM"
+      },
+      {
+        "cod": "4152",
+        "nombre": "LIDOCAÍNA AMPOLLA"
+      },
+      {
+        "cod": "4156",
+        "nombre": "TENDERWET 10X10"
+      },
+      {
+        "cod": "4161",
+        "nombre": "VENDA PÜTTERFLEX 8 CM X 5 CM"
+      },
+      {
+        "cod": "148",
+        "nombre": "Jose Honores"
+      },
+      {
+        "cod": "3003",
+        "nombre": "Ozonoterapia Bimodal"
+      },
+      {
+        "cod": "1103066",
+        "nombre": "LIBERACIÓN QUIRÚRGICA DE NERVIO PERIFÉRICO EXTRACRANEANO (TUNEL"
+      },
+      {
+        "cod": "563",
+        "nombre": "PROCEDIMIENTO INFILTRACIÓN CORTICOIDE (DACAM)"
+      },
+      {
+        "cod": "4008",
+        "nombre": "BOTA DE MARCHA LARGA TALLA L"
+      },
+      {
+        "cod": "4011",
+        "nombre": "TOBILLERAS C/BARRAS TALLA M"
+      },
+      {
+        "cod": "4019",
+        "nombre": "ZAPATO TACON INVERTIDO TALLA M"
+      },
+      {
+        "cod": "4027",
+        "nombre": "RODILLERA ESTABILIZADORA TALLA XL MI-44"
+      },
+      {
+        "cod": "4035",
+        "nombre": "CABESTRILLO MALLA TALLA S"
+      },
+      {
+        "cod": "4043",
+        "nombre": "MUÑEQUERA C/PULGAR DERECHO TALLA M"
+      },
+      {
+        "cod": "4051",
+        "nombre": "COLLAR CERVICAL TALLA L"
+      },
+      {
+        "cod": "4059",
+        "nombre": "VENDA ELASTICA TALLA UNICA"
+      },
+      {
+        "cod": "4067",
+        "nombre": "TOBILLERA INFANTIL TALLA 8 - 10 AÑOS"
+      },
+      {
+        "cod": "155",
+        "nombre": "Germán Herrera"
+      },
+      {
+        "cod": "4136",
+        "nombre": "ATRAUMAN AG 5 CM X 5 CM"
+      },
+      {
+        "cod": "4145",
+        "nombre": "GASA 5 CM X 5 CM"
+      },
+      {
+        "cod": "4114",
+        "nombre": "AP. MATRIZ EQUILIBRADORA DE HERIDAD 123 CM"
+      },
+      {
+        "cod": "4157",
+        "nombre": "TENDERWET 4X7"
+      },
+      {
+        "cod": "4134",
+        "nombre": "ASKINA CALGITROL AG 10 CM X 12 CM"
+      },
+      {
+        "cod": "149",
+        "nombre": "Ecocardiogramas"
+      },
+      {
+        "cod": "3004",
+        "nombre": "Retiro de puntos"
+      },
+      {
+        "cod": "2104051",
+        "nombre": "HOMBRO/RUPTURA MANGUITO ROTADORES,TRAT.QUIR. C/S ACROMI"
+      },
+      {
+        "cod": "564",
+        "nombre": "PROCEDIMIENTO INFILTRACIÓN CORTICOIDE (DEPOMEDROL)"
+      },
+      {
+        "cod": "4009",
+        "nombre": "BOTA ROM TALLA M"
+      },
+      {
+        "cod": "4012",
+        "nombre": "TOBILLERAS C/BARRAS TALLA L"
+      },
+      {
+        "cod": "4020",
+        "nombre": "ZAPATO TACON INVERTIDO TALLA L"
+      },
+      {
+        "cod": "4028",
+        "nombre": "RODILLERA SIMPLE TALLA M"
+      },
+      {
+        "cod": "4036",
+        "nombre": "CABESTRILLO MALLA TALLA M"
+      },
+      {
+        "cod": "4044",
+        "nombre": "MUÑEQUERA C/PULGAR DERECHO TALLA L"
+      },
+      {
+        "cod": "4052",
+        "nombre": "COLLAR CERVICAL TALLA XL"
+      },
+      {
+        "cod": "4060",
+        "nombre": "CABESTRILLO INFANTIL TALLA 4 - 6 AÑOS"
+      },
+      {
+        "cod": "4068",
+        "nombre": "TOBILLERA INFANTIL TALLA 12 - 14 AÑO"
+      },
+      {
+        "cod": "156",
+        "nombre": "María José Mendez"
+      },
+      {
+        "cod": "13220",
+        "nombre": "Lina Mavarro"
+      },
+      {
+        "cod": "159",
+        "nombre": "Mary Rodríguez"
+      },
+      {
+        "cod": "570",
+        "nombre": "PACK 3: Análisis de Marcha + 3 par de plantillas"
+      },
+      {
+        "cod": "165",
+        "nombre": "Viviana Gomez Santana"
+      },
+      {
+        "cod": "969",
+        "nombre": "Mary Rodriguez"
+      },
+      {
+        "cod": "569",
+        "nombre": "PACK 2: Análisis de Marcha + 2 par de plantillas"
+      },
+      {
+        "cod": "164",
+        "nombre": "David Caronel"
+      },
+      {
+        "cod": "168",
+        "nombre": "Maximiliano Hormazabal"
+      },
+      {
+        "cod": "4073",
+        "nombre": "SEPARADOR DEDOS TALLA L"
+      },
+      {
+        "cod": "9999",
+        "nombre": "Preventivo Escolar"
+      },
+      {
+        "cod": "9997",
+        "nombre": "Rayos Torax Programa Preventivo Escolar"
+      },
+      {
+        "cod": "161",
+        "nombre": "Carolina Carrasco Purull"
+      },
+      {
+        "cod": "572",
+        "nombre": "PRP SIMPLE"
+      },
+      {
+        "cod": "1602201",
+        "nombre": "Biopsia de piel y/o mucosa por curetaje o sección tangencial c/"
+      },
+      {
+        "cod": "4066",
+        "nombre": "TOBILLERA INFANTIL TALLA 4 - 6 AÑOS"
+      },
+      {
+        "cod": "154",
+        "nombre": "Arnoldo Briceño"
+      },
+      {
+        "cod": "9996",
+        "nombre": "Electrocardiograma Programa Preventivo Escolar"
+      },
+      {
+        "cod": "9998",
+        "nombre": "Consulta Médica Programa Preventivo Escolar"
+      },
+      {
+        "cod": "566",
+        "nombre": "Análisis de Marcha "
+      },
+      {
+        "cod": "220",
+        "nombre": "María José Zeballos Huerta"
+      },
+      {
+        "cod": "1602206",
+        "nombre": "Extirpación de lesiones benignas por sec tangencial, curetaje y"
+      },
+      {
+        "cod": "565",
+        "nombre": "Ondas de Choque Urológica"
+      },
+      {
+        "cod": "567",
+        "nombre": "Fabricación: 1 par de plantillas"
+      },
+      {
+        "cod": "163",
+        "nombre": "Atención Psicóloga : Isabel Diaz"
+      },
+      {
+        "cod": "1602207",
+        "nombre": "TRATAMIENTO POR ELECTRO DE HEMANGIOMAS O TELANGECTASIAS HASTA 1"
+      },
+      {
+        "cod": "4071",
+        "nombre": "TAPING ROLLO"
+      },
+      {
+        "cod": "13281",
+        "nombre": "Maria Jose Mendez"
+      },
+      {
+        "cod": "160",
+        "nombre": "Lorenzo Ramírez Durini"
+      },
+      {
+        "cod": "571",
+        "nombre": "PACK 4: Análisis de Marcha + 4 par de plantillas"
+      },
+      {
+        "cod": "166",
+        "nombre": "Walter Araos Silva"
+      },
+      {
+        "cod": "4072",
+        "nombre": "SEPARADOR DEDOS TALLA M"
+      },
+      {
+        "cod": "157",
+        "nombre": "NEIDA MELENDEZ"
+      },
+      {
+        "cod": "3009",
+        "nombre": "EXTRACCIÓN DE PUNTOS"
+      },
+      {
+        "cod": "162",
+        "nombre": "ANGEL PADRON"
+      },
+      {
+        "cod": "1601119",
+        "nombre": "Inyección intracutánea en áreas hasta 9 cm2 por sesión"
+      },
+      {
+        "cod": "158",
+        "nombre": "BALDO ESPINOZA"
+      },
+      {
+        "cod": "568",
+        "nombre": "PACK 1: análisis de Marcha + 1 par de plantillas"
+      },
+      {
+        "cod": "4074",
+        "nombre": "RODILLERA MI 52 ROM"
+      },
+      {
+        "cod": "167",
+        "nombre": "MILENA MARAMBIO"
+      }
+    ],
+
+    "previsiones":[
+      {
+        "cod": "1",
+        "nombre": "PARTICULAR"
+      },
+      {
+        "cod": "2",
+        "nombre": "FONASA"
+      },
+      {
+        "cod": "3",
+        "nombre": "COLMENA"
+      },
+      {
+        "cod": "4",
+        "nombre": "CRUZ BLANCA"
+      },
+      {
+        "cod": "5",
+        "nombre": "CONSALUD"
+      },
+      {
+        "cod": "6",
+        "nombre": "CRUZ DEL NORTE"
+      },
+      {
+        "cod": "7",
+        "nombre": "ISALUD"
+      },
+      {
+        "cod": "8",
+        "nombre": "FUNDACION"
+      },
+      {
+        "cod": "9",
+        "nombre": "MAS VIDA"
+      },
+      {
+        "cod": "10",
+        "nombre": "BANMEDICA"
+      },
+      {
+        "cod": "11",
+        "nombre": "VIDA TRES"
+      },
+      {
+        "cod": "12",
+        "nombre": "ACHS"
+      },
+      {
+        "cod": "13",
+        "nombre": "MUTUAL"
+      },
+      {
+        "cod": "14",
+        "nombre": "IST"
+      },
+      {
+        "cod": "15",
+        "nombre": "EJERCITO"
+      },
+      {
+        "cod": "16",
+        "nombre": "CAPREDENA"
+      },
+      {
+        "cod": "17",
+        "nombre": "FACH"
+      },
+      {
+        "cod": "18",
+        "nombre": "DIPRECA"
+      },
+      {
+        "cod": "19",
+        "nombre": "MEDIMEL"
+      },
+      {
+        "cod": "20",
+        "nombre": "GES CHUQUICAMATA"
+      },
+      {
+        "cod": "21",
+        "nombre": "GES CRUZ BLANCA"
+      },
+      {
+        "cod": "22",
+        "nombre": "GES MAS VIDA"
+      },
+      {
+        "cod": "23",
+        "nombre": "GES COLMENA"
+      },
+      {
+        "cod": "24",
+        "nombre": "GES FONASA"
+      },
+      {
+        "cod": "25",
+        "nombre": "GES BANMEDICA"
+      },
+      {
+        "cod": "26",
+        "nombre": "GES CONSALUD"
+      },
+      {
+        "cod": "27",
+        "nombre": "CODELCO"
+      },
+      {
+        "cod": "28",
+        "nombre": "SANOFI"
+      },
+      {
+        "cod": "29",
+        "nombre": "NOVO"
+      },
+      {
+        "cod": "30",
+        "nombre": "ARMADA"
+      },
+      {
+        "cod": "31",
+        "nombre": "CDA"
+      },
+      {
+        "cod": "32",
+        "nombre": "GES VIDA TRES"
+      },
+      {
+        "cod": "33",
+        "nombre": "GES CRUZ DEL NORTE"
+      },
+      {
+        "cod": "34",
+        "nombre": "COMISIÓN MÉDICA"
+      }
+    ],
+
+    "tipoAgenda": [
+      {
+        "cod": "1",
+        "nombre": "Médica"
+      },
+      {
+        "cod": "2",
+        "nombre": "Radiología"
+      }
+    ],
+
+    "modalidad": [
+      {
+        "cod": "CR",
+        "nombre": "Radiografía computarizada"
+      },
+      {
+        "cod": "CT",
+        "nombre": "Tomografía computarizada"
+      },
+      {
+        "cod": "DX",
+        "nombre": "Radiografía digital"
+      },
+      {
+        "cod": "MG",
+        "nombre": "Mamografía"
+      },
+      {
+        "cod": "MR",
+        "nombre": "Resonancia magnética"
+      },
+      {
+        "cod": "US",
+        "nombre": "Ultrasonido"
+      },
+      {
+        "cod": "XA",
+        "nombre": "Angiografía de Rayos-X"
+      }
+    ],
+
+    "duracion": [
+      {
+        "cod": "15",
+        "nombre": "15 min"
+      },
+      {
+        "cod": "30",
+        "nombre": "30 min"
+      },
+      {
+        "cod": "60",
+        "nombre": "60 min"
+      },
+      {
+        "cod": "90",
+        "nombre": "90 min"
+      },
+      {
+        "cod": "120",
+        "nombre": "120 min"
+      },
+      {
+        "cod": "150",
+        "nombre": "150 min"
+      },
+      {
+        "cod": "180",
+        "nombre": "180 min"
+      }
+    ],
+    
+    "medicos":[
+      {
+        "cod": "2101",
+        "nombre": "Agustin Brante (Neurólogo)"
+      },
+      {
+        "cod": "2076",
+        "nombre": "Alejandro Avendaño (Traumatólogo)"
+      },
+      {
+        "cod": "2079",
+        "nombre": "Amanda  Valenzuela (Nutricionista)"
+      },
+      {
+        "cod": "2225",
+        "nombre": "Andrés Montenegro (Dermatólogo)"
+      },
+      {
+        "cod": "2199",
+        "nombre": "Angel Padrón (Internista)"
+      },
+      {
+        "cod": "2106",
+        "nombre": "Angelica Montecinos (Psicóloga)"
+      },
+      {
+        "cod": "2172",
+        "nombre": "Arnoldo Briceño (Traumatólogo)"
+      },
+      {
+        "cod": "2100",
+        "nombre": "Axel Araya (Neurólogo)"
+      },
+      {
+        "cod": "2191",
+        "nombre": "Baldo  Espinoza (Urólogo)"
+      },
+      {
+        "cod": "2092",
+        "nombre": "Bernarda  Avalos (Enfermera)"
+      },
+      {
+        "cod": "2060",
+        "nombre": "Bio + Cal + Holter + ME"
+      },
+      {
+        "cod": "2098",
+        "nombre": "Carlos Ñancupil (Neurólogo)"
+      },
+      {
+        "cod": "2168",
+        "nombre": "Carmen Rojas (Reumatóloga)"
+      },
+      {
+        "cod": "2062",
+        "nombre": "Cristian Aguirre"
+      },
+      {
+        "cod": "2054",
+        "nombre": "Cristian  Tabilo (Diabetólogo-ADULTO)"
+      },
+      {
+        "cod": "2105",
+        "nombre": "Daniela Gonzalez (Fonoaudióloga)"
+      },
+      {
+        "cod": "2201",
+        "nombre": "David Barraza (Kinesiologo)"
+      },
+      {
+        "cod": "2206",
+        "nombre": "David  Coronel (Cirugía cabeza y cuello)"
+      },
+      {
+        "cod": "19",
+        "nombre": "Eduardo Mendez"
+      },
+      {
+        "cod": "2111",
+        "nombre": "EEG + EMT + TL"
+      },
+      {
+        "cod": "2167",
+        "nombre": "ElectroCardiograma"
+      },
+      {
+        "cod": "2138",
+        "nombre": "Electromiografía De Arco"
+      },
+      {
+        "cod": "2175",
+        "nombre": "German Herrera (Médico General)"
+      },
+      {
+        "cod": "2133",
+        "nombre": "Gislaine Lam (Neuróloga)"
+      },
+      {
+        "cod": "2048",
+        "nombre": "Gloria Bustos M. (Nutrióloga-ADULTO)"
+      },
+      {
+        "cod": "2204",
+        "nombre": "Isabel Diaz"
+      },
+      {
+        "cod": "2222",
+        "nombre": "Ivan  Remolina (Reumatólogo)"
+      },
+      {
+        "cod": "2080",
+        "nombre": "Ivan Galleguillos (Traumatólogo)"
+      },
+      {
+        "cod": "2071",
+        "nombre": "Javier Farias G. (Traumatólogo)"
+      },
+      {
+        "cod": "2156",
+        "nombre": "Juan Amado Péndola (Traumatólogo)"
+      },
+      {
+        "cod": "2149",
+        "nombre": "Juan Antonio Anelli C. (Traumatólogo)"
+      },
+      {
+        "cod": "2132",
+        "nombre": "Julio Caamaño (Nefrólogo)"
+      },
+      {
+        "cod": "2104",
+        "nombre": "Karla Villegas (Reumatóloga)"
+      },
+      {
+        "cod": "2197",
+        "nombre": "Lorenzo Ramírez (Cirujano General)"
+      },
+      {
+        "cod": "2061",
+        "nombre": "Macarena Barahona (Kinesiologa)"
+      },
+      {
+        "cod": "2058",
+        "nombre": "Marcelo Zamorano (Cirujano Digestivo)"
+      },
+      {
+        "cod": "2136",
+        "nombre": "Margarita Enberg (Infectologa)"
+      },
+      {
+        "cod": "2180",
+        "nombre": "Maria Jose Mendez (Médico General)"
+      },
+      {
+        "cod": "2200",
+        "nombre": "María José Zeballos (Neuróloga)"
+      },
+      {
+        "cod": "2143",
+        "nombre": "Mariano  Perez (Traumatólogo)"
+      },
+      {
+        "cod": "2196",
+        "nombre": "Mary Rodriguez (Gastroenterologa)"
+      },
+      {
+        "cod": "2055",
+        "nombre": "Mauricio Dacuña (Cardiólogo)"
+      },
+      {
+        "cod": "2214",
+        "nombre": "Maximiliano Hormazábal (Traumatólogo)"
+      },
+      {
+        "cod": "2137",
+        "nombre": "Micke De Arco E. (Neurólogo)"
+      },
+      {
+        "cod": "2090",
+        "nombre": "Náyade Collío (Pediatra)"
+      },
+      {
+        "cod": "2181",
+        "nombre": "Neida  Melendez (Psiquiatra)"
+      },
+      {
+        "cod": "2208",
+        "nombre": "Ondas de Choque Urológica"
+      },
+      {
+        "cod": "2221",
+        "nombre": "Oscar  Vargas (Otorrino)"
+      },
+      {
+        "cod": "2077",
+        "nombre": "Paola Madrid (Nutricionista)"
+      },
+      {
+        "cod": "2202",
+        "nombre": "PLANTILLAS"
+      },
+      {
+        "cod": "2131",
+        "nombre": "Polisomnografía Pol"
+      },
+      {
+        "cod": "2212",
+        "nombre": "Procedimientos dermatológicos"
+      },
+      {
+        "cod": "2218",
+        "nombre": "Ricardo Vacarezza E (Hematólogo)"
+      },
+      {
+        "cod": "2103",
+        "nombre": "Ricardo Soto (Neurocirujano)"
+      },
+      {
+        "cod": "2069",
+        "nombre": "Roxana Fuentes (Psicóloga)"
+      },
+      {
+        "cod": "2056",
+        "nombre": "Vicente Carrasco (Psiquiatra)"
+      },
+      {
+        "cod": "2082",
+        "nombre": "Victor Olivares (Neurología Pediátrica)"
+      },
+      {
+        "cod": "2050",
+        "nombre": "Víctor García Jara (Endocrinólogo)"
+      },
+      {
+        "cod": "2107",
+        "nombre": "Viviana Tobar"
+      },
+      {
+        "cod": "2209",
+        "nombre": "Viviana Gomez (Dermatólogo)"
+      },
+      {
+        "cod": "2210",
+        "nombre": "Walter Araos (Traumatólogo)"
+      },
+      {
+        "cod": "2155",
+        "nombre": "Yhurka  Yañez Navarrete (Psicóloga)"
+      }
+    ]
+}

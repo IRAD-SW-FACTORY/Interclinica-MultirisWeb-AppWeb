@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="VerInforme.aspx.cs" Inherits="MultiRisWeb.Web.Examen.VerInforme" %>

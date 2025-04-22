@@ -1,0 +1,101 @@
+﻿body {
+    background-color: #404848;
+    color: white;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.textareaBasico {
+    height: 80px !important;
+    font-size: 12px;
+}
+
+.textareaTecnica {
+    height: 33px !important;
+    font-size: 12px!important;
+}
+
+.textareaCompleto {
+    height: 190px !important;
+    font-size: 12px;
+}
+
+.lbl {
+    color: white;
+}
+
+.btnGuardar, .btnVolver {
+    width: 65px !important;
+}
+
+.btnValidar {
+    width: 60px !important;
+}
+
+.btnVolver {
+    padding: 3px 0px 0px 3px
+}
+
+
+.close {
+    opacity: 1 !important;
+}
+
+.form-control2 {
+    width: 100% !important;
+}
+
+.col-md-4, .col-md-8, .col-md-3, .col-md-9{
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+
+/*.btn {
+    background-color: #FA4B3F !important;
+}*/
+
+.btn, btn-primary {
+    background-color: #FF7500;
+}
+
+.btn:hover {
+    background-color: #FF8C3F;
+    color: white;
+}
+
+.imgvisor{
+    width: 25px;
+    border-radius: 4px;
+}
+
+.ddlVisor {
+    background-color: #FA4B3F;
+    border-color: #FA4B3F;
+    color: white;
+    border-radius: 6px 6px 6px 6px;
+    margin-top: 5px;
+}
+
+.cke_editable, .cke_editable_themed, .cke_contents_ltr, .cke_show_borders{
+    margin: 0px !important;
+}
+
+.table_informes_previos {
+    text-align: left;
+    font-weight: bold;
+    width: 95%;
+}
+
+.btn_informes_previos{
+    width: 100%;
+    height: 46px;
+    background-color: white;
+    color: black;
+}
+
+#tablaInformesPrevios{
+    width: 100%;
+}

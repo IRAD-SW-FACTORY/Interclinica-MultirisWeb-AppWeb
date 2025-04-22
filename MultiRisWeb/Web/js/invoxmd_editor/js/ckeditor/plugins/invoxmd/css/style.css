@@ -1,0 +1,108 @@
+.invox-micconfig-readme-container p,
+.invox-training-readme-container p{
+    white-space: normal;
+    margin: 1em;
+}
+#invox-micconfig-sentences-container {
+    height: 4em;
+}
+#invox-training-sentences-container{
+    height: 22em;
+}
+.invox-label {
+    text-transform: uppercase;
+    color: #526296;
+    font-weight: bold;
+    margin: 0em 1.5em;
+
+}
+.invox-micconfig-sentences-row {
+    margin: 1em 0.5em;
+    white-space: normal;
+    padding: 1.2em;
+    padding-right: 2em; 
+    font-weight: bold;
+    height: 2em;
+}
+.invox-training-sentences-row{
+    margin: 1em 1.5em;
+    white-space: normal;
+    padding: 1.2em;
+    padding-right: 2em;
+    font-weight: bold;
+    height: 3em;
+}
+.invox-micconfig-sentences-row-disabled,
+.invox-training-sentences-row-disabled{
+    opacity: 0.7;
+}
+.invox-micconfig-sentences-badge,
+.invox-training-sentences-badge{
+    color: white;
+    float: right;
+    font-size: 2em;
+}
+.invox-bg-primary{
+    background-color: #526296 !important ;
+    color: white !important;
+}
+.invox-bg-info{
+    background: #337ab7 !important;
+    color: white !important;
+}
+.invox-bg-success{
+    background-color: #5cb85c !important;
+    color: white !important;
+}
+.invox-bg-error{
+    background-color: #ff4444 !important;
+    color: white !important;
+}
+.invox-bg-warning{
+    background-color: #ffa500 !important;
+    color: white !important;
+}
+.invox-bg-disabled{
+    background-color: gray !important;
+    color: white !important;
+}
+	
+
+.invox-text-primary {
+    color: #526296;
+}
+.invox-text-info {
+    color: #337ab7 ;
+}
+.invox-text-success{
+    color: #5cb85c ;
+}
+.invox-text-error{
+    color: #ff4444 ;
+}
+
+.invox-progress{
+    background: #e5e5e5;
+    margin: 0.5em 1.5em;
+    height: 2em;
+}
+.invox-progress-bar{
+    font-weight: bold;
+    padding: 0.5em 1em;
+    line-height: 1em;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box; 
+}
+.invox-vumeter{
+    background: #e5e5e5;
+    margin: 0.5em 1.5em;
+    border-left: solid 5px  #366e36
+}
+.invox-vumeter-bar{
+    font-weight: bold;
+    padding: 1em 0em;
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box; 
+}

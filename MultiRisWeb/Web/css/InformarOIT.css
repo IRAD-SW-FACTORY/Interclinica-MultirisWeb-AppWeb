@@ -1,0 +1,104 @@
+﻿.lblInformeOIT {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.div-espaciador{
+    height: 3px;
+	background-color: gray;
+}
+
+hr {
+    height: 2px;
+    background-color: #efefef;
+}
+
+.radio-list {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    list-style-type: none; /* Eliminar viñetas */
+    padding: 0; /* Eliminar padding */
+    margin: 0; /* Eliminar margen */							
+}
+
+input[type=radio] {
+    border: 1px solid #b6bcc3;
+    padding: 0.5em;
+    border-radius: 50%; /* Hace que el radio sea circular */
+    -webkit-appearance: none; /* Mantén esto si quieres personalizar el diseño */
+    width: 1.2em; /* Ajusta el tamaño del radio */
+    height: 1.2em;
+    background-color: #b6bcc3; /* Fondo del radio */
+    cursor: pointer; /* Opcional: Cambiar el cursor */
+}
+
+    input[type=radio]:checked {
+        background-color: red; /* Fondo rojo cuando está seleccionado */
+        border: 1px solid red; /* Borde adicional para el estado seleccionado */
+        background-size: 9px 9px; /* Ajusta el tamaño del fondo, si es necesario */
+    }
+	
+	input[type=radio]:focus {
+        outline-color: transparent;
+    }
+
+.campos-texto{
+    font-size: 12px; 
+}
+
+.tdStyle {
+    padding: 5px !important;
+}
+
+.imgvisor {
+    width: 17px;
+}
+
+.size-check {
+    font-size: 15px;
+}
+
+.size-check-num {
+    font-size: 12px;
+}
+
+.aling-radio-line {
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+
+.css-seccion {
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 2px;
+    background-color: black;
+}
+
+.css-line-just {
+    padding-left: 15px !important;
+}
+
+.css-disabled-div {
+    pointer-events: none; 
+    opacity: 0.5; 
+}
+
+.input-disabled {
+    background-color: gray;
+    border-color: gray !important;
+}
+
+.css-cuaro-externo {
+    border: 1px solid gray;
+}
+.css-div-form {
+    height: auto;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    margin: 0 0 0 0;
+    width: 100%;
+    border-radius: 3px;
+    float: left;
+}

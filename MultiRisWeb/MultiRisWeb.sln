@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiRisWeb", "MultiRisWeb.csproj", "{36FB75E7-A641-4004-B714-E016844B4B88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiRisWeb.Data", "..\MultiRisWeb.Data\MultiRisWeb.Data.csproj", "{59408DD6-BE26-49D1-9FE8-8261DE39A420}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiRisWeb.Encrypt", "..\MultiRisWeb.Encrypt\MultiRisWeb.Encrypt.csproj", "{F6EA81C5-107C-4C14-BF38-E2E159D6A647}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36FB75E7-A641-4004-B714-E016844B4B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FB75E7-A641-4004-B714-E016844B4B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FB75E7-A641-4004-B714-E016844B4B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FB75E7-A641-4004-B714-E016844B4B88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59408DD6-BE26-49D1-9FE8-8261DE39A420}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59408DD6-BE26-49D1-9FE8-8261DE39A420}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59408DD6-BE26-49D1-9FE8-8261DE39A420}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59408DD6-BE26-49D1-9FE8-8261DE39A420}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6EA81C5-107C-4C14-BF38-E2E159D6A647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6EA81C5-107C-4C14-BF38-E2E159D6A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6EA81C5-107C-4C14-BF38-E2E159D6A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6EA81C5-107C-4C14-BF38-E2E159D6A647}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {387C67A0-6160-4785-ACDF-DA013B95EF5C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,7 @@
+﻿.form-control-ddl, .form-control {
+    background-color: rgb(101, 96, 95) !important;
+    color: white;
+    border-color: rgb(101, 96, 95) !important;
+    height: 21px;
+    cursor: pointer;
+}

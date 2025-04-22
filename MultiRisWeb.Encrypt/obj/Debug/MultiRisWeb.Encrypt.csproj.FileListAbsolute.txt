@@ -1,0 +1,18 @@
+D:\IradSoftwareFactory\Amis-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.dll
+D:\IradSoftwareFactory\Amis-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.pdb
+D:\IradSoftwareFactory\Amis-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.AssemblyReference.cache
+D:\IradSoftwareFactory\Amis-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.CoreCompileInputs.cache
+D:\IradSoftwareFactory\Amis-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.dll
+D:\IradSoftwareFactory\Amis-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.pdb
+C:\Desarrollos\MultiRis GH Main\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.dll
+C:\Desarrollos\MultiRis GH Main\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.pdb
+C:\Desarrollos\MultiRis GH Main\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.AssemblyReference.cache
+C:\Desarrollos\MultiRis GH Main\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.CoreCompileInputs.cache
+C:\Desarrollos\MultiRis GH Main\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.dll
+C:\Desarrollos\MultiRis GH Main\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.pdb
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.dll
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.pdb
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.AssemblyReference.cache
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.CoreCompileInputs.cache
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.dll
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.pdb

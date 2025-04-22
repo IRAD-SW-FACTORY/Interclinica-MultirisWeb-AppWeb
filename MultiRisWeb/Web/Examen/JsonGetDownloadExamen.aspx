@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JsonGetDownloadExamen.aspx.cs" Inherits="MultiRisWeb.Web.Examen.JsonGetDownloadExamen" %>

@@ -1,0 +1,347 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="MultiRisWeb.Web.Control.Master" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MultiRisWeb</title>
+    <link href="../Complementos/bootstrap-4.3.1-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <%--    <script src="../js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="../js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../js/jquery.min.js"></script>--%>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <%--    <script src="../js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="../js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="../js/jquery.min.js"></script>--%>
+
+    <link href="../font/Avenir-Roman/style.css" rel="stylesheet" />
+    <link href="../css/Master.css" rel="stylesheet" />
+    <script src="../js/Validaciones.js"></script>
+    <style>
+        .table {
+            color: white;
+        }
+
+        .dropdown-toggle::after {
+            content: none;
+        }
+
+        .btn-danger {
+            /*width: 60px !important;*/
+            border-radius: 4px 4px 4px 4px !important;
+            font-weight: bold;
+            font-size: 11px;
+            color: white;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onerror = function (errMsg, url, line, column, error) {
+            var suppressErrorAlert = true;
+            var eliminarCaracter = /:/g;
+            var result = 'NAME: ' + error.name + ' MENSAJE: ' + error.message + ' STACK: ' + error.stack + ' LINEA: ' + line + ' COLUMNA: ' + column;
+            var mensaje = errMsg.replace('Uncaught ', '');
+
+            url = url.replace(eliminarCaracter, '');
+            mensaje = mensaje.replace(eliminarCaracter, '');
+            result = result.replace(eliminarCaracter, '');
+
+            var jsdata = '{errmsg:"' + mensaje + '", url:"' + url + '", error:"' + result + '"}';
+
+            $.ajax({
+                type: "POST",
+                url: "../Error/Error.aspx/AddErrorJs",
+                data: jsdata,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    console.log(data.d);
+                    location.href = '../ErrorPage.aspx';
+                }
+            });
+            return suppressErrorAlert;
+        };
+
+        $(document).ready(function () {
+            //var par = false;
+            //function parpadeo() {
+            //    col = par ? 'white' : 'A1';
+            //    document.getElementById('txt').style.color = col;
+            //    par = !par;
+            //    setTimeout("parpadeo()", 500); //500 = medio segundo
+            //}
+            //window.onload = parpadeo;
+            //$.blockUI.defaults.message = '<div class="row">' +
+            //    '<div class="col-12 text-center">' +
+            //    '<h4>Procesando Informacion</h4>' +
+            //    '</div>' +
+            //    '<div class="col-12 text-center">' +
+            //    //'<img src="../../assets/images/cargando.gif" class="img-fluid" />' +
+            //    '<h1> HOLAAA </h1>' +
+            //    '</div>' +
+            //    '</div >';
+            //$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+        });
+
+        function CargaDatosActivoSitio() {
+            $('#modalCargando').modal('show');
+        }
+    </script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <asp:ContentPlaceHolder ID="vocali" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+    <form id="form1" runat="server">
+        <asp:HiddenField runat="server" ID="hddVerAddendum" Value="false" />
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="font-size: 13px; margin: 1px 0px 0px 0px; /* 10px arriba, 3px derecha, 30px abajo, 5px izquierda">
+            <a class="navbar-brand" href="../Examen/ListaExamen.aspx">
+                <img src="../img/logo4.png" style="width: 90px; margin-top: 3px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample03">
+                <%--<ul class="navbar-nav mr-auto">--%>
+
+                <%--aaaaa--%>
+
+                <div class="collapse navbar-collapse row pt-3" id="navbar-p">
+                    <ul class="nav navbar-nav  mr-auto">
+                        &nbsp;&nbsp;
+                            <li><a href="../Examen/ListaExamen.aspx" class="nav-link nav-examenes" style="font-size: small" id="examenes" runat="server" onclick="CargaDatosActivo();">EXÁMENES</a></li>
+                        &nbsp;&nbsp;
+                            <li><a href="../Examen/ListaExamen.aspx" class="nav-link nav-examenes" style="font-size: small" id="monitor" runat="server" onclick="CargaDatosActivo();">MONITOR</a></li>
+                        <%-- &nbsp;&nbsp;--%>
+                        <li><a href="../Plantilla/ListarPlantilla.aspx" class="nav-link nav-examenes" style="font-size: small" id="plantillas" runat="server" onclick="CargaDatosActivo();">PLANTILLAS</a></li>
+                         &nbsp;&nbsp;   
+                        
+                         <ul class="nav navbar-nav" id="tagExamen" runat="server" style="width: 150px;">
+                               <li class="dropdown">
+                                   <a href="#" class="dropdown-toggle nav-link nav-examenes" data-toggle="dropdown">
+                                       <label id="Label1" text="" runat="server" style="font-size: small">TAGS</label>
+                                       <span class="caret"></span>
+                                   </a>
+                                   <ul class="dropdown-menu nav-examenes">
+                                       <li>
+                                           <a class=" nav-link nav-examenes" href="../TagExamen/TagExamenProfesional.aspx" id="menuTagExamenProfesional" runat="server" onclick="CargaDatosActivoSitio();">Tags Personal</a>
+                                           <a class=" nav-link nav-examenes" href="../TagExamen/TagExamenListar.aspx" id="menuTagListarExamen" runat="server" onclick="CargaDatosActivoSitio();">Listar Tags</a>                                         
+                                       </li>
+                                   </ul>
+                               </li>
+                           </ul>
+
+
+                        <%if (hddVerAddendum.Value == "true")
+                            { %>
+                            <li><a href="javascript:OpenProcesarAddemdum()" class="nav-link nav-examenes" style="font-size: small" img="../img/iconoCandadoBloqueado.png" id="A1" runat="server" >ADDENDUM</a></li>
+                        &nbsp;&nbsp;
+                        <%} %>
+                      
+                           <ul class="nav navbar-nav" id="gestion" runat="server" style="width: 150px;">
+                               <li class="dropdown">
+                                   <a href="#" class="dropdown-toggle nav-link nav-examenes" data-toggle="dropdown">
+                                       <label id="lblGestion" text="" runat="server" style="font-size: small">GESTIÓN</label>
+                                       <span class="caret"></span>
+                                   </a>
+                                   <ul class="dropdown-menu nav-examenes">
+                                       <li>
+                                           <a class=" nav-link nav-examenes" href="DealsBloqueados.aspx" id="menuCumplimientosPorInstitucion" runat="server" onclick="CargaDatosActivoSitio();">Cumplimientos Por Institución</a>
+                                           <a class=" nav-link nav-examenes" href="DealsServicios.aspx" id="menuCumpliemntoPorProfesional" runat="server" onclick="CargaDatosActivoSitio();">Cumplimiento Por Profesional</a>
+                                           <a class=" nav-link nav-examenes" href="../Gestion/Honorarios.aspx" id="menuHonorarios" runat="server" onclick="CargaDatosActivoSitio();">Producción</a>
+                                           <a class=" nav-link  nav-examenes" href="../Gestion/MonitoreoDeTiempo.aspx" id="menuMonitoreoDeTiempo" runat="server" style="width: 190px !important;" onclick="CargaDatosActivoSitio();">Monitoreo de Tiempo</a>
+                                       </li>
+                                   </ul>
+                               </li>
+                           </ul>
+                        &nbsp;&nbsp;
+                            <ul class="nav navbar-nav" id="configuracion" runat="server" style="width: 150px;">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle nav-link nav-examenes" data-toggle="dropdown">
+                                        <label id="lblConfiguracion" text="" runat="server" style="font-size: small">CONFIGURACIÓN</label>
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu nav-examenes">
+                                        <li>
+                                            <a class="nav-link nav-examenes" href="../Configuracion/UsuariosOld.aspx" id="menuUsuarios" runat="server" onclick="CargaDatosActivoSitio();">Usuarios</a>
+                                            <a class="nav-link nav-examenes" href="../Configuracion/Instituciones.aspx" id="menuInstituciones" runat="server" onclick="CargaDatosActivoSitio();">Instituciones</a>
+                                            <a class="nav-link nav-examenes" href="../Configuracion/TagGeneralExamen.aspx" id="menuExamenesTags" runat="server" onclick="CargaDatosActivoSitio();">Tags Generales</a>
+                                            <a class="nav-link nav-examenes" href="../Configuracion/TiempoInstitucion.aspx" id="menuInstitucion" runat="server" onclick="CargaDatosActivoSitio();">Tiempo Institución</a>
+                                            <a class="nav-link nav-examenes" href="../Configuracion/VisorErrorLog.aspx" id="menuVisorError" runat="server" onclick="CargaDatosActivoSitio();">Visor Error Log</a>
+                                            <a class="nav-link nav-examenes" href="../Configuracion/ControlMenuAcceso.aspx" id="menuControlMenu" runat="server" onclick="CargaDatosActivoSitio();">Control Menú de Acceso</a>
+                                            <a class="nav-link nav-examenes" href="../MaestroFiltro/Buscador.aspx" id="menuFiltros" runat="server" onclick="CargaDatosActivoSitio();">Filtros Generales</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        &nbsp;&nbsp;
+                    </ul>
+                    <ul class="nav navbar-nav pull-xs-right" style="font-size: 13px; margin-right: 40px">
+                       <%-- <li class="nav-item dropdown">
+                            <a href="#" id="btnAddendum" class="btn btn-filter" runat="server" onclick="GetAddendumsPendientes();" style="visibility: hidden; padding-top: 6px; width: 60px !important; border-radius: 4px !important;" data-toggle="modal" data-target="#modalAddendum" title="Asignar">Addemduns</a>
+                            &nbsp;
+                        &nbsp;--%>
+                        <a class="btn btn-danger" href="javascript:funcion()" runat="server" id="btnSoporte" style="padding-top: 6px; width: 60px !important; border-radius: 4px !important;">Soporte</a>
+                            <%--<a href="#" id="btnAddendum" class="btn btn-filter" onclick="prueba();" style="visibility: hidden; padding-top: 6px; width: 60px !important; border-radius: 4px !important;" data-toggle="modal" data-target="#" title="Asignar">Soporte</a>--%>
+
+                            <script>
+                                function funcion() {
+                                    let now = new Date();
+                                    let hora = now.getHours();
+
+                                    prueba();
+                                }
+
+                                function prueba() {
+                                    let now = new Date();
+                                    let hora = now.getHours();
+                                    /*            alert(hora);*/
+
+                                    if (hora >= 8 && hora <= 20) {
+                                        $('#modalInicioPopUpHabil').modal('show');
+                                    }
+                                    else {
+                                        $('#modalInicioPopUpNoHabil').modal('show');
+                                    }
+                                }
+                            </script>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown03" style="color: white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="../img/user.png" style="width: 25px;" />
+                                <b>
+                                    <asp:Label runat="server" ID="lblUsuario"></asp:Label></b></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown03">
+                                <%--<a class="dropdown-item" href="../Configuracion/Instituciones.aspx" style="font-size: 12px">Instituciónes</a>--%>
+                               <%-- <a class="dropdown-item" href="../Gestion/LogAsignaciones.aspx" style="font-size: 12px" onclick="CargaDatosActivoSitio();">Log Asignacion</a>--%>
+                                <a class="dropdown-item" href="../Control/CerrarSesion.aspx" style="font-size: 12px" onclick="CargaDatosActivoSitio();">Cerrar Sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <%if (Session["id_perfil"].ToString() != "8")
+                        {%>
+                    <div class="col-12 text-right" id="divInfoAmis">
+                        &nbsp;
+                     </div>
+                    <%} %>
+                </div>
+                </div>
+        </nav>       
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <%--MODAL POPUP--%>
+        <div runat="server" class="modal fade" id="modalInicioPopUpHabil">
+            <div class="modal-dialog modal-lg" style="background-color: #404848">
+                <div class="modal-content" style="background-color: #404848">
+                    <div class="modal-body">
+                        <div class="row">
+                            <img src="../img/habil.png" />
+                        </div>
+                    </div>
+                    <div style="background-color: #352D5C; height: 20px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <%--MODAL POPUP--%>
+        <div runat="server" class="modal fade" id="modalInicioPopUpNoHabil">
+            <div class="modal-dialog modal-lg" style="background-color: #404848">
+                <div class="modal-content" style="background-color: #404848">
+                    <div class="modal-body">
+                        <div class="row">
+                            <img src="../img/noHabil.png" />
+                        </div>
+                    </div>
+                    <div style="background-color: #352D5C; height: 20px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="modalCargando" role="dialog" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg">
+                <%# String.Format(Eval("nombre_tipo_urgencia").ToString() == "Urgencia" ? "<span style='color: red'>{0}</span>" : "<span>{0}</span>", Eval("nombre_tipo_urgencia")) %>
+                <div class="modal-content1" style="background: url('../img/logo_fondo.png'); background-size: cover; background-blend-mode: overlay;">
+                    <div class="row">
+                        <br />
+                        <br />
+                        <div class="col-md-12" style="text-align: center;">
+                            <br />
+                            <label class="label-title" style="font-size: 20px;">Cargando registros y comentarios desde los centros</label>
+                            <br />
+                            <label class="label-title" style="font-size: 20px;">Espere un momento por favor.</label>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-md-12"></div>
+                        <div class="col-md-12">
+                            <img src="../img/preloader.gif" class="imgLoader" style="width: 150px; height: 150px;" />
+                            <br />
+                            <br />
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalCargandoSitio" role="dialog" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg">
+                <%# String.Format(Eval("nombre_tipo_urgencia").ToString() == "Urgencia" ? "<span style='color: red'>{0}</span>" : "<span>{0}</span>", Eval("nombre_tipo_urgencia")) %>
+                <div class="modal-content1" style="background: url('../img/logo_fondo.png'); background-size: cover; background-blend-mode: overlay;">
+                    <div class="row">
+                        <br />
+                        <br />
+                        <div class="col-md-12" style="text-align: center;">
+                            <br />
+                            <label class="label-title" style="font-size: 20px;">Cargando... </label>
+                            <br />
+                            <label class="label-title" style="font-size: 20px;">Espere un momento por favor.</label>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-md-12"></div>
+                        <div class="col-md-12">
+                            <img src="../img/preloader.gif" class="imgLoader" style="width: 150px; height: 150px;" />
+                            <br />
+                            <br />
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <script src="../js/master.js?v=4"></script>
+    <script src="../Complementos/bootstrap-4.3.1-dist/js/bootstrap.min.js">
+    </script>
+    <script>
+        function abrirMotion() {
+            // Abrir nuevo tab
+            var win = window.open('https://amisgroup.notion.site/GU-A-AMIS-PROTOCOLOS-CONTINUIDAD-DE-SERVICIO-a15132e27d5a42968554e38f6519b9d4', '_blank');
+            // Cambiar el foco al nuevo tab (punto opcional)
+            win.focus();
+        }       
+    </script>
+</body>
+</html>
+

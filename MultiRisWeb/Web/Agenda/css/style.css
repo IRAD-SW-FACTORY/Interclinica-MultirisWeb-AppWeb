@@ -1,0 +1,257 @@
+@font-face {
+    font-family: "AvenirRoman";
+    src: url("../fonts/AvenirRoman.otf") format("opentype");
+  }
+
+  body{
+    font-family: 'AvenirRoman';
+    font-weight: 200;
+    color: #fff;
+    background-color: #444748;
+  }
+  a{
+   color: #F39555;
+   font-weight: bold;
+ }
+ p{
+  line-height: 0.2;
+}
+#calendar{
+  color: white !important;
+}
+.boton-nav{
+  display: inline-block;
+}
+.nav-seleccionado-background{
+  width: 180px; height: 40px; background: #F07D00; border-radius: 0px 0px 4px 4px;
+}
+.nav-seleccionado-detalle{
+  width: 40px; border-bottom: 40px solid #F07D00; border-right: 25px solid transparent; border-radius: 0px 0px 4px 4px;
+}
+.nav-no-seleccionado-background{
+  width: 180px; height: 40px; background: #362E5F; border-radius: 0px 0px 4px 4px;
+}
+.nav-no-seleccionado-detalle{
+  width: 40px; border-bottom: 40px solid #2E2E64; border-right: 25px solid transparent; border-radius: 0px 0px 4px 4px;
+}
+
+
+.temporalidad-seleccionado-background{
+  width: 80px !important; height: 30px; background: #F39555; border-radius:4px;
+}
+.temporalidad-seleccionado-detalle{
+  width: 80px; border-bottom: 30px solid #F39555; border-right: 25px solid transparent; border-radius: 4px;
+}
+.temporalidad-no-seleccionado-background{
+  width: 60px; height: 30px; background: #868686; border-radius:4px;
+}
+.temporalidad-no-seleccionado-background:hover{
+  background: #red; cursor: pointer;
+}
+.temporalidad-no-seleccionado-detalle{
+  width: 60px; border-bottom: 30px solid #868686; border-right: 25px solid transparent; border-radius: 4px;
+}
+.nav-icono{
+  position: absolute; height: inherit; width: inherit; transform: scale(0.6);
+}
+.nav-titulo{
+  color: white; margin-top: 20px; margin-left: 35px; position: absolute; font-size: 12px;
+}
+.temporalidad-titulo{
+  color: white; margin-top: 30px; margin-left: 20px; position: absolute; text-align: center;
+}
+.tui-full-calendar-layout.tui-view-25{
+  background-color: #444748 !important;
+}
+.tui-full-calendar-timegrid-timezone{
+  background-color: #444748 !important;
+}
+.card-body{
+  background-color: #4F5355;
+  color: white;
+}
+.tui-full-calendar-popup-container{
+  color: white !important;
+  background-color: #868686;
+}
+span.tui-full-calendar-schedule-title {
+  color: white !important;
+}  
+span.tui-full-calendar-content{
+  color: white !important;
+}
+span.tui-full-calendar-weekday-grid-date.tui-full-calendar-weekday-grid-date-decorator{
+  background-color: #F07D00 !important;
+}
+span{
+  color: white !important;
+}
+
+span.checkmark {
+    border-color: #F07D00 !important;
+    border-width: 3px;
+}
+
+
+/* radio buttons */
+.radio-container > .radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.radio-container > .radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: transparent;
+    border-color: #fff;
+    border: 1px;
+    border-style: solid;
+}
+  
+.radio-container > .radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.radio-container > .radio input:checked ~ .checkmark {
+  background-color: #F39555;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container > .radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-container > .radio .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+}
+
+
+
+/* modal agendar hora */
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body {
+  background-color: #676C6F;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .agendar-options {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .agendar-options > label{
+  margin-left: 15pt;
+  margin-right: 15pt;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario {
+  padding-bottom: 20pt;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario > div > .input-container {
+  margin-bottom: 10px;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario > div > .input-container > label {
+  width: 25%;
+  display: inline-block;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario > div > .input-container > .form-control {
+  width: 70%;
+  display: inline-block;
+  background-color: #CECECE;
+  border: 0;
+  border-radius: 0;
+  height: 21pt;
+  font-size: 10pt;
+  border-radius: 6px;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario > div > div > div > .btn-formulario {
+  border-radius: 0px;
+  background-color: #9F9F9F;
+  color: #fff;
+  height: 20pt;
+  padding-top: 1pt;
+  padding-bottom: 1pt;
+  border:0;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario > .btns-form {
+  margin-top: 10pt;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario > .btns-form > .btn-formulario-sub {
+  margin-left: 20pt;
+  border-radius: 0;
+  background-color: #F07D00;
+  color: #fff;
+  border: 0;
+  font-size: 10pt;
+}
+
+.dark-modal-agendar > .modal-dialog > .modal-content > .modal-body > .formulario > .btns-form > .btn-formulario-cancel {
+  margin-left: 20pt;
+  border-radius: 0;
+  background-color: #9F9F9F;
+  color: #fff;
+  border: 0;
+  font-size: 10pt;
+}
+
+/* barra calendario */
+.dark-top-calendar-bar {
+  margin-top: 30pt;
+}
+
+.dark-top-calendar-bar > .nav-calendar-right {
+  float: right;
+  margin-right: 20px;
+}
+
+.dark-top-calendar-bar > .nav-calendar-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.dark-top-calendar-bar > .nav-calendar-left > .btn-agendar {
+  border: 0;
+  border-radius: 0;
+  background-color: #f39555;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.dark-top-calendar-bar > .nav-calendar-left > .btn-agendar > img {
+  display: inline-block;
+  height: 22px;
+  margin-top: -6px;
+}

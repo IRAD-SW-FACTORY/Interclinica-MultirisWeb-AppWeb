@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: D:\Descompilacion7\Multiris\Compilado\bin\MultiRisWeb.Data.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59408DD6-BE26-49D1-9FE8-8261DE39A420}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>MultiRisWeb.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>MultiRisWeb.Data</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\MultiRisWeb\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IradDBNet">
+      <HintPath>lib\IradDBNet.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\MultiRisWeb\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\MultiRisWeb\packages\NPOI.2.3.0\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\MultiRisWeb\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\MultiRisWeb\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="itextsharp">
+      <HintPath>lib\itextsharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\ArchivoPendienteDataAccess.cs" />
+    <Compile Include="DataAccess\CanalDataAccess.cs" />
+    <Compile Include="DataAccess\CategoriaDataAccess.cs" />
+    <Compile Include="DataAccess\EstadoPendienteDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroGeneralDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroUsuarioAsignadoDataAccess.cs" />
+    <Compile Include="DataAccess\LogControlAccesoDataAccess.cs" />
+    <Compile Include="DataAccess\LogMeddreamsDataAccess.cs" />
+    <Compile Include="Domain\ArchivoDomain.cs" />
+    <Compile Include="Domain\CanalDomain.cs" />
+    <Compile Include="Domain\CategoriaDomain.cs" />
+    <Compile Include="Domain\ChatDomain.cs" />
+    <Compile Include="Domain\EstadoPendienteDomain.cs" />
+    <Compile Include="Domain\FiltroGeneralDomain.cs" />
+    <Compile Include="Domain\FiltroUsuarioAsignadoDomain.cs" />
+    <Compile Include="Domain\InformeOITDomain.cs" />
+    <Compile Include="Domain\LogControlAccesoDomain.cs" />
+    <Compile Include="Domain\LogMeddreamsDomain.cs" />
+    <Compile Include="Util\AgeUtil.cs" />
+    <Compile Include="Util\EanCodeUtil.cs" />
+    <Compile Include="Util\LoginUtil.cs" />
+    <Compile Include="Util\MeddreamsUtil.cs" />
+    <Compile Include="Util\ParamUtil.cs" />
+    <Compile Include="PDF\PDFHeaderFooter.cs" />
+    <Compile Include="Parameters\clsFunciones.cs" />
+    <Compile Include="Parameters\ClsHonorarios.cs" />
+    <Compile Include="Parameters\clsInstitucion.cs" />
+    <Compile Include="Parameters\clsUrgencia.cs" />
+    <Compile Include="Parameters\Examen.cs" />
+    <Compile Include="Parameters\ExamenParameters.cs" />
+    <Compile Include="Parameters\ExamenPrestacion.cs" />
+    <Compile Include="Parameters\Informe.cs" />
+    <Compile Include="Parameters\InformeDato.cs" />
+    <Compile Include="Parameters\InformeParameters.cs" />
+    <Compile Include="Parameters\InformePrestacion.cs" />
+    <Compile Include="Parameters\Prestacion.cs" />
+    <Compile Include="Models\ResponseTituloPacienteInforme.cs" />
+    <Compile Include="Models\ResponseInformePrestacionEliminar.cs" />
+    <Compile Include="Domain\Agendamiento.cs" />
+    <Compile Include="Domain\ApiErrorDomain.cs" />
+    <Compile Include="Domain\AutenticacionConfigDomain.cs" />
+    <Compile Include="Domain\AutenticacionDomain.cs" />
+    <Compile Include="Domain\ComentarioGeneralTagDomain.cs" />
+    <Compile Include="Domain\ConfiguracionGeneralDomain.cs" />
+    <Compile Include="Domain\EstadoAddendumDomain.cs" />
+    <Compile Include="Domain\ExamenPrestacionMantenedorDomain.cs" />
+    <Compile Include="Domain\ExamenTagDomain.cs" />
+    <Compile Include="Domain\FiltroDomain.cs" />
+    <Compile Include="Domain\FiltroEstadoInformeDomain.cs" />
+    <Compile Include="Domain\FiltroEstadoDomain.cs" />
+    <Compile Include="Domain\FiltroInstitucionDomain.cs" />
+    <Compile Include="Domain\FiltroModalidadDomain.cs" />
+    <Compile Include="Domain\FiltroTipoUrgenciaDomain.cs" />
+    <Compile Include="Domain\FiltroUsuario.cs" />
+    <Compile Include="Domain\FiltroUsuarioDomain.cs" />
+    <Compile Include="Domain\InformeDomain.cs" />
+    <Compile Include="Domain\InformeExternoParameters.cs" />
+    <Compile Include="Domain\1InformeExternoParameters.cs" />
+    <Compile Include="Domain\InstitucionCredencialesDomain.cs" />
+    <Compile Include="Domain\InstitucionDatosDomain.cs" />
+    <Compile Include="Domain\InstitucionDomain.cs" />
+    <Compile Include="Domain\InstitucionVisorDomain.cs" />
+    <Compile Include="Domain\SolicitudAddendumInstitucionDomain.cs" />
+    <Compile Include="Domain\SubMenuDomain.cs" />
+    <Compile Include="Domain\PlantillaModalidadDomain.cs" />
+    <Compile Include="Domain\RisLogDomain.cs" />
+    <Compile Include="Domain\MeddreamsDomain.cs" />
+    <Compile Include="Domain\ModalidadDomain.cs" />
+    <Compile Include="Domain\PerfilDomain.cs" />
+    <Compile Include="Domain\PerfilVisualizacioDomain.cs" />
+    <Compile Include="Domain\RisAddendumDomain.cs" />
+    <Compile Include="Domain\RisDatoDomain.cs" />
+    <Compile Include="Domain\RisEstadoInformeDomain.cs" />
+    <Compile Include="Domain\RisEstadoExamenDomain.cs" />
+    <Compile Include="Domain\RisExamenDomain.cs" />
+    <Compile Include="Domain\RisExamenPrestacionDomain.cs" />
+    <Compile Include="Domain\RisInformeDatoDomain.cs" />
+    <Compile Include="Domain\RisInformeDomain.cs" />
+    <Compile Include="Domain\RisInformeOITDomain.cs" />
+    <Compile Include="Domain\RisInformePrestacionDomain.cs" />
+    <Compile Include="Domain\RisOrdenExamenDomain.cs" />
+    <Compile Include="Domain\RisPatologiaCriticaDomain.cs" />
+    <Compile Include="Domain\RisPlantillaDomain.cs" />
+    <Compile Include="Domain\RisPrestacionDomain.cs" />
+    <Compile Include="Domain\SeriesDomain.cs" />
+    <Compile Include="Domain\SolicitudAddendumDomain.cs" />
+    <Compile Include="Domain\StudyDomain.cs" />
+    <Compile Include="Domain\TagExamenDomain.cs" />
+    <Compile Include="Domain\TagExamenListarDomain.cs" />
+    <Compile Include="Domain\TagExamenVerInformeDomain.cs" />
+    <Compile Include="Domain\TipoBecadoDomain.cs" />
+    <Compile Include="Domain\MenuDomain.cs" />
+    <Compile Include="Domain\TipoSistema.cs" />
+    <Compile Include="Domain\TipoInformeDomain.cs" />
+    <Compile Include="Domain\TipoSolicitudAddendumDomain.cs" />
+    <Compile Include="Domain\TipoUrgenciaDomain.cs" />
+    <Compile Include="Domain\UsuarioDomain.cs" />
+    <Compile Include="Domain\UsuarioInstitucionDomain.cs" />
+    <Compile Include="Domain\TipoError.cs" />
+    <Compile Include="Domain\UsuarioRadiologoBecadoDomain.cs" />
+    <Compile Include="Domain\UsuarioRadiologoEspecializadoDomain.cs" />
+    <Compile Include="Domain\VisorDomain.cs" />
+    <Compile Include="Domain\VocaliDomain.cs" />
+    <Compile Include="DataAccess\AutenticacionConfigDataAccess.cs" />
+    <Compile Include="DataAccess\AutenticacionDataAccess.cs" />
+    <Compile Include="DataAccess\ComentarioGeneralTagDartaAccess.cs" />
+    <Compile Include="DataAccess\ControlMenuAccess.cs" />
+    <Compile Include="DataAccess\ControlErrorDataAccess.cs" />
+    <Compile Include="DataAccess\ExamenPrestacionMantenedorDataAccess.cs" />
+    <Compile Include="DataAccess\RadiologoBecadoDataAccess.cs" />
+    <Compile Include="DataAccess\RadiologoEspecializadoDataAccess.cs" />
+    <Compile Include="DataAccess\SolicitudAddendumInstitucionAccess.cs" />
+    <Compile Include="DataAccess\TagExamenDataAccess.cs" />
+    <Compile Include="DataAccess\TipoSolicitudAddendumDataAccess.cs" />
+    <Compile Include="DataAccess\TituloPacienteAperturaInformeDataAccess.cs" />
+    <Compile Include="DataAccess\UsuarioRadiologoBecadoDataAccess.cs" />
+    <Compile Include="DataAccess\UsuarioRadiologoEspecializadoDataAccess.cs" />
+    <Compile Include="DataAccess\VisorErrorDataAccess.cs" />
+    <Compile Include="DataAccess\WsErrorDataAccess.cs" />
+    <Compile Include="DataAccess\ApiErrorDataAccess.cs" />
+    <Compile Include="DataAccess\clsAccesoBD.cs" />
+    <Compile Include="DataAccess\ConfiguracionGeneralDataAccess.cs" />
+    <Compile Include="DataAccess\EstadoAddendumDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroEstadoInformeDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroEstadoDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroInstitucionDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroModalidadDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroTipoUrgenciaDataAccess.cs" />
+    <Compile Include="DataAccess\FiltroUsuarioDataAccess.cs" />
+    <Compile Include="DataAccess\InstitucionCredencialesDataAccess.cs" />
+    <Compile Include="DataAccess\InstitucionDataAccess.cs" />
+    <Compile Include="DataAccess\InstitucionDatosDataAccess.cs" />
+    <Compile Include="DataAccess\InstitucionVisorDataAccess.cs" />
+    <Compile Include="DataAccess\PlantillaModalidadDataAccess.cs" />
+    <Compile Include="DataAccess\RisLogDataAccess.cs" />
+    <Compile Include="DataAccess\MeddreamsDataAccess.cs" />
+    <Compile Include="DataAccess\ModalidadDataAccess.cs" />
+    <Compile Include="DataAccess\PerfilDataAccess.cs" />
+    <Compile Include="DataAccess\PerfilVisualizacionDataAccess.cs" />
+    <Compile Include="DataAccess\RisAddendumDataAccess.cs" />
+    <Compile Include="DataAccess\RisDatoDataAccess.cs" />
+    <Compile Include="DataAccess\RisEstadoInformeDataAccess.cs" />
+    <Compile Include="DataAccess\RisEstadoExamenDataAccess.cs" />
+    <Compile Include="DataAccess\RisExamenDataAccess.cs" />
+    <Compile Include="DataAccess\RisExamenPrestacionDataAccess.cs" />
+    <Compile Include="DataAccess\RisInformeDataAccess.cs" />
+    <Compile Include="DataAccess\RisInformeDatoDataAccess.cs" />
+    <Compile Include="DataAccess\RisInformePrestacionDataAccess.cs" />
+    <Compile Include="DataAccess\RisOrdenExamenDataAccess.cs" />
+    <Compile Include="DataAccess\RisPatologiaCriticaDataAccess.cs" />
+    <Compile Include="DataAccess\RisPlantillaDataAccess.cs" />
+    <Compile Include="DataAccess\RisPrestacionDataAccess.cs" />
+    <Compile Include="DataAccess\SeriesDataAccess.cs" />
+    <Compile Include="DataAccess\SolicitudAddendumDataAccess.cs" />
+    <Compile Include="DataAccess\StudyDataAccess.cs" />
+    <Compile Include="DataAccess\TipoInformeDataAccess.cs" />
+    <Compile Include="DataAccess\TipoUrgenciaDataAccess.cs" />
+    <Compile Include="DataAccess\UsuarioDataAccess.cs" />
+    <Compile Include="DataAccess\UsuarioInstitucionDataAccess.cs" />
+    <Compile Include="DataAccess\VisorDataAccess.cs" />
+    <Compile Include="DataAccess\VocaliDataAccess.cs" />
+    <Compile Include="Connected Services\WSCuc\Reference.cs" />
+    <Compile Include="Connected Services\WSCuc\1Reference.cs" />
+    <Compile Include="Connected Services\WSCuc\ServiceMultirisSoap.cs" />
+    <Compile Include="Connected Services\WSCuc\2Reference.cs" />
+    <Compile Include="Connected Services\WSCuc\3Reference.cs" />
+    <Compile Include="Connected Services\WSCuc\4Reference.cs" />
+    <Compile Include="Connected Services\WSCuc\5Reference.cs" />
+    <Compile Include="Connected Services\WSCuc\ServiceMultirisSoapChannel.cs" />
+    <Compile Include="Connected Services\WSCuc\6Reference.cs" />
+    <Compile Include="Connected Services\WSChillan\Reference.cs" />
+    <Compile Include="Connected Services\WSChillan\1Reference.cs" />
+    <Compile Include="Connected Services\WSChillan\ServiceMultirisSoap.cs" />
+    <Compile Include="Connected Services\WSChillan\2Reference.cs" />
+    <Compile Include="Connected Services\WSChillan\3Reference.cs" />
+    <Compile Include="Connected Services\WSChillan\4Reference.cs" />
+    <Compile Include="Connected Services\WSChillan\5Reference.cs" />
+    <Compile Include="Connected Services\WSChillan\ServiceMultirisSoapChannel.cs" />
+    <Compile Include="Connected Services\WSChillan\6Reference.cs" />
+    <Compile Include="Base\DataBase.cs" />
+    <Compile Include="Base\DataBaseJson.cs" />
+    <Compile Include="Base\DataBaseParametro.cs" />
+    <Compile Include="Api\ConsumoApi.cs" />
+    <Compile Include="Enum\ConfiguracionGeneralEnum.cs" />
+    <Compile Include="Enum\EstadoAddendumEnum.cs" />
+    <Compile Include="Enum\EstadoEnum.cs" />
+    <Compile Include="Enum\EstadoExamen.cs" />
+    <Compile Include="Enum\EstadoSincronizacionEnum.cs" />
+    <Compile Include="Enum\EstadoUsuarioEnum.cs" />
+    <Compile Include="Enum\IdInformeDatoEnum.cs" />
+    <Compile Include="Enum\InformeEstadoEnum.cs" />
+    <Compile Include="Enum\InstitucionEnum.cs" />
+    <Compile Include="Enum\MetodoEnum.cs" />
+    <Compile Include="Enum\PerfilUsuarioEnum.cs" />
+    <Compile Include="Enum\PerfilVisualizacionEnum.cs" />
+    <Compile Include="Enum\TagExamenEnum.cs" />
+    <Compile Include="Enum\TipoConexionEnum.cs" />
+    <Compile Include="Enum\TipoFirmaEnum.cs" />
+    <Compile Include="Enum\TipoSistemaEnum.cs" />
+    <Compile Include="Enum\TipoInformeEnum.cs" />
+    <Compile Include="ConsumirWS\ConsumirWS.cs" />
+    <Compile Include="ConsumirApi\ConsumirApi.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

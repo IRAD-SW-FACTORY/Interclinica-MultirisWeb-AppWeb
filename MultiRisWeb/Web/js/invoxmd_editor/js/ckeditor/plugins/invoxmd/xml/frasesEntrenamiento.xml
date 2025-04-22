@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FrasesEntrenamiento>
+  <Frase>El lenguaje oral es el medio más utilizado por las personas</Frase>
+  <Frase>para interactuar entre sí y aprender unas de otras.</Frase>
+  <Frase>La forma en que hablamos afecta al modo en que nos comunicamos con los demás,</Frase>
+  <Frase>ya sea por teléfono, en las películas o a través de la radio, la televisión e Internet.</Frase>
+  <Frase>Ayudado por el mouse y el teclado, el lenguaje oral se está convirtiendo poco a poco</Frase>
+  <Frase>en uno de los principales medios para interactuar con los equipos informáticos.</Frase>
+  <Frase>La tecnología que nos permite controlar los equipos informáticos utilizando la voz es todavía muy reciente,</Frase>
+  <Frase>especialmente cuando se tiene en cuenta que el objetivo final de la tecnología de reconocimiento de voz</Frase>
+  <Frase>es conseguir que hablar a un equipo sea tan natural como hablar a otro ser humano.</Frase>
+  <Frase>Esto requiere que el equipo sea capaz tanto de comprender el lenguaje oral humano como de simularlo.</Frase>
+  <Frase>Comprender el lenguaje oral humano se denomina "reconocimiento de voz".</Frase>
+  <Frase>Simular el lenguaje oral humano se denomina "conversión texto a voz".</Frase>
+  <Frase>Cuando las personas empezaron a crear software de reconocimiento de voz,</Frase>
+  <Frase>lo diseñaron para hacerse cargo de un gran número de llamadas telefónicas entrantes.</Frase>
+  <Frase>Éste era un buen lugar para empezar, ya que reconocer la voz de la persona que llamaba significó</Frase>
+  <Frase>reconocer únicamente unas pocas respuestas distintas, cada una de ellas sugerida por el propio software.</Frase>
+  <Frase>La conversión texto a voz también funcionó bien en los sistemas telefónicos.</Frase>
+  <Frase>Normalmente, los sistemas sólo tenían que simular frases cortas y precisas.</Frase>
+  <Frase>Y este tipo de frases eran más fáciles de pronunciar para los sistemas de conversión texto a voz.</Frase>
+  <Frase>Los ordenadores personales ahora están empezando a dar buenos resultados</Frase>
+  <Frase>con el reconocimiento de voz y la conversión texto a voz.</Frase>
+  <Frase>Los ordenadores personales permiten a los usuarios completar una amplia gama de tareas.</Frase>
+  <Frase>Pero debido a todas sus virtudes, los ordenadores personales comprenden el lenguaje oral</Frase>
+  <Frase>de un modo distinto a como lo hacen los humanos.</Frase>
+  <Frase>Comprenden las palabras analizando ondas de sonido</Frase>
+  <Frase>y comprenden las frases juzgando la probabilidad</Frase>
+  <Frase>con que determinadas palabras aparecerán junto a las demás.</Frase>
+  <Frase>Cuantas más cosas distintas deba escuchar un ordenador personal,</Frase>
+  <Frase>más difícil resulta reconocer con precisión lo que una persona puede decir.</Frase>
+  <Frase>En el caso del teléfono, se espera que la persona que llama responda a una pregunta con información concisa.</Frase>
+  <Frase>En este caso, el software suele conocer con exactitud lo que debe escuchar,</Frase>
+  <Frase>como un número de cuenta, un código postal o una ciudad de salida.</Frase>
+  <Frase>Usando un ordenador personal, las personas pueden hacer muchas cosas en un momento determinado.</Frase>
+  <Frase>Incluso podemos hacer varias cosas simultáneamente.</Frase>
+  <Frase>Podemos charlar con un amigo y leer un artículo de prensa al mismo tiempo.</Frase>
+  <Frase>Puesto que el software desconoce qué estamos haciendo o qué haremos a continuación,</Frase>
+  <Frase>tiene que asumir que podemos decir cualquier cosa en cualquier momento.</Frase>
+  <Frase>Este desafío se vuelve todavía más complicado cuando las personas dictan texto al equipo.</Frase>
+  <Frase>Éste debe estar preparado para reconocer todo lo que podamos decir,</Frase>
+  <Frase>incluso aunque no tenga relación alguna con lo que acabamos de decir,</Frase>
+  <Frase>o si no estamos dictando, sino que estamos hablando.</Frase>
+  <Frase>Los ordenadores personales se enfrentan a este problema</Frase>
+  <Frase>dividiendo todo lo que dice el usuario en dos categorías: comandos y dictado.</Frase>
+  <Frase>El equipo limita el número de comandos que podemos decir en un momento determinado.</Frase>
+  <Frase>El equipo escucha únicamente un pequeño conjunto de comandos que puede aplicar a lo que estamos haciendo.</Frase>
+  <Frase>Cuando estamos trabajando en algo que nos permite dictar texto,</Frase>
+  <Frase>el equipo sigue intentando interpretar lo que decimos como un comando.</Frase>
+  <Frase>Si el equipo no reconoce lo que decimos como un comando, lo interpretará como dictado de texto.</Frase>
+  <Frase>Entonces el equipo escribirá este dictado en forma de texto en el programa actual.</Frase>
+  <Frase>Con esto concluye la información de fondo para la sesión de entrenamiento del reconocimiento de voz.</Frase>
+  <Frase>Para aprender más acerca del reconocimiento de voz,</Frase>
+  <Frase>consulte la documentación de ayuda del reconocimiento de voz.</Frase>
+</FrasesEntrenamiento>

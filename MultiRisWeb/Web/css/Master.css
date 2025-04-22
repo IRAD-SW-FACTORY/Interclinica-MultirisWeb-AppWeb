@@ -1,0 +1,175 @@
+﻿.bg-dark {
+    height: 50px !important;
+    background-color: #404848 !important;
+}
+
+
+body {
+    background-color: #404848;
+    color: white;
+    font-family: 'Avenir' !important;
+    overflow-x: hidden;
+}
+
+table {
+    color: white;
+    font-size: 12px;
+}
+
+.row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.btn {
+    margin-top: 0px !important;
+    height: 26px !important;
+    /*border: 0px;*/
+    padding: 0;
+    font-size: 12px;
+}
+
+.form-control {
+    height: 20px;
+    font-size: 12px;
+    padding: 7px;
+    color: #495057 !important;
+    border-radius: 4px 4px 4px 4px;
+}
+
+.form-control:disabled {
+    color: #495057 !important;
+}
+
+.form-control:focus {
+    color: #495057 !important;
+}
+
+.table-hover tbody tr:hover {
+    color: white !important;
+    background-color: #352D5C !important;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #147069;
+    border-color: transparent !important;
+}
+
+.texto1 {
+    color: #CECECE;
+}
+
+.checkbox input[type="checkbox"] {
+    font-size: 10px;
+}
+
+.tablaPrestaciones {
+    font-size: 11px !important;
+}
+
+.titulo1 {
+    font-size: 13px !important;
+    width: 100%;
+}
+
+.close {
+    color: #2FAFA6 !important;
+    opacity: 0 !important;
+}
+
+.border {
+    border-radius: 0px !important;
+}
+
+.navbar {
+    height: 40px !important;
+}
+
+.bg-dark {
+    height: 40px !important;
+    margin-top: -3px;
+}
+
+.btn, btn-primary {
+    background-color: rgb(101, 96, 95);
+}
+
+.btn:hover {
+    background-color: #E67C00;
+    color:white;
+}
+
+.btn-secondary {
+    background-color: #A7A7A7;
+    border-radius: 4px 4px 4px 4px !important;
+}
+
+    .btn-secondary:hover {
+        background-color: #E67C00 !important;
+    }
+
+.btn-informar2{
+    width: 90px;
+}
+
+.close {
+    color: #FA4B3F !important;
+}
+
+.imgGifCargando{
+    width: 60px;
+}
+
+.imgError1{
+    width: 330px;
+}
+
+.fontSizeGeneral{
+    font-size: 11px !important;
+}
+
+.dropdown-item:hover {
+    color: white !important;
+    background-color: #F39555 !important;
+}
+
+form-control2 {
+    height: calc(1.5em + .75rem + 2px) !important;
+    border-radius: 4px 4px 4px 4px;
+}
+.nav-link{
+    border-radius: 0px 0px 4px 4px;
+    width: 140px !important;
+}
+
+.nav-link1 {
+    border-radius: 0px 0px 4px 4px;
+    width: 190px !important;
+}
+
+.ui-multiselect:hover {
+    background-color: #352D5C;
+}
+
+.ui-multiselect-close{
+    visibility:hidden;
+}
+
+a:hover {
+    color: silver !important;
+    cursor: pointer;
+}
+
+.ocultar-div {
+    visibility: hidden !important;
+}
+
+.oculta-columna {
+    visibility: collapse;
+    display: none;
+}

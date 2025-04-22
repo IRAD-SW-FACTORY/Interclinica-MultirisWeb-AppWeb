@@ -1,0 +1,397 @@
+:root {
+    /* Normal bar palette color */
+    --invox-highlight-normal-color: #778cd4;
+    --invox-shadow-normal-color: #5d6ea6;
+    --invox-dark-normal-color: #415491;
+
+    /* Error bar palette color */
+    --invox-highlight-error-color: #ff6060;
+    --invox-shadow-error-color: #d65050;
+    --invox-dark-error-color: #b83939;
+
+    /* Page common palette color */
+    --invox-highlight-page-primary-color: #dce1f0;
+    --invox-shadow-page-primary-color: #d2d7ee;
+    --invox-dark-page-primary-color: #415491;
+
+    --invox-highlight-page-secondary-color: #bbeee1;
+    --invox-shadow-page-secondary-color: #a6e2d3;
+    --invox-dark-page-secondary-color: #4c6c61;
+
+    --invox-highlight-page-tertiary-color:#f3f3f3;
+    --invox-shadow-page-tertiary-color: #e9ecef;
+    --invox-dark-page-tertiary-color: #656160;
+
+    /* Another common colors */
+    --invox-disable-red-color: #fda3a3;
+    --invox-focus-red-color: #fa8888;
+}
+
+/* Header  */
+
+.invox-header {
+    margin: 40px 20px 20px 20px; 
+}
+
+.invox-login-card {
+    background-color: white;
+    margin-bottom: 20px;
+    border: 1px solid var(--invox-shadow-page-tertiary-color);;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding-bottom: 5px;
+    height: fit-content;
+}
+
+.invox-login-input-title {
+    font-size: 0.65em;
+    margin-left: 5px;
+    margin-right: 8px;
+    margin-bottom: 0px;
+    color: var(--invox-dark-page-tertiary-color);
+}
+
+.invox-login-input {
+    height: 26px;
+    font-size: calc(0.5em + 0.3vw);
+}
+.invox-login-input:focus {
+    outline: none !important;
+    border: 1px solid var(--invox-shadow-page-primary-color);
+    box-shadow: 0 0 10px var(--invox-shadow-page-primary-color);
+}
+
+.invox-login-spinner {
+    margin-left: calc(-9px - 0.7vw);
+    width: calc(5px + 0.7vw);
+    height: calc(5px + 0.7vw);
+    opacity: 0.5;
+    margin-right: 4px;
+}
+.invox-login-btn {
+    height: 50%;
+    width: 100%;
+    font-weight: 600;
+    font-size: calc(8px + 0.7vw);
+    background-color: var(--invox-highlight-page-secondary-color);
+    color: var(--invox-dark-page-secondary-color);
+}
+.invox-login-btn:hover, .invox-login-btn:focus {
+    background-color: var(--invox-shadow-page-secondary-color);
+    color: var(--invox-dark-page-secondary-color);
+}
+.invox-logout-btn {
+    height: 50%;
+    width: 100%;
+    font-weight: 600;
+    font-size: calc(8px + 0.7vw);
+    background-color: var(--invox-highlight-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+}
+.invox-logout-btn:hover, .invox-logout-btn:focus {
+    background-color: var(--invox-shadow-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+}
+
+.invox-login-config-btn {
+    height: 50%;
+    width: 100%;
+    font-weight: 600;
+    font-size: calc(6px + 0.5vw);
+    margin-top: 5px;
+    background-color: var(--invox-highlight-page-tertiary-color);
+    color: var(--invox-dark-page-tertiary-color);
+}
+.invox-login-config-btn:hover, .invox-login-config-btn:focus {
+    background-color: var(--invox-shadow-page-tertiary-color);
+}
+.invox-config-input-padding {
+    padding: 4px
+}
+
+.invox-password-btn {
+    background-color: var(--invox-highlight-page-tertiary-color);
+    color: var(--invox-dark-page-tertiary-color);
+    font-size: 0.75rem;
+    height: 26px;
+    outline: none;
+}
+
+.invox-password-btn:hover, .invox-password-btn:focus {
+    background-color: var(--invox-shadow-page-tertiary-color);
+}
+
+
+/* Content */
+
+.invox-page-title {
+    font-size: calc(1em + 0.7vw);
+    font-weight: bold;
+    color: var(--invox-dark-page-tertiary-color);
+    text-align: center;
+}
+.invox-page-subtitle {
+    font-size: calc(0.8em + 0.7vw);
+    font-weight: bold;
+    color: #a0a9c5;
+    font-style: italic;
+    text-align: center;
+}
+
+.invox-link {
+    text-decoration: none;
+    color: inherit;
+}
+.invox-link:hover {
+    color: var(--invox-shadow-normal-color);
+    text-decoration: none;
+}
+
+.invox-textarea-type {
+    font-size: calc(0.6em + 0.3vw); 
+    font-weight: bold; 
+    color: var(--invox-dark-page-tertiary-color);
+    margin-bottom: 5px;
+}
+
+.invox-textarea-title {
+    font-size: calc(0.6em + 0.3vw); 
+    font-weight: normal; 
+    color: var(--invox-dark-page-tertiary-color);
+    margin-top: 20px;
+}
+
+.invox-textarea {
+    min-height: 80px !important;
+    font-size: 0.75rem;
+    resize: vertical;
+}
+.invox-textarea:focus {
+    border: 1px solid #b1b1b1;
+}
+
+.invox-focus-textarea {
+    border: 4px solid var(--invox-shadow-page-primary-color) !important;
+}
+.invox-focus-dictation-textarea {
+    border: 4px solid var(--invox-focus-red-color) !important;
+}
+
+.invox-base-btn {
+    font-weight: bold;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    border: 2px solid transparent;
+    background-color: var(--invox-highlight-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+}
+.invox-base-btn:hover {
+    background-color: var(--invox-shadow-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+}
+
+.invox-switch-lock-btn:hover {
+    border: 2px solid var(--invox-dark-normal-color);
+    background-color: var(--invox-highlight-page-primary-color);
+    color: var(--invox-dark-normal-color); 
+}
+.invox-switch-lock-focus-btn {
+    border: 2px solid var(--invox-dark-normal-color);
+    background-color: var(--invox-highlight-page-primary-color);
+    color: var(--invox-dark-normal-color); 
+}
+
+
+.invox-installation-dependency-btn {
+    background-color: var(--invox-highlight-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+.invox-installation-dependency-btn:hover {
+    background-color: var(--invox-shadow-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+}
+
+.invox-toast-border-rounded {
+    border-radius: calc(.25rem - 1px);
+}
+
+
+/* Product name & Version */
+
+.invox-product-logo {
+    transition: transform ease .3s;
+}
+
+.invox-product-logo:hover {
+    transform: scale(1.05);
+}
+
+#invox-product-version,
+#invox-product-commit {
+    font-size: 0.75rem;
+    font-weight: normal;
+    text-align: center;
+    color: gray;
+    margin-right: 1rem;
+}
+
+
+/* Footer Waves Animation */
+
+.invox-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: -1;
+}
+
+.invox-waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.invox-parallax > use {
+    animation: invox-move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.invox-parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.invox-parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.invox-parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+@keyframes invox-move-forever {
+    0% {
+        transform: translate3d(-90px,0,0);
+    }
+    100% { 
+        transform: translate3d(85px,0,0);
+    }
+}
+
+/* Home */
+
+
+.invox-home-title {
+    font-weight: 900;
+    color: var(--invox-dark-page-tertiary-color);
+    width: min-intrinsic;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    display: table-caption;
+    display: -ms-grid;
+    -ms-grid-columns: min-content;
+}
+
+.invox-home-group-title {
+    font-size: calc(1.1em + 0.5vw); 
+    font-weight: 400;
+    color: #898dba;
+    margin-bottom: 5px;
+    padding-left: 30px;
+}
+
+.invox-home-card {
+    border: 1px solid var(--invox-shadow-page-tertiary-color);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 250ms;
+}
+.invox-home-card:hover {
+    transform: translateY(-3%);
+}
+
+.invox-home-link-btn  {
+    width: 100%;
+    background-color: var(--invox-highlight-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+    font-weight: bold;
+    font-size: calc(0.8em + 0.2vw);
+    border-bottom-left-radius: inherit !important;
+    border-bottom-right-radius: inherit !important;
+    border: none;
+    padding: 7px;
+    text-decoration: none;
+    text-align: center;
+}
+.invox-home-link-btn:hover {
+    background-color: var(--invox-shadow-page-primary-color);
+    color: var(--invox-dark-page-primary-color);
+}
+.invox-home-card-title {
+    font-size: calc(0.8em + 0.5vw);
+    color: var(--invox-dark-page-tertiary-color);
+}
+.invox-home-card-description {
+    font-size: calc(0.8em + 0.2vw);
+}
+
+
+/* Auxiliars */
+
+.invox-nopadding {
+    padding: 0 !important;
+}
+.invox-nomargin {
+    margin: 0 !important;
+}
+.invox-hide {
+    display: none !important;
+}
+.invox-disabled {
+    pointer-events: none;
+}
+
+
+
+
+.btn,
+.btn:focus,
+.btn:focus-visible,
+.btn:active,
+.btn.focus,
+.btn:focus,
+.btn:hover,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus {
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    box-shadow: none;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #a0a0a0 !important;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #a0a0a0 !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #a0a0a0 !important;
+}
+
+.toast {
+    background-color: white;
+}

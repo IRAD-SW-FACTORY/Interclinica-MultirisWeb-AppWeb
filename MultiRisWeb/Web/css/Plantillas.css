@@ -1,0 +1,22 @@
+﻿.form-control-ddl, .form-control {
+    background-color: rgb(101, 96, 95) !important;
+    color: white;
+    border-color: rgb(101, 96, 95) !important;
+    height: 21px;
+    cursor: pointer;
+}
+
+.form-control-ddl:hover, .form-control:hover, .btn-day:hover {
+    cursor: pointer;
+    background-color: #DB7762 !important;
+    border-color: rgb(209, 81, 55) !important;
+}
+
+.btn {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+.filtrar{
+    margin-top: 5px;
+}

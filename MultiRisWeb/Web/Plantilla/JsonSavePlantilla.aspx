@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="JsonSavePlantilla.aspx.cs" Inherits="MultiRisWeb.Web.Plantilla.JsonSavePlantilla" %>
