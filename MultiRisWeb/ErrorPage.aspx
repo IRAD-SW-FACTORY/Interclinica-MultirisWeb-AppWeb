@@ -38,7 +38,7 @@
                                                 <asp:Label runat="server" ID="lblId"></asp:Label></h6>
                                         </div>
                                         <div class="col-12 text-justify pt-4 text-center">
-                                            <a href="https://multiris.irad.cl/multirisweb">Regresar a control de acceso</a>
+                                            <a href="https://riscloud.clinicatarapaca.cl//multirisweb">Regresar a control de acceso</a>
                                         </div>
                                     </div>
                                 </div>

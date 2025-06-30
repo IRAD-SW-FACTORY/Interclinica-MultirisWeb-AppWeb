@@ -34,14 +34,15 @@ D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Rele
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\MultiRisWeb.Data.pdb
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\ICSharpCode.SharpZipLib.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\IradDBNet.dll
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\IradLogFile.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\itextsharp.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\Newtonsoft.Json.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\NPOI.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\NPOI.OOXML.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\NPOI.OpenXml4Net.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\NPOI.OpenXmlFormats.dll
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\IradLogFile.pdb
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Release\NPOI.xml
-D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.csproj.AssemblyReference.cache
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.csproj.CoreCompileInputs.cache
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.csproj.CopyComplete
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.dll

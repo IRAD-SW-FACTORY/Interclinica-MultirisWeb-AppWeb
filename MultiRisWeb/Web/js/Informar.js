@@ -673,7 +673,7 @@ function Informar(validar) {
 }
 
 function VerInforme(idInforme, aetitle) {
-    var url = 'https://multiris.irad.cl/multirisweb/Web/Examen/VerInforme.aspx?idinforme=' + idInforme + '&aetitle=' + aetitle;
+    var url = 'https://riscloud.clinicatarapaca.cl/Web/Examen/VerInforme.aspx?idinforme=' + idInforme + '&aetitle=' + aetitle;
     window.open(url, "_blank");
 }
 

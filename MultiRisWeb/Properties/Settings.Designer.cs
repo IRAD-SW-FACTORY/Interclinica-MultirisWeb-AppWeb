@@ -12,7 +12,7 @@ namespace MultiRisWeb.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.5.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -66,6 +66,16 @@ namespace MultiRisWeb.Properties {
         public string MultiRisWeb_WsCordillera_ServiceMultiris {
             get {
                 return ((string)(this["MultiRisWeb_WsCordillera_ServiceMultiris"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx")]
+        public string MultiRisWeb_WsLosCarrera_ServiceMultiris {
+            get {
+                return ((string)(this["MultiRisWeb_WsLosCarrera_ServiceMultiris"]));
             }
         }
     }

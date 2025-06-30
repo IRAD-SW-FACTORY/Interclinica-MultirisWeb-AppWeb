@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetcomentarioTM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="codexamen" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CredencialesParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetcomentarioTMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetcomentarioTMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAntecedentesClinicos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="codExamen" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAntecedentesClinicosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAntecedentesClinicosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentosExamen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="documentosParameters" type="tns:DocumentosParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DocumentosParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codExamen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="numeroAcceso" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetDocumentosExamenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDocumentosExamenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEstudiosRelacionados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="id_paciente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEstudiosRelacionadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEstudiosRelacionadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertInforme">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="InformeParameters" type="tns:InformeParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InformeParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id_informe_remoto" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_estado_informe" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="id_paciente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="username_radiologo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha_validacion" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="flag_patologia_grave" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="patologia_grave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="descripcion" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="codigo_his" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="valor" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado_sinconizacion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="codExamen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="modalidad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_tipo_informe" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertInformeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertInformeResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarInformePDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="informePDF" type="tns:ArrayOfInformePDFParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInformePDFParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InformePDFParameters" nillable="true" type="tns:InformePDFParameters" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InformePDFParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="codexamen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha_validacion" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="username_radiologo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aetitle" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_estado_examen" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="filename" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="size" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="base64" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="flagPatologiaGrave" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_informe_multiris" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre_informe" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_prestacion_remoto" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertarInformePDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarInformePDFResult" type="tns:Respuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Respuesta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RespuestaWS" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertInformeOIT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="InformeOITParameters" type="tns:InformeOITParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InformeOITParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="username_radiologo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="idpaciente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha_radiografia" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="numero_radiografia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="radiografia_digital" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="lectura_negatoscopio" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="tecnica_qualidaden" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="radiografia_normal" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="comentario" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="anormalidad_parenquimatosa" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="primaria1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="primaria2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="primaria3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="secundaria1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="secundaria2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="secundaria3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="zonas1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="profusion1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="profusion2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="profusion3" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="profusion4" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="opacidades_pequenas1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="anormalidad_pleural" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_sitio_perfil" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_sitio_frente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_sitio_diagrama" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_sitio_otro" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_calcificacion_perfil" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_calcificacion_frente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_calcificacion_diagrama" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_calcificacion_otro" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_extencion_pared1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_extencion_pared2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_ancho1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="placas_pleurales_ancho2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="obliteracion_angulo_costofrenico" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_sitio_perfil" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_sitio_frente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_calcificacion_perfil" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_calcificacion_frente" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_extencion_pared1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_extencion_pared2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_ancho1" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="engrosamiento_pleural_difuso_ancho2" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="otras_anormalidades" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_aa" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_at" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_ax" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_bu" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_ca" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_cg" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_cn" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_co" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_cp" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_cv" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_di" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_ef" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_em" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_es" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_fr" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_hi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_ho" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_ih" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_kl" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_me" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_pa" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_pb" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_pi" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_px" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_ra" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_rp" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_tb" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="simbolo_od" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="comentario_general" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha_lectura" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="codexamen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertInformeOITResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertInformeOITResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertInformeDato">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="InformeDatoParameters" type="tns:InformeDatoParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InformeDatoParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="codexamen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="iddato" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="valor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="idinforme" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="posicion" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertInformeDatoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertInformeDatoResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertInformePrestacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="informePrestacionParameters" type="tns:InformePrestacionParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InformePrestacionParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idInforme" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_prestacion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="codhl7" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertInformePrestacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertInformePrestacionResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetComentarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="documentosParameters" type="tns:DocumentosParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetComentariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetComentariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveComentario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="comentarios" type="tns:ComentariosParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ComentariosParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="idInforme" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="codExamen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cantidad" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="aetitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="texto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SaveComentarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveComentarioResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudExamen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="codexamen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="destino" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudExamenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SolicitudExamenResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateStateExamen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExamenParameters" type="tns:DatosExamenParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DatosExamenParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="id_paciente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="aetitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="codExamen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_examen_remoto" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_estado_examen" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="fechaValidacion" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateStateExamenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateStateExamenResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAddendum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="RisAddendum" type="tns:AddendumParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddendumParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id_addendum" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="id_informe" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="cod_examen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="fecha_hora" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="addendum" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado_visible" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="estado_bloqueo" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateAddendumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAddendumResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Solicitarimagenes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="codexamen" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aetitle_destino" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitarimagenesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SolicitarimagenesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarExamenDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="informeExterno" type="tns:ArrayOfInformeExternoCabeceraParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInformeExternoCabeceraParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="InformeExternoCabeceraParameters" nillable="true" type="tns:InformeExternoCabeceraParameters" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InformeExternoCabeceraParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdInforme" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoHis" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreInforme" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodExamen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdPaciente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaValidacion" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdEstado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdRadiologo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserNameRadiologo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NombreRadiologo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagPatologiaGrave" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatologiaGrave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="prestacionesExternas" type="tns:InformeExternoDetalleParameters" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InformeExternoDetalleParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="prestacionesExternas" type="tns:ArrayOfPrestacionesExternasParameters" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPrestacionesExternasParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="prestacionesExternasParameters" nillable="true" type="tns:prestacionesExternasParameters" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="prestacionesExternasParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdInformeExterno" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdPrestacion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodFonasa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertarExamenDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarExamenDetalleResult" type="tns:Respuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertarExamenCabDetalle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="informeExterno" type="tns:ArrayOfInformeExternoCabeceraParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalleExterno" type="tns:ArrayOfPrestacionesExternasParameters1" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPrestacionesExternasParameters1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PrestacionesExternasParameters" nillable="true" type="tns:PrestacionesExternasParameters" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PrestacionesExternasParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdInformeExterno" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdPrestacion" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodFonasa" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="InsertarExamenCabDetalleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertarExamenCabDetalleResult" type="tns:Respuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetcomentarioTMSoapIn">
+    <wsdl:part name="parameters" element="tns:GetcomentarioTM" />
+  </wsdl:message>
+  <wsdl:message name="GetcomentarioTMSoapOut">
+    <wsdl:part name="parameters" element="tns:GetcomentarioTMResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAntecedentesClinicosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAntecedentesClinicos" />
+  </wsdl:message>
+  <wsdl:message name="GetAntecedentesClinicosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAntecedentesClinicosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentosExamenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentosExamen" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentosExamenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentosExamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEstudiosRelacionadosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEstudiosRelacionados" />
+  </wsdl:message>
+  <wsdl:message name="GetEstudiosRelacionadosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEstudiosRelacionadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformeSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertInforme" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformeSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertInformeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarInformePDFSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarInformePDF" />
+  </wsdl:message>
+  <wsdl:message name="InsertarInformePDFSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarInformePDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformeOITSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertInformeOIT" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformeOITSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertInformeOITResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformeDatoSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertInformeDato" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformeDatoSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertInformeDatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformePrestacionSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertInformePrestacion" />
+  </wsdl:message>
+  <wsdl:message name="InsertInformePrestacionSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertInformePrestacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetComentariosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetComentarios" />
+  </wsdl:message>
+  <wsdl:message name="GetComentariosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetComentariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveComentarioSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveComentario" />
+  </wsdl:message>
+  <wsdl:message name="SaveComentarioSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveComentarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudExamenSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudExamen" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudExamenSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudExamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStateExamenSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateStateExamen" />
+  </wsdl:message>
+  <wsdl:message name="UpdateStateExamenSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateStateExamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAddendumSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAddendum" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAddendumSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAddendumResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarimagenesSoapIn">
+    <wsdl:part name="parameters" element="tns:Solicitarimagenes" />
+  </wsdl:message>
+  <wsdl:message name="SolicitarimagenesSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitarimagenesResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarExamenDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarExamenDetalle" />
+  </wsdl:message>
+  <wsdl:message name="InsertarExamenDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarExamenDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertarExamenCabDetalleSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertarExamenCabDetalle" />
+  </wsdl:message>
+  <wsdl:message name="InsertarExamenCabDetalleSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertarExamenCabDetalleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceMultirisSoap">
+    <wsdl:operation name="GetcomentarioTM">
+      <wsdl:input message="tns:GetcomentarioTMSoapIn" />
+      <wsdl:output message="tns:GetcomentarioTMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAntecedentesClinicos">
+      <wsdl:input message="tns:GetAntecedentesClinicosSoapIn" />
+      <wsdl:output message="tns:GetAntecedentesClinicosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentosExamen">
+      <wsdl:input message="tns:GetDocumentosExamenSoapIn" />
+      <wsdl:output message="tns:GetDocumentosExamenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstudiosRelacionados">
+      <wsdl:input message="tns:GetEstudiosRelacionadosSoapIn" />
+      <wsdl:output message="tns:GetEstudiosRelacionadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInforme">
+      <wsdl:input message="tns:InsertInformeSoapIn" />
+      <wsdl:output message="tns:InsertInformeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarInformePDF">
+      <wsdl:input message="tns:InsertarInformePDFSoapIn" />
+      <wsdl:output message="tns:InsertarInformePDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformeOIT">
+      <wsdl:input message="tns:InsertInformeOITSoapIn" />
+      <wsdl:output message="tns:InsertInformeOITSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformeDato">
+      <wsdl:input message="tns:InsertInformeDatoSoapIn" />
+      <wsdl:output message="tns:InsertInformeDatoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformePrestacion">
+      <wsdl:input message="tns:InsertInformePrestacionSoapIn" />
+      <wsdl:output message="tns:InsertInformePrestacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComentarios">
+      <wsdl:input message="tns:GetComentariosSoapIn" />
+      <wsdl:output message="tns:GetComentariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveComentario">
+      <wsdl:input message="tns:SaveComentarioSoapIn" />
+      <wsdl:output message="tns:SaveComentarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudExamen">
+      <wsdl:input message="tns:SolicitudExamenSoapIn" />
+      <wsdl:output message="tns:SolicitudExamenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStateExamen">
+      <wsdl:input message="tns:UpdateStateExamenSoapIn" />
+      <wsdl:output message="tns:UpdateStateExamenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddendum">
+      <wsdl:input message="tns:UpdateAddendumSoapIn" />
+      <wsdl:output message="tns:UpdateAddendumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Solicitarimagenes">
+      <wsdl:input message="tns:SolicitarimagenesSoapIn" />
+      <wsdl:output message="tns:SolicitarimagenesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarExamenDetalle">
+      <wsdl:input message="tns:InsertarExamenDetalleSoapIn" />
+      <wsdl:output message="tns:InsertarExamenDetalleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarExamenCabDetalle">
+      <wsdl:input message="tns:InsertarExamenCabDetalleSoapIn" />
+      <wsdl:output message="tns:InsertarExamenCabDetalleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceMultirisSoap" type="tns:ServiceMultirisSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetcomentarioTM">
+      <soap:operation soapAction="http://tempuri.org/GetcomentarioTM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAntecedentesClinicos">
+      <soap:operation soapAction="http://tempuri.org/GetAntecedentesClinicos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentosExamen">
+      <soap:operation soapAction="http://tempuri.org/GetDocumentosExamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstudiosRelacionados">
+      <soap:operation soapAction="http://tempuri.org/GetEstudiosRelacionados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInforme">
+      <soap:operation soapAction="http://tempuri.org/InsertInforme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarInformePDF">
+      <soap:operation soapAction="http://tempuri.org/InsertarInformePDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformeOIT">
+      <soap:operation soapAction="http://tempuri.org/InsertInformeOIT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformeDato">
+      <soap:operation soapAction="http://tempuri.org/InsertInformeDato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformePrestacion">
+      <soap:operation soapAction="http://tempuri.org/InsertInformePrestacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComentarios">
+      <soap:operation soapAction="http://tempuri.org/GetComentarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveComentario">
+      <soap:operation soapAction="http://tempuri.org/SaveComentario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudExamen">
+      <soap:operation soapAction="http://tempuri.org/SolicitudExamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStateExamen">
+      <soap:operation soapAction="http://tempuri.org/UpdateStateExamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddendum">
+      <soap:operation soapAction="http://tempuri.org/UpdateAddendum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Solicitarimagenes">
+      <soap:operation soapAction="http://tempuri.org/Solicitarimagenes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarExamenDetalle">
+      <soap:operation soapAction="http://tempuri.org/InsertarExamenDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarExamenCabDetalle">
+      <soap:operation soapAction="http://tempuri.org/InsertarExamenCabDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceMultirisSoap12" type="tns:ServiceMultirisSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetcomentarioTM">
+      <soap12:operation soapAction="http://tempuri.org/GetcomentarioTM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAntecedentesClinicos">
+      <soap12:operation soapAction="http://tempuri.org/GetAntecedentesClinicos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentosExamen">
+      <soap12:operation soapAction="http://tempuri.org/GetDocumentosExamen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstudiosRelacionados">
+      <soap12:operation soapAction="http://tempuri.org/GetEstudiosRelacionados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInforme">
+      <soap12:operation soapAction="http://tempuri.org/InsertInforme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarInformePDF">
+      <soap12:operation soapAction="http://tempuri.org/InsertarInformePDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformeOIT">
+      <soap12:operation soapAction="http://tempuri.org/InsertInformeOIT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformeDato">
+      <soap12:operation soapAction="http://tempuri.org/InsertInformeDato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertInformePrestacion">
+      <soap12:operation soapAction="http://tempuri.org/InsertInformePrestacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComentarios">
+      <soap12:operation soapAction="http://tempuri.org/GetComentarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveComentario">
+      <soap12:operation soapAction="http://tempuri.org/SaveComentario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudExamen">
+      <soap12:operation soapAction="http://tempuri.org/SolicitudExamen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStateExamen">
+      <soap12:operation soapAction="http://tempuri.org/UpdateStateExamen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAddendum">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAddendum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Solicitarimagenes">
+      <soap12:operation soapAction="http://tempuri.org/Solicitarimagenes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarExamenDetalle">
+      <soap12:operation soapAction="http://tempuri.org/InsertarExamenDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarExamenCabDetalle">
+      <soap12:operation soapAction="http://tempuri.org/InsertarExamenCabDetalle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceMultiris">
+    <wsdl:port name="ServiceMultirisSoap" binding="tns:ServiceMultirisSoap">
+      <soap:address location="https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceMultirisSoap12" binding="tns:ServiceMultirisSoap12">
+      <soap12:address location="https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

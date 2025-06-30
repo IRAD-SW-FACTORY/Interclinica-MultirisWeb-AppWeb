@@ -33,6 +33,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credenciales.password = byId.password;
                         result = serviceMultirisWsCordillera.GetAntecedentesClinicos(credenciales, codexamen);
                         break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrera.username = byId.username;
+                        credencialesLosCarrera.password = byId.password;
+                        result = serviceMultirisWsLosCarrera.GetAntecedentesClinicos(credencialesLosCarrera, codexamen);
+                        break;
                     default:
                         break;
                 }
@@ -46,7 +53,10 @@ namespace MultiRisWeb.ConsumirServicios
          
         public static string ObtenerComentarioTM(int idInstitucion, string codexamen)
         {
+            new IradLogFile.LogFile("Institucion : " + idInstitucion.ToString());
             InstitucionCredencialesDomain institucionCredenciales = InstitucionCredencialesDataAccess.GetById(idInstitucion);
+            new IradLogFile.LogFile("username : " + institucionCredenciales.username);
+            new IradLogFile.LogFile("pass : " + institucionCredenciales.password);
             string result = string.Empty;
             try
             {
@@ -58,6 +68,15 @@ namespace MultiRisWeb.ConsumirServicios
                         credenciales.username = institucionCredenciales.username;
                         credenciales.password = institucionCredenciales.password;
                         result = serviceMultirisWsCordillera.GetcomentarioTM(credenciales, codexamen);
+                        break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrera.username = institucionCredenciales.username;
+                        credencialesLosCarrera.password = institucionCredenciales.password;
+                        new IradLogFile.LogFile("Inicio " + credencialesLosCarrera.username + ' ' + credencialesLosCarrera.password + ' ' + codexamen);
+                        result = serviceMultirisWsLosCarrera.GetcomentarioTM(credencialesLosCarrera, codexamen);
+                        new IradLogFile.LogFile("Paso ");
                         break;
                     default:
                         break;
@@ -84,6 +103,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credenciales.username = institucionCredenciales.username;
                         credenciales.password = institucionCredenciales.password;
                         serviceMultirisWsCordillera.SolicitudExamen(credenciales, codexamen, "");
+                        break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrera.username = institucionCredenciales.username;
+                        credencialesLosCarrera.password = institucionCredenciales.password;
+                        serviceMultirisWsLosCarrera.SolicitudExamen(credencialesLosCarrera, codexamen, "");
                         break;
                     default:
                         break;
@@ -118,6 +144,17 @@ namespace MultiRisWeb.ConsumirServicios
                         documentos.numeroAcceso = numeroAcceso;
                         documentosExamen = serviceMultirisWsCordillera.GetDocumentosExamen(credenciales, documentos);
                         break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.DocumentosParameters documentosLosCarrera = new MultiRisWeb.WsLosCarrera.DocumentosParameters();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+
+                        credencialesLosCarrera.username = institucionCredenciales.username;
+                        credencialesLosCarrera.password = institucionCredenciales.password;
+                        documentosLosCarrera.codExamen = codExamen;
+                        documentosLosCarrera.numeroAcceso = numeroAcceso;
+                        documentosExamen = serviceMultirisWsLosCarrera.GetDocumentosExamen(credencialesLosCarrera, documentosLosCarrera);
+                        break;
                     default:
                         break;
                 }
@@ -143,6 +180,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credenciales.username = institucionCredenciales.username;
                         credenciales.password = institucionCredenciales.password;
                         estudiosRelacionados = serviceMultirisWsCordillera.GetEstudiosRelacionados(credenciales, idPaciente);
+                        break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrra = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrra = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrra.username = institucionCredenciales.username;
+                        credencialesLosCarrra.password = institucionCredenciales.password;
+                        estudiosRelacionados = serviceMultirisWsLosCarrra.GetEstudiosRelacionados(credencialesLosCarrra, idPaciente);
                         break;
                     default:
                         break;
@@ -196,7 +240,7 @@ namespace MultiRisWeb.ConsumirServicios
             {
                 switch (idInstitucion)
                 {
-                    case 2:
+                    case 1:
                         MultiRisWeb.WsCordillera.ServiceMultiris serviceMultirisWsCordillera = new MultiRisWeb.WsCordillera.ServiceMultiris();
                         MultiRisWeb.WsCordillera.InformeOITParameters informeOit = new MultiRisWeb.WsCordillera.InformeOITParameters();
                         MultiRisWeb.WsCordillera.CredencialesParameters credenciales = new MultiRisWeb.WsCordillera.CredencialesParameters();
@@ -287,6 +331,97 @@ namespace MultiRisWeb.ConsumirServicios
                    
                         result = serviceMultirisWsCordillera.InsertInformeOIT(credenciales, informeOit);
                         break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.InformeOITParameters informeOitLosCarrera = new MultiRisWeb.WsLosCarrera.InformeOITParameters();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrera.username = byId2.username;
+                        credencialesLosCarrera.password = byId2.password;
+                        informeOitLosCarrera.id = informeOIT.id;
+                        informeOitLosCarrera.nombre = informeOIT.nombre;
+                        informeOitLosCarrera.idpaciente = informeOIT.idPaciente;
+                        informeOitLosCarrera.fecha_radiografia = informeOIT.fechaRadiografia;
+                        informeOitLosCarrera.numero_radiografia = informeOIT.numeroRadiografia;
+                        informeOitLosCarrera.radiografia_digital = Convert.ToInt32(informeOIT.radiografiaDigital);
+                        informeOitLosCarrera.lectura_negatoscopio = Convert.ToInt32(informeOIT.lecturaNegatoscopio);
+                        informeOitLosCarrera.tecnica_qualidaden = Convert.ToInt32(informeOIT.tecnicaQualidaden);
+                        informeOitLosCarrera.radiografia_normal = Convert.ToInt32(informeOIT.radiografiaNormal);
+                        informeOitLosCarrera.comentario = informeOIT.comentario;
+                        informeOitLosCarrera.anormalidad_parenquimatosa = Convert.ToInt32(informeOIT.anormalidadParenquimatosa);
+                        informeOitLosCarrera.primaria1 = Convert.ToInt32(informeOIT.primaria1);
+                        informeOitLosCarrera.primaria2 = Convert.ToInt32(informeOIT.primaria2);
+                        informeOitLosCarrera.primaria3 = Convert.ToInt32(informeOIT.primaria3);
+                        informeOitLosCarrera.secundaria1 = Convert.ToInt32(informeOIT.secundaria1);
+                        informeOitLosCarrera.secundaria2 = Convert.ToInt32(informeOIT.secundaria2);
+                        informeOitLosCarrera.secundaria3 = Convert.ToInt32(informeOIT.secundaria3);
+                        informeOitLosCarrera.zonas1 = Convert.ToInt32(informeOIT.zonas1);
+                        informeOitLosCarrera.profusion1 = Convert.ToInt32(informeOIT.profusion1);
+                        informeOitLosCarrera.profusion2 = Convert.ToInt32(informeOIT.profusion2);
+                        informeOitLosCarrera.profusion3 = Convert.ToInt32(informeOIT.profusion3);
+                        informeOitLosCarrera.profusion4 = Convert.ToInt32(informeOIT.profusion4);
+                        informeOitLosCarrera.opacidades_pequenas1 = Convert.ToInt32(informeOIT.opacidadesPequenas1);
+                        informeOitLosCarrera.anormalidad_pleural = Convert.ToInt32(informeOIT.anormalidadPleural);
+                        informeOitLosCarrera.placas_pleurales = Convert.ToInt32(informeOIT.placasPleurales);
+                        informeOitLosCarrera.placas_pleurales_sitio_perfil = Convert.ToInt32(informeOIT.placasPleuralesSitioPerfil);
+                        informeOitLosCarrera.placas_pleurales_sitio_frente = Convert.ToInt32(informeOIT.placasPleuralesSitioFrente);
+                        informeOitLosCarrera.placas_pleurales_sitio_diagrama = Convert.ToInt32(informeOIT.placasPleuralesSitioDiagrama);
+                        informeOitLosCarrera.placas_pleurales_sitio_otro = Convert.ToInt32(informeOIT.placasPleuralesSitioOtro);
+                        informeOitLosCarrera.placas_pleurales_calcificacion_perfil = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionPerfil);
+                        informeOitLosCarrera.placas_pleurales_calcificacion_frente = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionFrente);
+                        informeOitLosCarrera.placas_pleurales_calcificacion_diagrama = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionDiagrama);
+                        informeOitLosCarrera.placas_pleurales_calcificacion_otro = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionOtro);
+                        informeOitLosCarrera.placas_pleurales_extencion_pared1 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared1);
+                        informeOitLosCarrera.placas_pleurales_extencion_pared2 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared2);
+                        informeOitLosCarrera.placas_pleurales_ancho1 = Convert.ToInt32(informeOIT.placasPleuralesAncho1);
+                        informeOitLosCarrera.placas_pleurales_ancho2 = Convert.ToInt32(informeOIT.placasPleuralesAncho2);
+                        informeOitLosCarrera.obliteracion_angulo_costofrenico = Convert.ToInt32(informeOIT.obliteracionAnguloCostofrenico);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso = Convert.ToInt32(informeOIT.engrosamientoPleuralDifuso);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_sitio_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioPerfil);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_sitio_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioFrente);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_calcificacion_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionPerfil);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_calcificacion_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionFrente);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_extencion_pared1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared1);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_extencion_pared2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared2);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_ancho1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho1);
+                        informeOitLosCarrera.engrosamiento_pleural_difuso_ancho2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho2);
+                        informeOitLosCarrera.otras_anormalidades = Convert.ToInt32(informeOIT.otrasAnormalidades);
+                        informeOitLosCarrera.simbolo_aa = informeOIT.simbolo_aa;
+                        informeOitLosCarrera.simbolo_at = informeOIT.simbolo_at;
+                        informeOitLosCarrera.simbolo_ax = informeOIT.simbolo_ax;
+                        informeOitLosCarrera.simbolo_bu = informeOIT.simbolo_bu;
+                        informeOitLosCarrera.simbolo_ca = informeOIT.simbolo_ca;
+                        informeOitLosCarrera.simbolo_cg = informeOIT.simbolo_cg;
+                        informeOitLosCarrera.simbolo_cn = informeOIT.simbolo_cn;
+                        informeOitLosCarrera.simbolo_co = informeOIT.simbolo_co;
+                        informeOitLosCarrera.simbolo_cp = informeOIT.simbolo_cp;
+                        informeOitLosCarrera.simbolo_cv = informeOIT.simbolo_cv;
+                        informeOitLosCarrera.simbolo_di = informeOIT.simbolo_di;
+                        informeOitLosCarrera.simbolo_ef = informeOIT.simbolo_ef;
+                        informeOitLosCarrera.simbolo_em = informeOIT.simbolo_em;
+                        informeOitLosCarrera.simbolo_es = informeOIT.simbolo_es;
+                        informeOitLosCarrera.simbolo_fr = informeOIT.simbolo_fr;
+                        informeOitLosCarrera.simbolo_hi = informeOIT.simbolo_hi;
+                        informeOitLosCarrera.simbolo_ho = informeOIT.simbolo_ho;
+                        informeOitLosCarrera.simbolo_id = informeOIT.simbolo_id;
+                        informeOitLosCarrera.simbolo_ih = informeOIT.simbolo_ih;
+                        informeOitLosCarrera.simbolo_kl = informeOIT.simbolo_kl;
+                        informeOitLosCarrera.simbolo_me = informeOIT.simbolo_me;
+                        informeOitLosCarrera.simbolo_pa = informeOIT.simbolo_pa;
+                        informeOitLosCarrera.simbolo_pb = informeOIT.simbolo_pb;
+                        informeOitLosCarrera.simbolo_pi = informeOIT.simbolo_pi;
+                        informeOitLosCarrera.simbolo_px = informeOIT.simbolo_px;
+                        informeOitLosCarrera.simbolo_ra = informeOIT.simbolo_ra;
+                        informeOitLosCarrera.simbolo_rp = informeOIT.simbolo_rp;
+                        informeOitLosCarrera.simbolo_tb = informeOIT.simbolo_tb;
+                        informeOitLosCarrera.simbolo_od = informeOIT.simbolo_od;
+                        informeOitLosCarrera.comentario_general = informeOIT.comentarioGeneral;
+                        informeOitLosCarrera.fecha_lectura = informeOIT.fechaLectura;
+                        informeOitLosCarrera.codexamen = informeOIT.codexamen;
+                        informeOitLosCarrera.estado = informeOIT.estado;
+                        informeOitLosCarrera.username_radiologo = "admin";
+
+                        result = serviceMultirisWsLosCarrera.InsertInformeOIT(credencialesLosCarrera, informeOitLosCarrera);
+                        break;
                     default:
                         break;
                 }
@@ -317,6 +452,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentos.codExamen = codExamen;
                         documentos.numeroAcceso = numeroAcceso;                       
                         comentarios = serviceMultirisWSCordillera.GetComentarios(credenciales, documentos);
+                        break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWSLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.DocumentosParameters documentosLosCarrera = new MultiRisWeb.WsLosCarrera.DocumentosParameters();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrera.username = byId2.username;
+                        credencialesLosCarrera.password = byId2.password;
+                        documentosLosCarrera.codExamen = codExamen;
+                        documentosLosCarrera.numeroAcceso = numeroAcceso;
+                        comentarios = serviceMultirisWSLosCarrera.GetComentarios(credencialesLosCarrera, documentosLosCarrera);
                         break;
                     default:
                         break;
@@ -351,6 +496,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentos.codExamen = codExamen;
                         documentos.numeroAcceso = numeroAcceso;                       
                         comentariosWs = serviceMultirisWsCordillera.GetComentarios(credenciales, documentos);
+                        break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.DocumentosParameters documentosLosCarrera = new MultiRisWeb.WsLosCarrera.DocumentosParameters();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrera.username = credencialesInstitucion.username;
+                        credencialesLosCarrera.password = credencialesInstitucion.password;
+                        documentosLosCarrera.codExamen = codExamen;
+                        documentosLosCarrera.numeroAcceso = numeroAcceso;
+                        comentariosWs = serviceMultirisWsLosCarrera.GetComentarios(credencialesLosCarrera, documentosLosCarrera);
                         break;
                     default:
 
@@ -391,6 +546,21 @@ namespace MultiRisWeb.ConsumirServicios
                         comentarios.username = userName;
                        
                         result = serviceMultirisWsCordillera.SaveComentario(credenciales, comentarios);
+                        break;
+                    case 2:
+                        MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
+                        MultiRisWeb.WsLosCarrera.ComentariosParameters comentariosLosCarrera = new MultiRisWeb.WsLosCarrera.ComentariosParameters();
+                        MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
+                        credencialesLosCarrera.username = institucionCredenciales.username;
+                        credencialesLosCarrera.password = institucionCredenciales.password;
+                        comentariosLosCarrera.codExamen = byCodExamen.codexamen;
+                        comentariosLosCarrera.cantidad = 1;
+                        comentariosLosCarrera.fecha = DateTime.Now;
+                        comentariosLosCarrera.aetitle = byCodExamen.aetitle;
+                        comentariosLosCarrera.texto = comentario;
+                        comentariosLosCarrera.username = userName;
+
+                        result = serviceMultirisWsLosCarrera.SaveComentario(credencialesLosCarrera, comentariosLosCarrera);
                         break;
                     default:
                         break;

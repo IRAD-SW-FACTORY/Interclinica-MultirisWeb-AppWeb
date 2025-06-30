@@ -17,5 +17,8 @@
     <Setting Name="MultiRisWeb_WsCordillera_ServiceMultiris" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://riscloud.nuevaclinicacordillera.cl/MULTIRISWEBWS/ServiceMultiris.asmx</Value>
     </Setting>
+    <Setting Name="MultiRisWeb_WsLosCarrera_ServiceMultiris" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

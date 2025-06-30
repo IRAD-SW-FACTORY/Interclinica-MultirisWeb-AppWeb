@@ -787,9 +787,8 @@ namespace MultiRisWeb.Data.DataAccess
             parameters.Add(new Parameter() { Name = nameof(id_institucion), Type = DbType.Int32, Value = (object)id_institucion });
             parameters.Add(new Parameter() { Name = nameof(cod_examen), Type = DbType.String, Value = (object)cod_examen });
             parameters.Add(new Parameter() { Name = nameof(aetitle), Type = DbType.String, Value = (object)aetitle });
-
             RisExamenDomain risExamenDomain = new RisExamenDomain();
-
+            
             return DataBaseProcedure.GetEntidad<RisExamenDomain>(parameters, "sp_RisExamen_GetByInstitucionCodExamen", "CN_RISPACS") ?? new RisExamenDomain();
         }
 

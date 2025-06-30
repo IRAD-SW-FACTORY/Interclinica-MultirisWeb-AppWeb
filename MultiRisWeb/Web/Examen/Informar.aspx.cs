@@ -250,7 +250,7 @@ namespace MultiRisWeb.Web.Examen
             }
             catch (Exception ex)
             {
-                Informar.LogError(ex, "btnInformar");
+                new IradLogFile.LogFile(ex.ToString());
                 return new ResponseApp()
                 {
                     Data = (object)null,
@@ -991,8 +991,9 @@ namespace MultiRisWeb.Web.Examen
                 num1 = num2;
                 return num1;
             }
-            catch
+            catch(Exception ex)
             {
+                new IradLogFile.LogFile(ex.ToString());
                 throw;
             }
         }
@@ -1448,7 +1449,7 @@ namespace MultiRisWeb.Web.Examen
                           "Rut: <b>" + examen.idpaciente + "</b><br />" +
                           "Fecha/Hora Examen: <b>" + examen.fechaexamen + "</b><br /><br />" +
                           "Mensaje del Radiologo: <br /><b>" + msg + "</b><br /><br /><br />" +
-                          "Por favor acceder con su usuario y credencales a nuestra plaforma para revisar más detalles " + @"https://multiris.irad.cl/multirisweb" +
+                          "Por favor acceder con su usuario y credencales a nuestra plaforma para revisar más detalles " + @"https://riscloud.clinicatarapaca.cl/multirisweb" +
                           "<br /><br /><br />Atte.<br /><br /> <b>Diagnóstico por Imágenes</b><br />";
 
             string appSetting1 = ConfigurationManager.AppSettings["emailfrom"];

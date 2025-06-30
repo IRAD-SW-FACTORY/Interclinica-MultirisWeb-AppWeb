@@ -39,6 +39,9 @@
     <Reference Include="IradDBNet">
       <HintPath>lib\IradDBNet.dll</HintPath>
     </Reference>
+    <Reference Include="IradLogFile">
+      <HintPath>..\MultiRisWeb\lib\IradLogFile.dll</HintPath>
+    </Reference>
     <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\MultiRisWeb\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
     </Reference>

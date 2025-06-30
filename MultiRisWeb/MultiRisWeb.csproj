@@ -2766,6 +2766,14 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\WsCordillera\ServiceMultiris.disco" />
+    <None Include="Web References\WsLosCarrera\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\WsLosCarrera\Respuesta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsLosCarrera\servicemultiris.disco" />
     <Content Include="Web.config" />
     <Content Include="Web\Agenda\Agenda.aspx" />
     <Content Include="Web\Agenda\css\default.css" />
@@ -3205,6 +3213,9 @@
     <Content Include="Web\Examen\VerInformeOIT.aspx" />
     <Content Include="Web\Filtro\EditarFiltro.aspx" />
     <Content Include="Web\Filtro\ListarFiltro.aspx" />
+    <Content Include="Web\Firmas\administrador.jpg" />
+    <Content Include="Web\Firmas\interclinicaCordillera.png" />
+    <Content Include="Web\Firmas\interclinicaLosCarrera.png" />
     <Content Include="Web\font\Avenir-Roman\style.css" />
     <Content Include="Web\Gestion\Honorarios.aspx" />
     <Content Include="Web\Gestion\LogAsignaciones.aspx" />
@@ -6197,6 +6208,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WsLosCarrera\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web\Agenda\Agenda.aspx.cs">
       <DependentUpon>Agenda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6438,6 +6454,7 @@
     <Content Include="vocali\libs\integrations\invox-ckeditor4\readme.md" />
     <Content Include="vocali\libs\opus\encoderWorker.min.wasm" />
     <None Include="Web References\WsCordillera\ServiceMultiris.wsdl" />
+    <None Include="Web References\WsLosCarrera\servicemultiris.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -6571,10 +6588,20 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Web\Firmas\" />
     <Folder Include="Web\Firmas_OLD\" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferenceUrl Include="https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsLosCarrera\</RelPath>
+      <UpdateFromURL>https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MultiRisWeb_WsLosCarrera_ServiceMultiris</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="https://riscloud.nuevaclinicacordillera.cl/MULTIRISWEBWS/ServiceMultiris.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WsCordillera\</RelPath>
