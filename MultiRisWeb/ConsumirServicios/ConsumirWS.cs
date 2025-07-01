@@ -47,6 +47,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesTarapaca.password = byId.password;
                         result = serviceMultirisWsTarapaca.GetAntecedentesClinicos(credencialesTarapaca, codexamen);
                         break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = byId.username;
+                        credencialesLosLeones.password = byId.password;
+                        result = serviceMultirisWsLosLeones.GetAntecedentesClinicos(credencialesLosLeones, codexamen);
+                        break;
                     default:
                         break;
                 }
@@ -80,19 +87,22 @@ namespace MultiRisWeb.ConsumirServicios
                         MultiRisWeb.WsLosCarrera.ServiceMultiris serviceMultirisWsLosCarrera = new MultiRisWeb.WsLosCarrera.ServiceMultiris();
                         MultiRisWeb.WsLosCarrera.CredencialesParameters credencialesLosCarrera = new MultiRisWeb.WsLosCarrera.CredencialesParameters();
                         credencialesLosCarrera.username = institucionCredenciales.username;
-                        credencialesLosCarrera.password = institucionCredenciales.password;
-                        new IradLogFile.LogFile("Inicio " + credencialesLosCarrera.username + ' ' + credencialesLosCarrera.password + ' ' + codexamen);
-                        result = serviceMultirisWsLosCarrera.GetcomentarioTM(credencialesLosCarrera, codexamen);
-                        new IradLogFile.LogFile("Paso ");
+                        credencialesLosCarrera.password = institucionCredenciales.password;                      
+                        result = serviceMultirisWsLosCarrera.GetcomentarioTM(credencialesLosCarrera, codexamen);                        
                         break;
                     case 3:
                         MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
                         MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
                         credencialesTarapaca.username = institucionCredenciales.username;
-                        credencialesTarapaca.password = institucionCredenciales.password;
-                        new IradLogFile.LogFile("Inicio " + credencialesTarapaca.username + ' ' + credencialesTarapaca.password + ' ' + codexamen);
+                        credencialesTarapaca.password = institucionCredenciales.password;                       
                         result = serviceMultirisWsTarapaca.GetcomentarioTM(credencialesTarapaca, codexamen);
-                        new IradLogFile.LogFile("Paso ");
+                        break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = institucionCredenciales.username;
+                        credencialesLosLeones.password = institucionCredenciales.password;
+                        result = serviceMultirisWsLosLeones.GetcomentarioTM(credencialesLosLeones, codexamen);
                         break;
                     default:
                         break;
@@ -133,6 +143,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesTarapaca.username = institucionCredenciales.username;
                         credencialesTarapaca.password = institucionCredenciales.password;
                         serviceMultirisWsTarapaca.SolicitudExamen(credencialesTarapaca, codexamen, "");
+                        break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = institucionCredenciales.username;
+                        credencialesLosLeones.password = institucionCredenciales.password;
+                        serviceMultirisWsLosLeones.SolicitudExamen(credencialesLosLeones, codexamen, "");
                         break;
                     default:
                         break;
@@ -189,6 +206,17 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosTarapaca.numeroAcceso = numeroAcceso;
                         documentosExamen = serviceMultirisWsTarapaca.GetDocumentosExamen(credencialesTarapaca, documentosTarapaca);
                         break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.DocumentosParameters documentosLosLeones = new MultiRisWeb.WsLosLeones.DocumentosParameters();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+
+                        credencialesLosLeones.username = institucionCredenciales.username;
+                        credencialesLosLeones.password = institucionCredenciales.password;
+                        documentosLosLeones.codExamen = codExamen;
+                        documentosLosLeones.numeroAcceso = numeroAcceso;
+                        documentosExamen = serviceMultirisWsLosLeones.GetDocumentosExamen(credencialesLosLeones, documentosLosLeones);
+                        break;
                     default:
                         break;
                 }
@@ -228,6 +256,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesTarapaca.username = institucionCredenciales.username;
                         credencialesTarapaca.password = institucionCredenciales.password;
                         estudiosRelacionados = serviceMultirisWsTarapaca.GetEstudiosRelacionados(credencialesTarapaca, idPaciente);
+                        break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = institucionCredenciales.username;
+                        credencialesLosLeones.password = institucionCredenciales.password;
+                        estudiosRelacionados = serviceMultirisWsLosLeones.GetEstudiosRelacionados(credencialesLosLeones, idPaciente);
                         break;
                     default:
                         break;
@@ -554,6 +589,97 @@ namespace MultiRisWeb.ConsumirServicios
 
                         result = serviceMultirisWsTarapaca.InsertInformeOIT(credencialesTarapaca, informeOitTarapaca);
                         break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.InformeOITParameters informeOitLosLeones = new MultiRisWeb.WsLosLeones.InformeOITParameters();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = byId2.username;
+                        credencialesLosLeones.password = byId2.password;
+                        informeOitLosLeones.id = informeOIT.id;
+                        informeOitLosLeones.nombre = informeOIT.nombre;
+                        informeOitLosLeones.idpaciente = informeOIT.idPaciente;
+                        informeOitLosLeones.fecha_radiografia = informeOIT.fechaRadiografia;
+                        informeOitLosLeones.numero_radiografia = informeOIT.numeroRadiografia;
+                        informeOitLosLeones.radiografia_digital = Convert.ToInt32(informeOIT.radiografiaDigital);
+                        informeOitLosLeones.lectura_negatoscopio = Convert.ToInt32(informeOIT.lecturaNegatoscopio);
+                        informeOitLosLeones.tecnica_qualidaden = Convert.ToInt32(informeOIT.tecnicaQualidaden);
+                        informeOitLosLeones.radiografia_normal = Convert.ToInt32(informeOIT.radiografiaNormal);
+                        informeOitLosLeones.comentario = informeOIT.comentario;
+                        informeOitLosLeones.anormalidad_parenquimatosa = Convert.ToInt32(informeOIT.anormalidadParenquimatosa);
+                        informeOitLosLeones.primaria1 = Convert.ToInt32(informeOIT.primaria1);
+                        informeOitLosLeones.primaria2 = Convert.ToInt32(informeOIT.primaria2);
+                        informeOitLosLeones.primaria3 = Convert.ToInt32(informeOIT.primaria3);
+                        informeOitLosLeones.secundaria1 = Convert.ToInt32(informeOIT.secundaria1);
+                        informeOitLosLeones.secundaria2 = Convert.ToInt32(informeOIT.secundaria2);
+                        informeOitLosLeones.secundaria3 = Convert.ToInt32(informeOIT.secundaria3);
+                        informeOitLosLeones.zonas1 = Convert.ToInt32(informeOIT.zonas1);
+                        informeOitLosLeones.profusion1 = Convert.ToInt32(informeOIT.profusion1);
+                        informeOitLosLeones.profusion2 = Convert.ToInt32(informeOIT.profusion2);
+                        informeOitLosLeones.profusion3 = Convert.ToInt32(informeOIT.profusion3);
+                        informeOitLosLeones.profusion4 = Convert.ToInt32(informeOIT.profusion4);
+                        informeOitLosLeones.opacidades_pequenas1 = Convert.ToInt32(informeOIT.opacidadesPequenas1);
+                        informeOitLosLeones.anormalidad_pleural = Convert.ToInt32(informeOIT.anormalidadPleural);
+                        informeOitLosLeones.placas_pleurales = Convert.ToInt32(informeOIT.placasPleurales);
+                        informeOitLosLeones.placas_pleurales_sitio_perfil = Convert.ToInt32(informeOIT.placasPleuralesSitioPerfil);
+                        informeOitLosLeones.placas_pleurales_sitio_frente = Convert.ToInt32(informeOIT.placasPleuralesSitioFrente);
+                        informeOitLosLeones.placas_pleurales_sitio_diagrama = Convert.ToInt32(informeOIT.placasPleuralesSitioDiagrama);
+                        informeOitLosLeones.placas_pleurales_sitio_otro = Convert.ToInt32(informeOIT.placasPleuralesSitioOtro);
+                        informeOitLosLeones.placas_pleurales_calcificacion_perfil = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionPerfil);
+                        informeOitLosLeones.placas_pleurales_calcificacion_frente = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionFrente);
+                        informeOitLosLeones.placas_pleurales_calcificacion_diagrama = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionDiagrama);
+                        informeOitLosLeones.placas_pleurales_calcificacion_otro = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionOtro);
+                        informeOitLosLeones.placas_pleurales_extencion_pared1 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared1);
+                        informeOitLosLeones.placas_pleurales_extencion_pared2 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared2);
+                        informeOitLosLeones.placas_pleurales_ancho1 = Convert.ToInt32(informeOIT.placasPleuralesAncho1);
+                        informeOitLosLeones.placas_pleurales_ancho2 = Convert.ToInt32(informeOIT.placasPleuralesAncho2);
+                        informeOitLosLeones.obliteracion_angulo_costofrenico = Convert.ToInt32(informeOIT.obliteracionAnguloCostofrenico);
+                        informeOitLosLeones.engrosamiento_pleural_difuso = Convert.ToInt32(informeOIT.engrosamientoPleuralDifuso);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_sitio_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioPerfil);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_sitio_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioFrente);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_calcificacion_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionPerfil);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_calcificacion_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionFrente);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_extencion_pared1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared1);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_extencion_pared2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared2);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_ancho1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho1);
+                        informeOitLosLeones.engrosamiento_pleural_difuso_ancho2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho2);
+                        informeOitLosLeones.otras_anormalidades = Convert.ToInt32(informeOIT.otrasAnormalidades);
+                        informeOitLosLeones.simbolo_aa = informeOIT.simbolo_aa;
+                        informeOitLosLeones.simbolo_at = informeOIT.simbolo_at;
+                        informeOitLosLeones.simbolo_ax = informeOIT.simbolo_ax;
+                        informeOitLosLeones.simbolo_bu = informeOIT.simbolo_bu;
+                        informeOitLosLeones.simbolo_ca = informeOIT.simbolo_ca;
+                        informeOitLosLeones.simbolo_cg = informeOIT.simbolo_cg;
+                        informeOitLosLeones.simbolo_cn = informeOIT.simbolo_cn;
+                        informeOitLosLeones.simbolo_co = informeOIT.simbolo_co;
+                        informeOitLosLeones.simbolo_cp = informeOIT.simbolo_cp;
+                        informeOitLosLeones.simbolo_cv = informeOIT.simbolo_cv;
+                        informeOitLosLeones.simbolo_di = informeOIT.simbolo_di;
+                        informeOitLosLeones.simbolo_ef = informeOIT.simbolo_ef;
+                        informeOitLosLeones.simbolo_em = informeOIT.simbolo_em;
+                        informeOitLosLeones.simbolo_es = informeOIT.simbolo_es;
+                        informeOitLosLeones.simbolo_fr = informeOIT.simbolo_fr;
+                        informeOitLosLeones.simbolo_hi = informeOIT.simbolo_hi;
+                        informeOitLosLeones.simbolo_ho = informeOIT.simbolo_ho;
+                        informeOitLosLeones.simbolo_id = informeOIT.simbolo_id;
+                        informeOitLosLeones.simbolo_ih = informeOIT.simbolo_ih;
+                        informeOitLosLeones.simbolo_kl = informeOIT.simbolo_kl;
+                        informeOitLosLeones.simbolo_me = informeOIT.simbolo_me;
+                        informeOitLosLeones.simbolo_pa = informeOIT.simbolo_pa;
+                        informeOitLosLeones.simbolo_pb = informeOIT.simbolo_pb;
+                        informeOitLosLeones.simbolo_pi = informeOIT.simbolo_pi;
+                        informeOitLosLeones.simbolo_px = informeOIT.simbolo_px;
+                        informeOitLosLeones.simbolo_ra = informeOIT.simbolo_ra;
+                        informeOitLosLeones.simbolo_rp = informeOIT.simbolo_rp;
+                        informeOitLosLeones.simbolo_tb = informeOIT.simbolo_tb;
+                        informeOitLosLeones.simbolo_od = informeOIT.simbolo_od;
+                        informeOitLosLeones.comentario_general = informeOIT.comentarioGeneral;
+                        informeOitLosLeones.fecha_lectura = informeOIT.fechaLectura;
+                        informeOitLosLeones.codexamen = informeOIT.codexamen;
+                        informeOitLosLeones.estado = informeOIT.estado;
+                        informeOitLosLeones.username_radiologo = "admin";
+
+                        result = serviceMultirisWsLosLeones.InsertInformeOIT(credencialesLosLeones, informeOitLosLeones);
+                        break;
                     default:
                         break;
                 }
@@ -604,6 +730,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosTarapaca.codExamen = codExamen;
                         documentosTarapaca.numeroAcceso = numeroAcceso;
                         comentarios = serviceMultirisWSTarapaca.GetComentarios(credencialesTarapaca, documentosTarapaca);
+                        break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWSLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.DocumentosParameters documentosLosLeones = new MultiRisWeb.WsLosLeones.DocumentosParameters();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = byId2.username;
+                        credencialesLosLeones.password = byId2.password;
+                        documentosLosLeones.codExamen = codExamen;
+                        documentosLosLeones.numeroAcceso = numeroAcceso;
+                        comentarios = serviceMultirisWSLosLeones.GetComentarios(credencialesLosLeones, documentosLosLeones);
                         break;
                     default:
                         break;
@@ -658,6 +794,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosTarapaca.codExamen = codExamen;
                         documentosTarapaca.numeroAcceso = numeroAcceso;
                         comentariosWs = serviceMultirisWsTarapaca.GetComentarios(credencialesTarapaca, documentosTarapaca);
+                        break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.DocumentosParameters documentosLosLeones = new MultiRisWeb.WsLosLeones.DocumentosParameters();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = credencialesInstitucion.username;
+                        credencialesLosLeones.password = credencialesInstitucion.password;
+                        documentosLosLeones.codExamen = codExamen;
+                        documentosLosLeones.numeroAcceso = numeroAcceso;
+                        comentariosWs = serviceMultirisWsLosLeones.GetComentarios(credencialesLosLeones, documentosLosLeones);
                         break;
                     default:
 
@@ -728,6 +874,21 @@ namespace MultiRisWeb.ConsumirServicios
                         comentariosTarapaca.username = userName;
 
                         result = serviceMultirisWsTarapaca.SaveComentario(credencialesTarapaca, comentariosTarapaca);
+                        break;
+                    case 4:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsLosLeones = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.ComentariosParameters comentariosLosLeones = new MultiRisWeb.WsLosLeones.ComentariosParameters();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesLosLeones = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesLosLeones.username = institucionCredenciales.username;
+                        credencialesLosLeones.password = institucionCredenciales.password;
+                        comentariosLosLeones.codExamen = byCodExamen.codexamen;
+                        comentariosLosLeones.cantidad = 1;
+                        comentariosLosLeones.fecha = DateTime.Now;
+                        comentariosLosLeones.aetitle = byCodExamen.aetitle;
+                        comentariosLosLeones.texto = comentario;
+                        comentariosLosLeones.username = userName;
+
+                        result = serviceMultirisWsLosLeones.SaveComentario(credencialesLosLeones, comentariosLosLeones);
                         break;
                     default:
                         break;

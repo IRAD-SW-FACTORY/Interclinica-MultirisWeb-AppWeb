@@ -52,5 +52,15 @@ namespace MultiRisWeb.Properties {
                 return ((string)(this["MultiRisWeb_WsTarapaca_ServiceMultiris"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://riscloud.clinicalosleones.cl/multiriswebws/servicemultiris.asmx")]
+        public string MultiRisWeb_WsLosLeones_ServiceMultiris {
+            get {
+                return ((string)(this["MultiRisWeb_WsLosLeones_ServiceMultiris"]));
+            }
+        }
     }
 }

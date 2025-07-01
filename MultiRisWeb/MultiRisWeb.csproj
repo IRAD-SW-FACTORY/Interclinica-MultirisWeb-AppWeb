@@ -2774,6 +2774,14 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\WsLosCarrera\servicemultiris.disco" />
+    <Content Include="Web References\WsLosLeones\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\WsLosLeones\Respuesta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsLosLeones\servicemultiris.disco" />
     <Content Include="Web References\WsTarapaca\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2781,6 +2789,7 @@
     <Content Include="Web References\WsTarapaca\Respuesta.datasource">
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
+    <None Include="Web References\WsLosLeones\servicemultiris.wsdl" />
     <None Include="Web References\WsTarapaca\ServiceMultiris.disco" />
     <Content Include="Web.config" />
     <Content Include="Web\Agenda\Agenda.aspx" />
@@ -6222,6 +6231,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WsLosLeones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web References\WsTarapaca\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -6616,6 +6630,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>MultiRisWeb_WsLosCarrera_ServiceMultiris</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://riscloud.clinicalosleones.cl/multiriswebws/servicemultiris.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsLosLeones\</RelPath>
+      <UpdateFromURL>https://riscloud.clinicalosleones.cl/multiriswebws/servicemultiris.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MultiRisWeb_WsLosLeones_ServiceMultiris</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="https://riscloud.clinicatarapaca.cl/multiriswebws/ServiceMultiris.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

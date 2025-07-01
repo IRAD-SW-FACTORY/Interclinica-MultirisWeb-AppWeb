@@ -11,5 +11,8 @@
     <Setting Name="MultiRisWeb_WsTarapaca_ServiceMultiris" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://riscloud.clinicatarapaca.cl/multiriswebws/ServiceMultiris.asmx</Value>
     </Setting>
+    <Setting Name="MultiRisWeb_WsLosLeones_ServiceMultiris" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://riscloud.clinicalosleones.cl/multiriswebws/servicemultiris.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
