@@ -40,6 +40,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesLosCarrera.password = byId.password;
                         result = serviceMultirisWsLosCarrera.GetAntecedentesClinicos(credencialesLosCarrera, codexamen);
                         break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = byId.username;
+                        credencialesTarapaca.password = byId.password;
+                        result = serviceMultirisWsTarapaca.GetAntecedentesClinicos(credencialesTarapaca, codexamen);
+                        break;
                     default:
                         break;
                 }
@@ -78,6 +85,15 @@ namespace MultiRisWeb.ConsumirServicios
                         result = serviceMultirisWsLosCarrera.GetcomentarioTM(credencialesLosCarrera, codexamen);
                         new IradLogFile.LogFile("Paso ");
                         break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = institucionCredenciales.username;
+                        credencialesTarapaca.password = institucionCredenciales.password;
+                        new IradLogFile.LogFile("Inicio " + credencialesTarapaca.username + ' ' + credencialesTarapaca.password + ' ' + codexamen);
+                        result = serviceMultirisWsTarapaca.GetcomentarioTM(credencialesTarapaca, codexamen);
+                        new IradLogFile.LogFile("Paso ");
+                        break;
                     default:
                         break;
                 }
@@ -110,6 +126,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesLosCarrera.username = institucionCredenciales.username;
                         credencialesLosCarrera.password = institucionCredenciales.password;
                         serviceMultirisWsLosCarrera.SolicitudExamen(credencialesLosCarrera, codexamen, "");
+                        break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = institucionCredenciales.username;
+                        credencialesTarapaca.password = institucionCredenciales.password;
+                        serviceMultirisWsTarapaca.SolicitudExamen(credencialesTarapaca, codexamen, "");
                         break;
                     default:
                         break;
@@ -155,6 +178,17 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosLosCarrera.numeroAcceso = numeroAcceso;
                         documentosExamen = serviceMultirisWsLosCarrera.GetDocumentosExamen(credencialesLosCarrera, documentosLosCarrera);
                         break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.DocumentosParameters documentosTarapaca = new MultiRisWeb.WsTarapaca.DocumentosParameters();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+
+                        credencialesTarapaca.username = institucionCredenciales.username;
+                        credencialesTarapaca.password = institucionCredenciales.password;
+                        documentosTarapaca.codExamen = codExamen;
+                        documentosTarapaca.numeroAcceso = numeroAcceso;
+                        documentosExamen = serviceMultirisWsTarapaca.GetDocumentosExamen(credencialesTarapaca, documentosTarapaca);
+                        break;
                     default:
                         break;
                 }
@@ -187,6 +221,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesLosCarrra.username = institucionCredenciales.username;
                         credencialesLosCarrra.password = institucionCredenciales.password;
                         estudiosRelacionados = serviceMultirisWsLosCarrra.GetEstudiosRelacionados(credencialesLosCarrra, idPaciente);
+                        break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = institucionCredenciales.username;
+                        credencialesTarapaca.password = institucionCredenciales.password;
+                        estudiosRelacionados = serviceMultirisWsTarapaca.GetEstudiosRelacionados(credencialesTarapaca, idPaciente);
                         break;
                     default:
                         break;
@@ -422,6 +463,97 @@ namespace MultiRisWeb.ConsumirServicios
 
                         result = serviceMultirisWsLosCarrera.InsertInformeOIT(credencialesLosCarrera, informeOitLosCarrera);
                         break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.InformeOITParameters informeOitTarapaca = new MultiRisWeb.WsTarapaca.InformeOITParameters();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = byId2.username;
+                        credencialesTarapaca.password = byId2.password;
+                        informeOitTarapaca.id = informeOIT.id;
+                        informeOitTarapaca.nombre = informeOIT.nombre;
+                        informeOitTarapaca.idpaciente = informeOIT.idPaciente;
+                        informeOitTarapaca.fecha_radiografia = informeOIT.fechaRadiografia;
+                        informeOitTarapaca.numero_radiografia = informeOIT.numeroRadiografia;
+                        informeOitTarapaca.radiografia_digital = Convert.ToInt32(informeOIT.radiografiaDigital);
+                        informeOitTarapaca.lectura_negatoscopio = Convert.ToInt32(informeOIT.lecturaNegatoscopio);
+                        informeOitTarapaca.tecnica_qualidaden = Convert.ToInt32(informeOIT.tecnicaQualidaden);
+                        informeOitTarapaca.radiografia_normal = Convert.ToInt32(informeOIT.radiografiaNormal);
+                        informeOitTarapaca.comentario = informeOIT.comentario;
+                        informeOitTarapaca.anormalidad_parenquimatosa = Convert.ToInt32(informeOIT.anormalidadParenquimatosa);
+                        informeOitTarapaca.primaria1 = Convert.ToInt32(informeOIT.primaria1);
+                        informeOitTarapaca.primaria2 = Convert.ToInt32(informeOIT.primaria2);
+                        informeOitTarapaca.primaria3 = Convert.ToInt32(informeOIT.primaria3);
+                        informeOitTarapaca.secundaria1 = Convert.ToInt32(informeOIT.secundaria1);
+                        informeOitTarapaca.secundaria2 = Convert.ToInt32(informeOIT.secundaria2);
+                        informeOitTarapaca.secundaria3 = Convert.ToInt32(informeOIT.secundaria3);
+                        informeOitTarapaca.zonas1 = Convert.ToInt32(informeOIT.zonas1);
+                        informeOitTarapaca.profusion1 = Convert.ToInt32(informeOIT.profusion1);
+                        informeOitTarapaca.profusion2 = Convert.ToInt32(informeOIT.profusion2);
+                        informeOitTarapaca.profusion3 = Convert.ToInt32(informeOIT.profusion3);
+                        informeOitTarapaca.profusion4 = Convert.ToInt32(informeOIT.profusion4);
+                        informeOitTarapaca.opacidades_pequenas1 = Convert.ToInt32(informeOIT.opacidadesPequenas1);
+                        informeOitTarapaca.anormalidad_pleural = Convert.ToInt32(informeOIT.anormalidadPleural);
+                        informeOitTarapaca.placas_pleurales = Convert.ToInt32(informeOIT.placasPleurales);
+                        informeOitTarapaca.placas_pleurales_sitio_perfil = Convert.ToInt32(informeOIT.placasPleuralesSitioPerfil);
+                        informeOitTarapaca.placas_pleurales_sitio_frente = Convert.ToInt32(informeOIT.placasPleuralesSitioFrente);
+                        informeOitTarapaca.placas_pleurales_sitio_diagrama = Convert.ToInt32(informeOIT.placasPleuralesSitioDiagrama);
+                        informeOitTarapaca.placas_pleurales_sitio_otro = Convert.ToInt32(informeOIT.placasPleuralesSitioOtro);
+                        informeOitTarapaca.placas_pleurales_calcificacion_perfil = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionPerfil);
+                        informeOitTarapaca.placas_pleurales_calcificacion_frente = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionFrente);
+                        informeOitTarapaca.placas_pleurales_calcificacion_diagrama = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionDiagrama);
+                        informeOitTarapaca.placas_pleurales_calcificacion_otro = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionOtro);
+                        informeOitTarapaca.placas_pleurales_extencion_pared1 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared1);
+                        informeOitTarapaca.placas_pleurales_extencion_pared2 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared2);
+                        informeOitTarapaca.placas_pleurales_ancho1 = Convert.ToInt32(informeOIT.placasPleuralesAncho1);
+                        informeOitTarapaca.placas_pleurales_ancho2 = Convert.ToInt32(informeOIT.placasPleuralesAncho2);
+                        informeOitTarapaca.obliteracion_angulo_costofrenico = Convert.ToInt32(informeOIT.obliteracionAnguloCostofrenico);
+                        informeOitTarapaca.engrosamiento_pleural_difuso = Convert.ToInt32(informeOIT.engrosamientoPleuralDifuso);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_sitio_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioPerfil);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_sitio_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioFrente);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_calcificacion_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionPerfil);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_calcificacion_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionFrente);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_extencion_pared1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared1);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_extencion_pared2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared2);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_ancho1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho1);
+                        informeOitTarapaca.engrosamiento_pleural_difuso_ancho2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho2);
+                        informeOitTarapaca.otras_anormalidades = Convert.ToInt32(informeOIT.otrasAnormalidades);
+                        informeOitTarapaca.simbolo_aa = informeOIT.simbolo_aa;
+                        informeOitTarapaca.simbolo_at = informeOIT.simbolo_at;
+                        informeOitTarapaca.simbolo_ax = informeOIT.simbolo_ax;
+                        informeOitTarapaca.simbolo_bu = informeOIT.simbolo_bu;
+                        informeOitTarapaca.simbolo_ca = informeOIT.simbolo_ca;
+                        informeOitTarapaca.simbolo_cg = informeOIT.simbolo_cg;
+                        informeOitTarapaca.simbolo_cn = informeOIT.simbolo_cn;
+                        informeOitTarapaca.simbolo_co = informeOIT.simbolo_co;
+                        informeOitTarapaca.simbolo_cp = informeOIT.simbolo_cp;
+                        informeOitTarapaca.simbolo_cv = informeOIT.simbolo_cv;
+                        informeOitTarapaca.simbolo_di = informeOIT.simbolo_di;
+                        informeOitTarapaca.simbolo_ef = informeOIT.simbolo_ef;
+                        informeOitTarapaca.simbolo_em = informeOIT.simbolo_em;
+                        informeOitTarapaca.simbolo_es = informeOIT.simbolo_es;
+                        informeOitTarapaca.simbolo_fr = informeOIT.simbolo_fr;
+                        informeOitTarapaca.simbolo_hi = informeOIT.simbolo_hi;
+                        informeOitTarapaca.simbolo_ho = informeOIT.simbolo_ho;
+                        informeOitTarapaca.simbolo_id = informeOIT.simbolo_id;
+                        informeOitTarapaca.simbolo_ih = informeOIT.simbolo_ih;
+                        informeOitTarapaca.simbolo_kl = informeOIT.simbolo_kl;
+                        informeOitTarapaca.simbolo_me = informeOIT.simbolo_me;
+                        informeOitTarapaca.simbolo_pa = informeOIT.simbolo_pa;
+                        informeOitTarapaca.simbolo_pb = informeOIT.simbolo_pb;
+                        informeOitTarapaca.simbolo_pi = informeOIT.simbolo_pi;
+                        informeOitTarapaca.simbolo_px = informeOIT.simbolo_px;
+                        informeOitTarapaca.simbolo_ra = informeOIT.simbolo_ra;
+                        informeOitTarapaca.simbolo_rp = informeOIT.simbolo_rp;
+                        informeOitTarapaca.simbolo_tb = informeOIT.simbolo_tb;
+                        informeOitTarapaca.simbolo_od = informeOIT.simbolo_od;
+                        informeOitTarapaca.comentario_general = informeOIT.comentarioGeneral;
+                        informeOitTarapaca.fecha_lectura = informeOIT.fechaLectura;
+                        informeOitTarapaca.codexamen = informeOIT.codexamen;
+                        informeOitTarapaca.estado = informeOIT.estado;
+                        informeOitTarapaca.username_radiologo = "admin";
+
+                        result = serviceMultirisWsTarapaca.InsertInformeOIT(credencialesTarapaca, informeOitTarapaca);
+                        break;
                     default:
                         break;
                 }
@@ -462,6 +594,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosLosCarrera.codExamen = codExamen;
                         documentosLosCarrera.numeroAcceso = numeroAcceso;
                         comentarios = serviceMultirisWSLosCarrera.GetComentarios(credencialesLosCarrera, documentosLosCarrera);
+                        break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWSTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.DocumentosParameters documentosTarapaca = new MultiRisWeb.WsTarapaca.DocumentosParameters();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = byId2.username;
+                        credencialesTarapaca.password = byId2.password;
+                        documentosTarapaca.codExamen = codExamen;
+                        documentosTarapaca.numeroAcceso = numeroAcceso;
+                        comentarios = serviceMultirisWSTarapaca.GetComentarios(credencialesTarapaca, documentosTarapaca);
                         break;
                     default:
                         break;
@@ -506,6 +648,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosLosCarrera.codExamen = codExamen;
                         documentosLosCarrera.numeroAcceso = numeroAcceso;
                         comentariosWs = serviceMultirisWsLosCarrera.GetComentarios(credencialesLosCarrera, documentosLosCarrera);
+                        break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.DocumentosParameters documentosTarapaca = new MultiRisWeb.WsTarapaca.DocumentosParameters();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = credencialesInstitucion.username;
+                        credencialesTarapaca.password = credencialesInstitucion.password;
+                        documentosTarapaca.codExamen = codExamen;
+                        documentosTarapaca.numeroAcceso = numeroAcceso;
+                        comentariosWs = serviceMultirisWsTarapaca.GetComentarios(credencialesTarapaca, documentosTarapaca);
                         break;
                     default:
 
@@ -561,6 +713,21 @@ namespace MultiRisWeb.ConsumirServicios
                         comentariosLosCarrera.username = userName;
 
                         result = serviceMultirisWsLosCarrera.SaveComentario(credencialesLosCarrera, comentariosLosCarrera);
+                        break;
+                    case 3:
+                        MultiRisWeb.WsTarapaca.ServiceMultiris serviceMultirisWsTarapaca = new MultiRisWeb.WsTarapaca.ServiceMultiris();
+                        MultiRisWeb.WsTarapaca.ComentariosParameters comentariosTarapaca = new MultiRisWeb.WsTarapaca.ComentariosParameters();
+                        MultiRisWeb.WsTarapaca.CredencialesParameters credencialesTarapaca = new MultiRisWeb.WsTarapaca.CredencialesParameters();
+                        credencialesTarapaca.username = institucionCredenciales.username;
+                        credencialesTarapaca.password = institucionCredenciales.password;
+                        comentariosTarapaca.codExamen = byCodExamen.codexamen;
+                        comentariosTarapaca.cantidad = 1;
+                        comentariosTarapaca.fecha = DateTime.Now;
+                        comentariosTarapaca.aetitle = byCodExamen.aetitle;
+                        comentariosTarapaca.texto = comentario;
+                        comentariosTarapaca.username = userName;
+
+                        result = serviceMultirisWsTarapaca.SaveComentario(credencialesTarapaca, comentariosTarapaca);
                         break;
                     default:
                         break;

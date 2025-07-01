@@ -2774,6 +2774,14 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\WsLosCarrera\servicemultiris.disco" />
+    <Content Include="Web References\WsTarapaca\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\WsTarapaca\Respuesta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsTarapaca\ServiceMultiris.disco" />
     <Content Include="Web.config" />
     <Content Include="Web\Agenda\Agenda.aspx" />
     <Content Include="Web\Agenda\css\default.css" />
@@ -3216,6 +3224,7 @@
     <Content Include="Web\Firmas\administrador.jpg" />
     <Content Include="Web\Firmas\interclinicaCordillera.png" />
     <Content Include="Web\Firmas\interclinicaLosCarrera.png" />
+    <Content Include="Web\Firmas\interclinicaTarapaca.png" />
     <Content Include="Web\font\Avenir-Roman\style.css" />
     <Content Include="Web\Gestion\Honorarios.aspx" />
     <Content Include="Web\Gestion\LogAsignaciones.aspx" />
@@ -6213,6 +6222,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WsTarapaca\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
     <Compile Include="Web\Agenda\Agenda.aspx.cs">
       <DependentUpon>Agenda.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -6455,6 +6469,7 @@
     <Content Include="vocali\libs\opus\encoderWorker.min.wasm" />
     <None Include="Web References\WsCordillera\ServiceMultiris.wsdl" />
     <None Include="Web References\WsLosCarrera\servicemultiris.wsdl" />
+    <None Include="Web References\WsTarapaca\ServiceMultiris.wsdl" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -6601,6 +6616,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>MultiRisWeb_WsLosCarrera_ServiceMultiris</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://riscloud.clinicatarapaca.cl/multiriswebws/ServiceMultiris.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsTarapaca\</RelPath>
+      <UpdateFromURL>https://riscloud.clinicatarapaca.cl/multiriswebws/ServiceMultiris.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MultiRisWeb_WsTarapaca_ServiceMultiris</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="https://riscloud.nuevaclinicacordillera.cl/MULTIRISWEBWS/ServiceMultiris.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>

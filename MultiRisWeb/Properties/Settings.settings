@@ -2,23 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MultiRisWeb.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="MultiRisWeb_WSSoranWeb_ServiceMultiris" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://rishra.irad.cl/Multiriswebws/servicemultiris.asmx</Value>
-    </Setting>
-    <Setting Name="MultiRisWeb_WsHospNavTalcahuano_ServiceMultiris" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://hnaval.irad.cl/Multiriswebws/servicemultiris.asmx</Value>
-    </Setting>
-    <Setting Name="MultiRisWeb_WS_Codelco_Tecnologo_ServiceSoran_Tecnologo" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://190.196.143.122/WSObtenertecnologo/ServiceSoran_Tecnologo.asmx</Value>
-    </Setting>
-    <Setting Name="MultiRisWeb_WSASTalca_ServiceMultiris" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://ristalca.amis-rx.cl:1443/MultiriswebWS/ServiceMultiris.asmx</Value>
-    </Setting>
     <Setting Name="MultiRisWeb_WsCordillera_ServiceMultiris" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://riscloud.nuevaclinicacordillera.cl/MULTIRISWEBWS/ServiceMultiris.asmx</Value>
     </Setting>
     <Setting Name="MultiRisWeb_WsLosCarrera_ServiceMultiris" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx</Value>
+    </Setting>
+    <Setting Name="MultiRisWeb_WsTarapaca_ServiceMultiris" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://riscloud.clinicatarapaca.cl/multiriswebws/ServiceMultiris.asmx</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -25,42 +25,6 @@ namespace MultiRisWeb.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://rishra.irad.cl/Multiriswebws/servicemultiris.asmx")]
-        public string MultiRisWeb_WSSoranWeb_ServiceMultiris {
-            get {
-                return ((string)(this["MultiRisWeb_WSSoranWeb_ServiceMultiris"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://hnaval.irad.cl/Multiriswebws/servicemultiris.asmx")]
-        public string MultiRisWeb_WsHospNavTalcahuano_ServiceMultiris {
-            get {
-                return ((string)(this["MultiRisWeb_WsHospNavTalcahuano_ServiceMultiris"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://190.196.143.122/WSObtenertecnologo/ServiceSoran_Tecnologo.asmx")]
-        public string MultiRisWeb_WS_Codelco_Tecnologo_ServiceSoran_Tecnologo {
-            get {
-                return ((string)(this["MultiRisWeb_WS_Codelco_Tecnologo_ServiceSoran_Tecnologo"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://ristalca.amis-rx.cl:1443/MultiriswebWS/ServiceMultiris.asmx")]
-        public string MultiRisWeb_WSASTalca_ServiceMultiris {
-            get {
-                return ((string)(this["MultiRisWeb_WSASTalca_ServiceMultiris"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://riscloud.nuevaclinicacordillera.cl/MULTIRISWEBWS/ServiceMultiris.asmx")]
         public string MultiRisWeb_WsCordillera_ServiceMultiris {
@@ -76,6 +40,16 @@ namespace MultiRisWeb.Properties {
         public string MultiRisWeb_WsLosCarrera_ServiceMultiris {
             get {
                 return ((string)(this["MultiRisWeb_WsLosCarrera_ServiceMultiris"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://riscloud.clinicatarapaca.cl/multiriswebws/ServiceMultiris.asmx")]
+        public string MultiRisWeb_WsTarapaca_ServiceMultiris {
+            get {
+                return ((string)(this["MultiRisWeb_WsTarapaca_ServiceMultiris"]));
             }
         }
     }
