@@ -4,7 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <History>True|2025-07-01T20:07:43.3139142Z;False|2025-07-01T16:07:15.0489026-04:00;True|2025-07-01T10:37:04.5612316-04:00;False|2025-07-01T10:36:20.3753603-04:00;True|2025-06-30T11:30:54.1065769-04:00;True|2025-06-30T11:09:23.8186381-04:00;False|2025-06-30T11:08:30.2290295-04:00;True|2025-06-27T08:55:16.0010199-04:00;False|2025-06-27T08:54:53.0125018-04:00;True|2025-06-25T15:10:44.7427513-04:00;False|2025-06-25T15:10:08.5668411-04:00;False|2025-06-24T09:37:23.9161674-04:00;False|2025-03-27T09:16:43.0439761-03:00;False|2025-03-27T09:14:56.8657953-03:00;False|2025-03-27T09:14:46.6682941-03:00;</History>
+    <History>True|2025-07-02T12:58:54.9191374Z;True|2025-07-01T16:07:43.3139142-04:00;False|2025-07-01T16:07:15.0489026-04:00;True|2025-07-01T10:37:04.5612316-04:00;False|2025-07-01T10:36:20.3753603-04:00;True|2025-06-30T11:30:54.1065769-04:00;True|2025-06-30T11:09:23.8186381-04:00;False|2025-06-30T11:08:30.2290295-04:00;True|2025-06-27T08:55:16.0010199-04:00;False|2025-06-27T08:54:53.0125018-04:00;True|2025-06-25T15:10:44.7427513-04:00;False|2025-06-25T15:10:08.5668411-04:00;False|2025-06-24T09:37:23.9161674-04:00;False|2025-03-27T09:16:43.0439761-03:00;False|2025-03-27T09:14:56.8657953-03:00;False|2025-03-27T09:14:46.6682941-03:00;</History>
     <LastFailureDetails />
     <_PublishTargetUrl>D:\IradSoftwareFactory\Publicaciones\Interclinica-MultiRisWeb-AppWeb</_PublishTargetUrl>
   </PropertyGroup>
@@ -43,13 +43,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/16/2024 10:23:16</publishTime>
     </File>
     <File Include="bin/MultiRisWeb.Data.dll">
-      <publishTime>01/07/2025 10:35:43</publishTime>
+      <publishTime>07/02/2025 09:38:18</publishTime>
     </File>
     <File Include="bin/MultiRisWeb.Data.pdb">
-      <publishTime>01/07/2025 10:35:43</publishTime>
+      <publishTime>07/02/2025 09:38:18</publishTime>
     </File>
     <File Include="bin/MultiRisWeb.dll">
-      <publishTime>07/01/2025 16:07:28</publishTime>
+      <publishTime>07/02/2025 09:38:21</publishTime>
     </File>
     <File Include="bin/MultiRisWeb.Encrypt.dll">
       <publishTime>01/07/2025 10:35:43</publishTime>
@@ -58,10 +58,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/07/2025 10:35:43</publishTime>
     </File>
     <File Include="bin/MultiRisWeb.pdb">
-      <publishTime>07/01/2025 16:07:28</publishTime>
+      <publishTime>07/02/2025 09:38:21</publishTime>
     </File>
     <File Include="bin/MultiRisWeb.XmlSerializers.dll">
-      <publishTime>07/01/2025 16:07:32</publishTime>
+      <publishTime>07/02/2025 09:38:25</publishTime>
     </File>
     <File Include="bin/netstandard.dll">
       <publishTime>04/11/2023 09:12:41</publishTime>
@@ -10022,6 +10022,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="Web/Firmas/interclinicaLosCarrera.png">
       <publishTime>06/30/2025 14:14:09</publishTime>
+    </File>
+    <File Include="Web/Firmas/interclinicaSanJose.png">
+      <publishTime>01/07/2025 16:16:41</publishTime>
     </File>
     <File Include="Web/Firmas/interclinicaTarapaca.png">
       <publishTime>07/01/2025 10:59:07</publishTime>

@@ -84,7 +84,7 @@ namespace MultiRisWeb.Data.Util
                             int idInstitucion = byId.id_institucion;
                             //string newValue = meddreamsUtil.generarToken(cod_examen, idInstitucion);
                             //str = str + "&nbsp;<a href='" + institucionAndVisor.url.Replace("#TOKEN#", newValue) + "' target='_blank' onclick='LogMeddream(" + institucionCodExamen.id_ris_examen + ");' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "' ></a>";
-                            str = str + "&nbsp;<a href='" + institucionAndVisor.url + codexamen + "&add=true" + "' target='_blank' onclick='LogMeddream(" + institucionCodExamen.id_ris_examen + ");' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "' ></a>";
+                            str = str + "&nbsp;<a href='" + institucionAndVisor.url + codexamen + "&storage="+ byId.aetitle +"&add=true" + "' target='_blank' onclick='LogMeddream(" + institucionCodExamen.id_ris_examen + ");' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "' ></a>";
                         }
                         else if (visorDomain.id_visor != 6)
                             str = str + "&nbsp;<a href='" + institucionAndVisor.url.Replace("#AETITLE#", byId.aetitle).Replace("#CODEXAMEN#", codexamen).Replace("#modalidad#", institucionCodExamen.modalidad) + "' target='_blank' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "'  style='max-width:25px !important' ></a>";
@@ -145,7 +145,8 @@ namespace MultiRisWeb.Data.Util
                             int idInstitucion = byId.id_institucion;
                             //string newValue = meddreamsUtil.generarToken(cod_examen, idInstitucion);
                             //str = str + "&nbsp;<a href='" + institucionAndVisor.url.Replace("#TOKEN#", newValue) + "' target='_blank' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "' ></a>";
-                            str = str + "&nbsp;<a href='" + institucionAndVisor.url + codexamen + "&add=true" + "' target='_blank' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "' ></a>";
+                            str = str + "&nbsp;<a href='" + institucionAndVisor.url + codexamen + "&storage=" + byId.aetitle + "&add=true" + "' target='_blank' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "' ></a>";
+                          
                         }
                         else if (visorDomain.id_visor != 6)
                             str = str + "&nbsp;<a href='" + institucionAndVisor.url.Replace("#AETITLE#", byId.aetitle).Replace("#CODEXAMEN#", codexamen).Replace("#modalidad#", institucionCodExamen.modalidad) + "' target='_blank' title='Ver con " + visorDomain.nombre + "' ><img class='imgvisor' src='../icon/" + visorDomain.icono + "' ></a>";
@@ -199,7 +200,7 @@ namespace MultiRisWeb.Data.Util
                     //string newValue = new MeddreamsUtil().generarToken(institucionCodExamen.codexamen, byId.id_institucion);
                     //str = institucionAndVisor.url.Replace("#TOKEN#", newValue);
                    
-                    str = institucionAndVisor.url+ cod_examen_actual + "&add=true";
+                    str = institucionAndVisor.url+ cod_examen_actual + "&storage=" + byId.aetitle + "&add=true";
                 }
             }
             return str;

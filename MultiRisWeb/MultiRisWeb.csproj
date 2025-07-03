@@ -3233,6 +3233,7 @@
     <Content Include="Web\Firmas\administrador.jpg" />
     <Content Include="Web\Firmas\interclinicaCordillera.png" />
     <Content Include="Web\Firmas\interclinicaLosCarrera.png" />
+    <Content Include="Web\Firmas\interclinicaSanJose.png" />
     <Content Include="Web\Firmas\interclinicaTarapaca.png" />
     <Content Include="Web\font\Avenir-Roman\style.css" />
     <Content Include="Web\Gestion\Honorarios.aspx" />
