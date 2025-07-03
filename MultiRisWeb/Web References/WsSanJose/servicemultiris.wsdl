@@ -446,11 +446,12 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertarExamenDetalle">
+      <s:element name="InsertarExamenCabDetalle">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
             <s:element minOccurs="0" maxOccurs="1" name="informeExterno" type="tns:ArrayOfInformeExternoCabeceraParameters" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalleExterno" type="tns:ArrayOfPrestacionesExternasParameters1" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -495,22 +496,6 @@
           <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
         </s:sequence>
       </s:complexType>
-      <s:element name="InsertarExamenDetalleResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="InsertarExamenDetalleResult" type="tns:Respuesta" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="InsertarExamenCabDetalle">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="credenciales" type="tns:CredencialesParameters" />
-            <s:element minOccurs="0" maxOccurs="1" name="informeExterno" type="tns:ArrayOfInformeExternoCabeceraParameters" />
-            <s:element minOccurs="0" maxOccurs="1" name="detalleExterno" type="tns:ArrayOfPrestacionesExternasParameters1" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:complexType name="ArrayOfPrestacionesExternasParameters1">
         <s:sequence>
           <s:element minOccurs="0" maxOccurs="unbounded" name="PrestacionesExternasParameters" nillable="true" type="tns:PrestacionesExternasParameters" />
@@ -623,12 +608,6 @@
   <wsdl:message name="SolicitarimagenesSoapOut">
     <wsdl:part name="parameters" element="tns:SolicitarimagenesResponse" />
   </wsdl:message>
-  <wsdl:message name="InsertarExamenDetalleSoapIn">
-    <wsdl:part name="parameters" element="tns:InsertarExamenDetalle" />
-  </wsdl:message>
-  <wsdl:message name="InsertarExamenDetalleSoapOut">
-    <wsdl:part name="parameters" element="tns:InsertarExamenDetalleResponse" />
-  </wsdl:message>
   <wsdl:message name="InsertarExamenCabDetalleSoapIn">
     <wsdl:part name="parameters" element="tns:InsertarExamenCabDetalle" />
   </wsdl:message>
@@ -695,10 +674,6 @@
     <wsdl:operation name="Solicitarimagenes">
       <wsdl:input message="tns:SolicitarimagenesSoapIn" />
       <wsdl:output message="tns:SolicitarimagenesSoapOut" />
-    </wsdl:operation>
-    <wsdl:operation name="InsertarExamenDetalle">
-      <wsdl:input message="tns:InsertarExamenDetalleSoapIn" />
-      <wsdl:output message="tns:InsertarExamenDetalleSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="InsertarExamenCabDetalle">
       <wsdl:input message="tns:InsertarExamenCabDetalleSoapIn" />
@@ -835,15 +810,6 @@
     </wsdl:operation>
     <wsdl:operation name="Solicitarimagenes">
       <soap:operation soapAction="http://tempuri.org/Solicitarimagenes" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="InsertarExamenDetalle">
-      <soap:operation soapAction="http://tempuri.org/InsertarExamenDetalle" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -998,15 +964,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertarExamenDetalle">
-      <soap12:operation soapAction="http://tempuri.org/InsertarExamenDetalle" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="InsertarExamenCabDetalle">
       <soap12:operation soapAction="http://tempuri.org/InsertarExamenCabDetalle" style="document" />
       <wsdl:input>
@@ -1019,10 +976,10 @@
   </wsdl:binding>
   <wsdl:service name="ServiceMultiris">
     <wsdl:port name="ServiceMultirisSoap" binding="tns:ServiceMultirisSoap">
-      <soap:address location="http://10.0.10.30/multiriswebws/servicemultiris.asmx" />
+      <soap:address location="https://ris.clinicasanjose.cl/multiriswebws/servicemultiris.asmx" />
     </wsdl:port>
     <wsdl:port name="ServiceMultirisSoap12" binding="tns:ServiceMultirisSoap12">
-      <soap12:address location="http://10.0.10.30/multiriswebws/servicemultiris.asmx" />
+      <soap12:address location="https://ris.clinicasanjose.cl/multiriswebws/servicemultiris.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

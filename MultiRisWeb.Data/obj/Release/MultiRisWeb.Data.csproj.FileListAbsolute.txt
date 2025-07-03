@@ -47,4 +47,3 @@ D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Rele
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.csproj.CopyComplete
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.pdb
-D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Release\MultiRisWeb.Data.csproj.AssemblyReference.cache

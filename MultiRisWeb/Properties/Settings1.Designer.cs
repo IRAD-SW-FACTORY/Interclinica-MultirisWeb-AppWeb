@@ -36,16 +36,6 @@ namespace MultiRisWeb.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx")]
-        public string MultiRisWeb_WsLosCarrera_ServiceMultiris {
-            get {
-                return ((string)(this["MultiRisWeb_WsLosCarrera_ServiceMultiris"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("https://riscloud.clinicatarapaca.cl/multiriswebws/ServiceMultiris.asmx")]
         public string MultiRisWeb_WsTarapaca_ServiceMultiris {
             get {
@@ -60,6 +50,26 @@ namespace MultiRisWeb.Properties {
         public string MultiRisWeb_WsLosLeones_ServiceMultiris {
             get {
                 return ((string)(this["MultiRisWeb_WsLosLeones_ServiceMultiris"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://10.0.10.30/multiriswebws/servicemultiris.asmx")]
+        public string MultiRisWeb_WsLosCarrera_ServiceMultiris {
+            get {
+                return ((string)(this["MultiRisWeb_WsLosCarrera_ServiceMultiris"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://ris.clinicasanjose.cl/multiriswebws/servicemultiris.asmx")]
+        public string MultiRisWeb_WsSanJose_ServiceMultiris {
+            get {
+                return ((string)(this["MultiRisWeb_WsSanJose_ServiceMultiris"]));
             }
         }
     }

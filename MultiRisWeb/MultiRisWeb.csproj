@@ -2756,7 +2756,7 @@
     <Content Include="vocali\libs\opus\opus-recorder.min.js" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
     </None>
     <Content Include="Web References\WsCordillera\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
@@ -2782,6 +2782,14 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\WsLosLeones\servicemultiris.disco" />
+    <Content Include="Web References\WsSanJose\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\WsSanJose\Respuesta.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\WsSanJose\servicemultiris.disco" />
     <Content Include="Web References\WsTarapaca\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -2790,6 +2798,7 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Content>
     <None Include="Web References\WsLosLeones\servicemultiris.wsdl" />
+    <None Include="Web References\WsSanJose\servicemultiris.wsdl" />
     <None Include="Web References\WsTarapaca\ServiceMultiris.disco" />
     <Content Include="Web.config" />
     <Content Include="Web\Agenda\Agenda.aspx" />
@@ -6198,7 +6207,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Include="Properties\Settings1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -6233,6 +6242,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="Web References\WsLosLeones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WsSanJose\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -6621,6 +6635,17 @@
     <Folder Include="Web\Firmas_OLD\" />
   </ItemGroup>
   <ItemGroup>
+    <WebReferenceUrl Include="https://ris.clinicasanjose.cl/multiriswebws/servicemultiris.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsSanJose\</RelPath>
+      <UpdateFromURL>https://ris.clinicasanjose.cl/multiriswebws/servicemultiris.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MultiRisWeb_WsSanJose_ServiceMultiris</CachedSettingsPropName>
+    </WebReferenceUrl>
     <WebReferenceUrl Include="https://riscloud.clinicaloscarrera.cl/multiriswebws/servicemultiris.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WsLosCarrera\</RelPath>

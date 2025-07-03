@@ -54,6 +54,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesLosLeones.password = byId.password;
                         result = serviceMultirisWsLosLeones.GetAntecedentesClinicos(credencialesLosLeones, codexamen);
                         break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+                        credencialesSanJose.username = byId.username;
+                        credencialesSanJose.password = byId.password;
+                        result = serviceMultirisWsSanJose.GetAntecedentesClinicos(credencialesSanJose, codexamen);
+                        break;
                     default:
                         break;
                 }
@@ -104,6 +111,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesLosLeones.password = institucionCredenciales.password;
                         result = serviceMultirisWsLosLeones.GetcomentarioTM(credencialesLosLeones, codexamen);
                         break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+                        credencialesSanJose.username = institucionCredenciales.username;
+                        credencialesSanJose.password = institucionCredenciales.password;
+                        result = serviceMultirisWsSanJose.GetcomentarioTM(credencialesSanJose, codexamen);
+                        break;
                     default:
                         break;
                 }
@@ -150,6 +164,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesLosLeones.username = institucionCredenciales.username;
                         credencialesLosLeones.password = institucionCredenciales.password;
                         serviceMultirisWsLosLeones.SolicitudExamen(credencialesLosLeones, codexamen, "");
+                        break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+                        credencialesSanJose.username = institucionCredenciales.username;
+                        credencialesSanJose.password = institucionCredenciales.password;
+                        serviceMultirisWsSanJose.SolicitudExamen(credencialesSanJose, codexamen, "");
                         break;
                     default:
                         break;
@@ -217,6 +238,17 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosLosLeones.numeroAcceso = numeroAcceso;
                         documentosExamen = serviceMultirisWsLosLeones.GetDocumentosExamen(credencialesLosLeones, documentosLosLeones);
                         break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.DocumentosParameters documentosSanJose = new MultiRisWeb.WsSanJose.DocumentosParameters();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+
+                        credencialesSanJose.username = institucionCredenciales.username;
+                        credencialesSanJose.password = institucionCredenciales.password;
+                        documentosSanJose.codExamen = codExamen;
+                        documentosSanJose.numeroAcceso = numeroAcceso;
+                        documentosExamen = serviceMultirisWsSanJose.GetDocumentosExamen(credencialesSanJose, documentosSanJose);
+                        break;
                     default:
                         break;
                 }
@@ -263,6 +295,13 @@ namespace MultiRisWeb.ConsumirServicios
                         credencialesLosLeones.username = institucionCredenciales.username;
                         credencialesLosLeones.password = institucionCredenciales.password;
                         estudiosRelacionados = serviceMultirisWsLosLeones.GetEstudiosRelacionados(credencialesLosLeones, idPaciente);
+                        break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+                        credencialesSanJose.username = institucionCredenciales.username;
+                        credencialesSanJose.password = institucionCredenciales.password;
+                        estudiosRelacionados = serviceMultirisWsSanJose.GetEstudiosRelacionados(credencialesSanJose, idPaciente);
                         break;
                     default:
                         break;
@@ -680,6 +719,97 @@ namespace MultiRisWeb.ConsumirServicios
 
                         result = serviceMultirisWsLosLeones.InsertInformeOIT(credencialesLosLeones, informeOitLosLeones);
                         break;
+                    case 5:
+                        MultiRisWeb.WsLosLeones.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsLosLeones.ServiceMultiris();
+                        MultiRisWeb.WsLosLeones.InformeOITParameters informeOitSanJose = new MultiRisWeb.WsLosLeones.InformeOITParameters();
+                        MultiRisWeb.WsLosLeones.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsLosLeones.CredencialesParameters();
+                        credencialesSanJose.username = byId2.username;
+                        credencialesSanJose.password = byId2.password;
+                        informeOitSanJose.id = informeOIT.id;
+                        informeOitSanJose.nombre = informeOIT.nombre;
+                        informeOitSanJose.idpaciente = informeOIT.idPaciente;
+                        informeOitSanJose.fecha_radiografia = informeOIT.fechaRadiografia;
+                        informeOitSanJose.numero_radiografia = informeOIT.numeroRadiografia;
+                        informeOitSanJose.radiografia_digital = Convert.ToInt32(informeOIT.radiografiaDigital);
+                        informeOitSanJose.lectura_negatoscopio = Convert.ToInt32(informeOIT.lecturaNegatoscopio);
+                        informeOitSanJose.tecnica_qualidaden = Convert.ToInt32(informeOIT.tecnicaQualidaden);
+                        informeOitSanJose.radiografia_normal = Convert.ToInt32(informeOIT.radiografiaNormal);
+                        informeOitSanJose.comentario = informeOIT.comentario;
+                        informeOitSanJose.anormalidad_parenquimatosa = Convert.ToInt32(informeOIT.anormalidadParenquimatosa);
+                        informeOitSanJose.primaria1 = Convert.ToInt32(informeOIT.primaria1);
+                        informeOitSanJose.primaria2 = Convert.ToInt32(informeOIT.primaria2);
+                        informeOitSanJose.primaria3 = Convert.ToInt32(informeOIT.primaria3);
+                        informeOitSanJose.secundaria1 = Convert.ToInt32(informeOIT.secundaria1);
+                        informeOitSanJose.secundaria2 = Convert.ToInt32(informeOIT.secundaria2);
+                        informeOitSanJose.secundaria3 = Convert.ToInt32(informeOIT.secundaria3);
+                        informeOitSanJose.zonas1 = Convert.ToInt32(informeOIT.zonas1);
+                        informeOitSanJose.profusion1 = Convert.ToInt32(informeOIT.profusion1);
+                        informeOitSanJose.profusion2 = Convert.ToInt32(informeOIT.profusion2);
+                        informeOitSanJose.profusion3 = Convert.ToInt32(informeOIT.profusion3);
+                        informeOitSanJose.profusion4 = Convert.ToInt32(informeOIT.profusion4);
+                        informeOitSanJose.opacidades_pequenas1 = Convert.ToInt32(informeOIT.opacidadesPequenas1);
+                        informeOitSanJose.anormalidad_pleural = Convert.ToInt32(informeOIT.anormalidadPleural);
+                        informeOitSanJose.placas_pleurales = Convert.ToInt32(informeOIT.placasPleurales);
+                        informeOitSanJose.placas_pleurales_sitio_perfil = Convert.ToInt32(informeOIT.placasPleuralesSitioPerfil);
+                        informeOitSanJose.placas_pleurales_sitio_frente = Convert.ToInt32(informeOIT.placasPleuralesSitioFrente);
+                        informeOitSanJose.placas_pleurales_sitio_diagrama = Convert.ToInt32(informeOIT.placasPleuralesSitioDiagrama);
+                        informeOitSanJose.placas_pleurales_sitio_otro = Convert.ToInt32(informeOIT.placasPleuralesSitioOtro);
+                        informeOitSanJose.placas_pleurales_calcificacion_perfil = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionPerfil);
+                        informeOitSanJose.placas_pleurales_calcificacion_frente = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionFrente);
+                        informeOitSanJose.placas_pleurales_calcificacion_diagrama = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionDiagrama);
+                        informeOitSanJose.placas_pleurales_calcificacion_otro = Convert.ToInt32(informeOIT.placasPleuralesCalcificacionOtro);
+                        informeOitSanJose.placas_pleurales_extencion_pared1 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared1);
+                        informeOitSanJose.placas_pleurales_extencion_pared2 = Convert.ToInt32(informeOIT.placasPleuralesExtencionPared2);
+                        informeOitSanJose.placas_pleurales_ancho1 = Convert.ToInt32(informeOIT.placasPleuralesAncho1);
+                        informeOitSanJose.placas_pleurales_ancho2 = Convert.ToInt32(informeOIT.placasPleuralesAncho2);
+                        informeOitSanJose.obliteracion_angulo_costofrenico = Convert.ToInt32(informeOIT.obliteracionAnguloCostofrenico);
+                        informeOitSanJose.engrosamiento_pleural_difuso = Convert.ToInt32(informeOIT.engrosamientoPleuralDifuso);
+                        informeOitSanJose.engrosamiento_pleural_difuso_sitio_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioPerfil);
+                        informeOitSanJose.engrosamiento_pleural_difuso_sitio_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoSitioFrente);
+                        informeOitSanJose.engrosamiento_pleural_difuso_calcificacion_perfil = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionPerfil);
+                        informeOitSanJose.engrosamiento_pleural_difuso_calcificacion_frente = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoCalcificacionFrente);
+                        informeOitSanJose.engrosamiento_pleural_difuso_extencion_pared1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared1);
+                        informeOitSanJose.engrosamiento_pleural_difuso_extencion_pared2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoExtencionPared2);
+                        informeOitSanJose.engrosamiento_pleural_difuso_ancho1 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho1);
+                        informeOitSanJose.engrosamiento_pleural_difuso_ancho2 = Convert.ToInt32(informeOIT.engrosamientoPleuralDifusoAncho2);
+                        informeOitSanJose.otras_anormalidades = Convert.ToInt32(informeOIT.otrasAnormalidades);
+                        informeOitSanJose.simbolo_aa = informeOIT.simbolo_aa;
+                        informeOitSanJose.simbolo_at = informeOIT.simbolo_at;
+                        informeOitSanJose.simbolo_ax = informeOIT.simbolo_ax;
+                        informeOitSanJose.simbolo_bu = informeOIT.simbolo_bu;
+                        informeOitSanJose.simbolo_ca = informeOIT.simbolo_ca;
+                        informeOitSanJose.simbolo_cg = informeOIT.simbolo_cg;
+                        informeOitSanJose.simbolo_cn = informeOIT.simbolo_cn;
+                        informeOitSanJose.simbolo_co = informeOIT.simbolo_co;
+                        informeOitSanJose.simbolo_cp = informeOIT.simbolo_cp;
+                        informeOitSanJose.simbolo_cv = informeOIT.simbolo_cv;
+                        informeOitSanJose.simbolo_di = informeOIT.simbolo_di;
+                        informeOitSanJose.simbolo_ef = informeOIT.simbolo_ef;
+                        informeOitSanJose.simbolo_em = informeOIT.simbolo_em;
+                        informeOitSanJose.simbolo_es = informeOIT.simbolo_es;
+                        informeOitSanJose.simbolo_fr = informeOIT.simbolo_fr;
+                        informeOitSanJose.simbolo_hi = informeOIT.simbolo_hi;
+                        informeOitSanJose.simbolo_ho = informeOIT.simbolo_ho;
+                        informeOitSanJose.simbolo_id = informeOIT.simbolo_id;
+                        informeOitSanJose.simbolo_ih = informeOIT.simbolo_ih;
+                        informeOitSanJose.simbolo_kl = informeOIT.simbolo_kl;
+                        informeOitSanJose.simbolo_me = informeOIT.simbolo_me;
+                        informeOitSanJose.simbolo_pa = informeOIT.simbolo_pa;
+                        informeOitSanJose.simbolo_pb = informeOIT.simbolo_pb;
+                        informeOitSanJose.simbolo_pi = informeOIT.simbolo_pi;
+                        informeOitSanJose.simbolo_px = informeOIT.simbolo_px;
+                        informeOitSanJose.simbolo_ra = informeOIT.simbolo_ra;
+                        informeOitSanJose.simbolo_rp = informeOIT.simbolo_rp;
+                        informeOitSanJose.simbolo_tb = informeOIT.simbolo_tb;
+                        informeOitSanJose.simbolo_od = informeOIT.simbolo_od;
+                        informeOitSanJose.comentario_general = informeOIT.comentarioGeneral;
+                        informeOitSanJose.fecha_lectura = informeOIT.fechaLectura;
+                        informeOitSanJose.codexamen = informeOIT.codexamen;
+                        informeOitSanJose.estado = informeOIT.estado;
+                        informeOitSanJose.username_radiologo = "admin";
+
+                        result = serviceMultirisWsSanJose.InsertInformeOIT(credencialesSanJose, informeOitSanJose);
+                        break;
                     default:
                         break;
                 }
@@ -740,6 +870,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosLosLeones.codExamen = codExamen;
                         documentosLosLeones.numeroAcceso = numeroAcceso;
                         comentarios = serviceMultirisWSLosLeones.GetComentarios(credencialesLosLeones, documentosLosLeones);
+                        break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWSSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.DocumentosParameters documentosSanJose = new MultiRisWeb.WsSanJose.DocumentosParameters();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+                        credencialesSanJose.username = byId2.username;
+                        credencialesSanJose.password = byId2.password;
+                        documentosSanJose.codExamen = codExamen;
+                        documentosSanJose.numeroAcceso = numeroAcceso;
+                        comentarios = serviceMultirisWSSanJose.GetComentarios(credencialesSanJose, documentosSanJose);
                         break;
                     default:
                         break;
@@ -804,6 +944,16 @@ namespace MultiRisWeb.ConsumirServicios
                         documentosLosLeones.codExamen = codExamen;
                         documentosLosLeones.numeroAcceso = numeroAcceso;
                         comentariosWs = serviceMultirisWsLosLeones.GetComentarios(credencialesLosLeones, documentosLosLeones);
+                        break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.DocumentosParameters documentosSanJose = new MultiRisWeb.WsSanJose.DocumentosParameters();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+                        credencialesSanJose.username = credencialesInstitucion.username;
+                        credencialesSanJose.password = credencialesInstitucion.password;
+                        documentosSanJose.codExamen = codExamen;
+                        documentosSanJose.numeroAcceso = numeroAcceso;
+                        comentariosWs = serviceMultirisWsSanJose.GetComentarios(credencialesSanJose, documentosSanJose);
                         break;
                     default:
 
@@ -889,6 +1039,21 @@ namespace MultiRisWeb.ConsumirServicios
                         comentariosLosLeones.username = userName;
 
                         result = serviceMultirisWsLosLeones.SaveComentario(credencialesLosLeones, comentariosLosLeones);
+                        break;
+                    case 5:
+                        MultiRisWeb.WsSanJose.ServiceMultiris serviceMultirisWsSanJose = new MultiRisWeb.WsSanJose.ServiceMultiris();
+                        MultiRisWeb.WsSanJose.ComentariosParameters comentariosSanJose = new MultiRisWeb.WsSanJose.ComentariosParameters();
+                        MultiRisWeb.WsSanJose.CredencialesParameters credencialesSanJose = new MultiRisWeb.WsSanJose.CredencialesParameters();
+                        credencialesSanJose.username = institucionCredenciales.username;
+                        credencialesSanJose.password = institucionCredenciales.password;
+                        comentariosSanJose.codExamen = byCodExamen.codexamen;
+                        comentariosSanJose.cantidad = 1;
+                        comentariosSanJose.fecha = DateTime.Now;
+                        comentariosSanJose.aetitle = byCodExamen.aetitle;
+                        comentariosSanJose.texto = comentario;
+                        comentariosSanJose.username = userName;
+
+                        result = serviceMultirisWsSanJose.SaveComentario(credencialesSanJose, comentariosSanJose);
                         break;
                     default:
                         break;
