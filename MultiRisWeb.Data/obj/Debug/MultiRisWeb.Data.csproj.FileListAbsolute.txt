@@ -30,3 +30,5 @@ D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Debu
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Debug\MultiRisWeb.Data.csproj.CopyComplete
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Debug\MultiRisWeb.Data.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\obj\Debug\MultiRisWeb.Data.pdb
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Debug\IradLogFile.dll
+D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Data\bin\Debug\IradLogFile.pdb
