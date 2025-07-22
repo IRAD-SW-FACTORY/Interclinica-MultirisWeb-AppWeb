@@ -36,3 +36,12 @@
 17-07-2025 11:02:02 Institucion : 1
 17-07-2025 11:02:02 username : adminCordillera
 17-07-2025 11:02:02 pass : Cordillerapassword
+22-07-2025 08:52:41 System.Threading.ThreadAbortException: Subproceso anulado. |    en System.Threading.Thread.AbortInternal() |    en System.Threading.Thread.Abort(Object stateInfo) |    en System.Web.HttpResponse.AbortCurrentThread() |    en System.Web.HttpResponse.End() |    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent) |    en System.Web.HttpResponse.Redirect(String url) |    en MultiRisWeb.Default.btnIngresar_Click(Object sender, EventArgs e) en D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb\Default.aspx.cs:línea 111
+22-07-2025 08:53:19 System.Threading.ThreadAbortException: Subproceso anulado. |    en System.Threading.Thread.AbortInternal() |    en System.Threading.Thread.Abort(Object stateInfo) |    en System.Web.HttpResponse.AbortCurrentThread() |    en System.Web.HttpResponse.End() |    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent) |    en System.Web.HttpResponse.Redirect(String url) |    en MultiRisWeb.Default.btnIngresar_Click(Object sender, EventArgs e) en D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb\Default.aspx.cs:línea 111
+22-07-2025 09:23:45 Institucion : 1
+22-07-2025 09:23:45 username : adminCordillera
+22-07-2025 09:23:45 pass : Cordillerapassword
+22-07-2025 09:25:31 Institucion : 1
+22-07-2025 09:25:31 username : adminCordillera
+22-07-2025 09:25:31 pass : Cordillerapassword
+22-07-2025 09:27:10 System.Threading.ThreadAbortException: Subproceso anulado. |    en System.Threading.Thread.AbortInternal() |    en System.Threading.Thread.Abort(Object stateInfo) |    en System.Web.HttpResponse.AbortCurrentThread() |    en System.Web.HttpResponse.End() |    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent) |    en System.Web.HttpResponse.Redirect(String url) |    en MultiRisWeb.Default.btnIngresar_Click(Object sender, EventArgs e) en D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb\Default.aspx.cs:línea 111

@@ -536,7 +536,7 @@
                             success: function (arg) {
                                 var objeto = arg.d;
 
-                                if (objeto[0].estadoExamen != 3 && (perfil == 4 || perfil == 8)) {
+                                if (objeto[0].estadoExamen != 3 && (perfil == 4 || perfil == 8 || perfil == 2)) {
                                     $("#lblMensajeAlerta").text('- Examen no se encuentra en estado Validado para acceder con su perfil');
                                     $("#modalInformarResumido").modal('hide');
                                     $("#modalMensajeAlerta").modal('show');
@@ -2156,7 +2156,7 @@
                             $("#messageTxt").text("El Exámen debe estar VALIDADO para poder generar esta solicitud");
                             $('#messageCss').removeClass("css-prc-addemdum").addClass("css-msg-addemdum");
                         };
-                        if (row.Perfil != 8 && row.Perfil != 1) {
+                        if (row.Perfil != 8 && row.Perfil != 1 && row.Perfil != 2) {
                             $('#crearAdd').prop('disabled', true)
                             $("#messageTxt").text("Usted NO tiene perfil para crear esta solicitud");
                             $('#messageCss').removeClass("css-prc-addemdum").addClass("css-msg-addemdum");
