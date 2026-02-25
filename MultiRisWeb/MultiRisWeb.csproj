@@ -48,7 +48,7 @@
       <HintPath>lib\IradDBNet.dll</HintPath>
     </Reference>
     <Reference Include="IradLogFile">
-      <HintPath>..\..\DLL\IradLogFile.dll</HintPath>
+      <HintPath>lib\IradLogFile.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>lib\itextsharp.dll</HintPath>
@@ -124,6 +124,10 @@
     <Content Include="ErrorPage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\001_CREAR_TABLA_ARCHIVO_AUDIO_EXAMEN.sql" />
+    <Content Include="Scripts\002_CREAR_SP_INSERTA_AUDIO_EXAMEN.sql" />
+    <Content Include="Scripts\003_CREAR_SP_LISTA_AUDIO_EXAMEN.sql" />
+    <Content Include="Scripts\004_CREAR_SP_ELIMINA_AUDIO_EXAMEN.sql" />
     <Content Include="vocali\common\common.css" />
     <Content Include="vocali\common\common.js" />
     <Content Include="vocali\common\custom-elements\loginForm.js" />
@@ -3193,6 +3197,7 @@
     <Content Include="Web\Control\UpdateClaveAcceso.aspx" />
     <Content Include="Web\Control\Vacio.html" />
     <Content Include="Web\css\Addendum.css" />
+    <Content Include="Web\css\audioExamen.css" />
     <Content Include="Web\css\chatIrad.css" />
     <Content Include="Web\css\DataTables\datatables.css" />
     <Content Include="Web\css\DataTables\datatables.min.css" />
@@ -3222,6 +3227,7 @@
     <Content Include="Web\Examen\1.html" />
     <Content Include="Web\Examen\Addendum.aspx" />
     <Content Include="Web\Examen\AddendumExamenPrevios.aspx" />
+    <Content Include="Web\Examen\AudioExamen.aspx" />
     <Content Include="Web\Examen\InformaOIT.aspx" />
     <Content Include="Web\Examen\Informar.aspx" />
     <Content Include="Web\Examen\InformarExamenPrevios.aspx" />
@@ -3344,6 +3350,7 @@
     <Content Include="Web\Institucion\ListaInstitucion.aspx" />
     <Content Include="Web\js\Addendum.js" />
     <Content Include="Web\js\AddendumExamenPrevio.js" />
+    <Content Include="Web\js\audioExamen.js" />
     <Content Include="Web\js\chatIrad.js" />
     <Content Include="Web\js\ControlMenuAcceso.js" />
     <Content Include="Web\js\DataTables\datatables.js" />
@@ -6182,6 +6189,7 @@
     <Content Include="Web\TagExamen\TagExamenProfesional.aspx" />
     <Content Include="Web\Usuario\ListaUsuario.aspx" />
     <Content Include="Web\Usuario\UsuarioAgregarCentros.aspx" />
+    <Content Include="Web\Examen\AudioStream.ashx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Catalogacion.aspx.cs">
@@ -6341,6 +6349,13 @@
     </Compile>
     <Compile Include="Web\Examen\AddendumExamenPrevios.aspx.designer.cs">
       <DependentUpon>AddendumExamenPrevios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Examen\AudioExamen.aspx.cs">
+      <DependentUpon>AudioExamen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Examen\AudioStream.ashx.cs">
+      <DependentUpon>AudioStream.ashx</DependentUpon>
     </Compile>
     <Compile Include="Web\Examen\InformaOIT.aspx.cs">
       <DependentUpon>InformaOIT.aspx</DependentUpon>

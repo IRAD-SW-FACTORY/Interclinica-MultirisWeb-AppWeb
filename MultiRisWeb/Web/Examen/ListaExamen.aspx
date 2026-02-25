@@ -24,6 +24,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css' />
 
     <link href="../css/chatIrad.css" rel="stylesheet" />
+    <link href="../css/audioExamen.css" rel="stylesheet" />
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
     <script src="../js/chatIrad.js"></script>
@@ -54,9 +55,20 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
     
     <script src="../js/chatIrad.js"></script>
+    <script type="text/javascript" src="../js/audioExamen.js"></script>
 
     <script>
         $(document).ready(function () {
+
+            // Handler para abrir panel de audios desde el menú de acciones
+            $('#gData').on('click', '.audioExamen', function () {
+                var parts = $(this).attr('id').split('-');
+                var idRisExamen = parseInt(parts[1]);
+                var idInstitucion = parseInt(parts[2]);
+                var codExamen = parts[3];
+                abrirPanelAudio(codExamen, idInstitucion, idRisExamen);
+            });
+
             var perfil = $("#hddPerfil").val();
             var user = $("#hddUser").val();
             var visualiza = $("#hddVisualiza").val();
@@ -1311,6 +1323,12 @@
                                         dropdown += '</a>';
                                         dropdown += '</li>';
                                     }
+                                    dropdown += '<li>';
+                                    dropdown += '<a title="Audios" style="color:white; font-size: 12px; text-decoration: none !important;" href="#" CssClass="form-control-ddl">';
+                                    dropdown += '<img style="width: 12px; margin: -10px 0 -5px 10px" src="../img/circulo.png" />';
+                                    dropdown += '<span class="audioExamen" id="audio-' + row[1] + '-' + row[10].split(',')[2] + '-' + row[34] + '" style="margin: -5px 0 -5px 5px">Audios</span>';
+                                    dropdown += '</a>';
+                                    dropdown += '</li>';
                                     if (row[12] == "Validado") {
                                         dropdown += '<li>';
                                         dropdown += '<a data-toggle="modal" title="Solicitar Addemdum" data-target="#modalSolicitudAddemdum" style="color:white; font-size: 12px; text-decoration: none !important;" href="#" CssClass="form-control-ddl">';
@@ -4231,6 +4249,27 @@
         }
     </script>
   
+    <!-- Panel flotante de audios -->
+    <div id="panelAudio">
+        <div class="audio-panel-header">
+            <span>&#9835; AUDIOS</span>
+            <div class="audio-panel-header-actions">
+                <button type="button" onclick="minimizarPanelAudio()" title="Minimizar">&#9472;</button>
+                <button type="button" onclick="cerrarPanelAudio()" title="Cerrar">&times;</button>
+            </div>
+        </div>
+        <div class="audio-panel-body">
+            <div id="audioListaContenido">
+                <div class="audio-lista-vacia">No hay audios para este examen.</div>
+            </div>
+        </div>
+        <div id="audioReproductor"></div>
+        <div class="audio-panel-footer">
+            <label for="audioFileInput">&#128228; Subir Audio <span id="audioContadorUpload">0/10</span></label>
+            <input type="file" id="audioFileInput" accept=".mp3,.wav,.ogg,.m4a,.mp4,.wma,.aac" onchange="subirAudio(this)" />
+        </div>
+    </div>
+
     <!--<script src="../js/evitarReenvio.js"></script>-->
     <script>
         async function uploadFile() {
