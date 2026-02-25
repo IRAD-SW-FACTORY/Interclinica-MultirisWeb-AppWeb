@@ -1,7 +1,7 @@
 using MultiRisWeb.Data.DataAccess;
 using MultiRisWeb.Data.Domain;
 using MultiRisWeb.ResponseEntity;
-using Serilog;
+using MultiRisWeb.Util;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,7 +9,6 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Web;
-using System.Web.Script.Services;
 using System.Web.Services;
 using System.Web.UI;
 
@@ -38,25 +37,25 @@ namespace MultiRisWeb.Web.Examen
         {
             if (HttpContext.Current.Session["id_usuario"] == null)
             {
-                Log.Warning("AudioExamen.ListarAudioExamen - Acceso no autorizado. codExamen: {CodExamen}", codExamen);
+                new LogApp("AudioExamen.ListarAudioExamen - Acceso no autorizado. codExamen: " + codExamen, "logAudios.log");
                 HttpContext.Current.Response.Redirect("../../Default.aspx");
             }
 
             try
             {
                 int idUsuario = int.Parse(HttpContext.Current.Session["id_usuario"].ToString());
-                Log.Information("AudioExamen.ListarAudioExamen - Inicio. codExamen: {CodExamen}, idInstitucion: {IdInstitucion}, usuario: {IdUsuario}", codExamen, idInstitucion, idUsuario);
+                new LogApp("AudioExamen.ListarAudioExamen - Inicio. codExamen: " + codExamen + ", idInstitucion: " + idInstitucion + ", usuario: " + idUsuario, "logAudios.log");
 
                 var dt = RisArchivoAudioDataAccess.Get(codExamen, idInstitucion);
                 var data = RisArchivoAudioDomain.ConvertTo(dt);
 
-                Log.Information("AudioExamen.ListarAudioExamen - Exito. codExamen: {CodExamen}, audios encontrados: {Count}", codExamen, data.Count);
+                new LogApp("AudioExamen.ListarAudioExamen - Exito. codExamen: " + codExamen + ", audios encontrados: " + data.Count, "logAudios.log");
 
                 return new ResponseApp() { Data = data, Ejecutado = true, Mensaje = "" };
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "AudioExamen.ListarAudioExamen - Error. codExamen: {CodExamen}, idInstitucion: {IdInstitucion}", codExamen, idInstitucion);
+                new LogApp("AudioExamen.ListarAudioExamen - Error. codExamen: " + codExamen + ", idInstitucion: " + idInstitucion + ". Exception: " + ex.ToString(), "logAudios.log");
                 LogError(ex, "ListarAudioExamen");
                 return new ResponseApp() { Data = null, Ejecutado = false, Mensaje = "Error al listar audios." };
             }
@@ -73,14 +72,14 @@ namespace MultiRisWeb.Web.Examen
         {
             if (HttpContext.Current.Session["id_usuario"] == null)
             {
-                Log.Warning("AudioExamen.ObtenerAudioExamen - Acceso no autorizado. idAudio: {IdAudio}", idArchivoAudio);
+                new LogApp("AudioExamen.ObtenerAudioExamen - Acceso no autorizado. idAudio: " + idArchivoAudio, "logAudios.log");
                 HttpContext.Current.Response.Redirect("../../Default.aspx");
             }
 
             try
             {
                 int idUsuario = int.Parse(HttpContext.Current.Session["id_usuario"].ToString());
-                Log.Warning("AudioExamen.ObtenerAudioExamen - Metodo obsoleto invocado. idAudio: {IdAudio}, usuario: {IdUsuario}. Usar AudioStream.ashx", idArchivoAudio, idUsuario);
+                new LogApp("AudioExamen.ObtenerAudioExamen - Metodo obsoleto invocado. idAudio: " + idArchivoAudio + ", usuario: " + idUsuario + ". Usar AudioStream.ashx", "logAudios.log");
 
                 var dt = RisArchivoAudioDataAccess.Get(codExamen, idInstitucion);
                 var audios = RisArchivoAudioDomain.ConvertTo(dt);
@@ -88,7 +87,7 @@ namespace MultiRisWeb.Web.Examen
 
                 if (audio == null)
                 {
-                    Log.Warning("AudioExamen.ObtenerAudioExamen - Audio no encontrado. idAudio: {IdAudio}, codExamen: {CodExamen}", idArchivoAudio, codExamen);
+                    new LogApp("AudioExamen.ObtenerAudioExamen - Audio no encontrado. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen, "logAudios.log");
                     return new ResponseApp() { Data = null, Ejecutado = false, Mensaje = "Audio no encontrado." };
                 }
 
@@ -97,14 +96,14 @@ namespace MultiRisWeb.Web.Examen
 
                 if (!File.Exists(rutaArchivo))
                 {
-                    Log.Warning("AudioExamen.ObtenerAudioExamen - Archivo no encontrado en disco. idAudio: {IdAudio}, ruta: {Ruta}", idArchivoAudio, rutaArchivo);
+                    new LogApp("AudioExamen.ObtenerAudioExamen - Archivo no encontrado en disco. idAudio: " + idArchivoAudio + ", ruta: " + rutaArchivo, "logAudios.log");
                     return new ResponseApp() { Data = null, Ejecutado = false, Mensaje = "Archivo de audio no encontrado en el servidor." };
                 }
 
                 byte[] bytes = File.ReadAllBytes(rutaArchivo);
                 string base64 = Convert.ToBase64String(bytes);
 
-                Log.Information("AudioExamen.ObtenerAudioExamen - Audio convertido a Base64. idAudio: {IdAudio}, tamano: {Tamano} bytes", idArchivoAudio, bytes.Length);
+                new LogApp("AudioExamen.ObtenerAudioExamen - Audio convertido a Base64. idAudio: " + idArchivoAudio + ", tamano: " + bytes.Length + " bytes", "logAudios.log");
 
                 return new ResponseApp()
                 {
@@ -115,7 +114,7 @@ namespace MultiRisWeb.Web.Examen
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "AudioExamen.ObtenerAudioExamen - Error. idAudio: {IdAudio}, codExamen: {CodExamen}", idArchivoAudio, codExamen);
+                new LogApp("AudioExamen.ObtenerAudioExamen - Error. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen + ". Exception: " + ex.ToString(), "logAudios.log");
                 LogError(ex, "ObtenerAudioExamen");
                 return new ResponseApp() { Data = null, Ejecutado = false, Mensaje = "Error al obtener audio." };
             }
@@ -126,20 +125,20 @@ namespace MultiRisWeb.Web.Examen
         {
             if (HttpContext.Current.Session["id_usuario"] == null)
             {
-                Log.Warning("AudioExamen.EliminarAudioExamen - Acceso no autorizado. idAudio: {IdAudio}", idArchivoAudio);
+                new LogApp("AudioExamen.EliminarAudioExamen - Acceso no autorizado. idAudio: " + idArchivoAudio, "logAudios.log");
                 HttpContext.Current.Response.Redirect("../../Default.aspx");
             }
 
             try
             {
                 int idUsuario = int.Parse(HttpContext.Current.Session["id_usuario"].ToString());
-                Log.Information("AudioExamen.EliminarAudioExamen - Inicio. idAudio: {IdAudio}, codExamen: {CodExamen}, usuario: {IdUsuario}", idArchivoAudio, codExamen, idUsuario);
+                new LogApp("AudioExamen.EliminarAudioExamen - Inicio. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen + ", usuario: " + idUsuario, "logAudios.log");
 
                 var dt = RisArchivoAudioDataAccess.Delete(idArchivoAudio, idUsuario);
 
                 if (dt.Rows.Count == 0 || string.IsNullOrEmpty(dt.Rows[0]["nombre_archivo"].ToString()))
                 {
-                    Log.Warning("AudioExamen.EliminarAudioExamen - Audio no encontrado o ya eliminado. idAudio: {IdAudio}, usuario: {IdUsuario}", idArchivoAudio, idUsuario);
+                    new LogApp("AudioExamen.EliminarAudioExamen - Audio no encontrado o ya eliminado. idAudio: " + idArchivoAudio + ", usuario: " + idUsuario, "logAudios.log");
                     return new ResponseApp() { Data = null, Ejecutado = false, Mensaje = "Audio no encontrado o ya fue eliminado." };
                 }
 
@@ -152,25 +151,25 @@ namespace MultiRisWeb.Web.Examen
                     if (File.Exists(rutaArchivo))
                     {
                         File.Delete(rutaArchivo);
-                        Log.Information("AudioExamen.EliminarAudioExamen - Archivo fisico eliminado. ruta: {Ruta}", rutaArchivo);
+                        new LogApp("AudioExamen.EliminarAudioExamen - Archivo fisico eliminado. ruta: " + rutaArchivo, "logAudios.log");
                     }
                     else
                     {
-                        Log.Warning("AudioExamen.EliminarAudioExamen - Archivo fisico no encontrado en disco. ruta: {Ruta}", rutaArchivo);
+                        new LogApp("AudioExamen.EliminarAudioExamen - Archivo fisico no encontrado en disco. ruta: " + rutaArchivo, "logAudios.log");
                     }
                 }
                 catch (Exception exFile)
                 {
-                    Log.Error(exFile, "AudioExamen.EliminarAudioExamen - Error al eliminar archivo fisico. ruta: {Ruta}", rutaArchivo);
+                    new LogApp("AudioExamen.EliminarAudioExamen - Error al eliminar archivo fisico. ruta: " + rutaArchivo + ". Exception: " + exFile.ToString(), "logAudios.log");
                     LogError(exFile, "EliminarAudioExamen_File");
                 }
 
-                Log.Information("AudioExamen.EliminarAudioExamen - Exito. idAudio: {IdAudio}, codExamen: {CodExamen}", idArchivoAudio, codExamen);
+                new LogApp("AudioExamen.EliminarAudioExamen - Exito. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen, "logAudios.log");
                 return new ResponseApp() { Data = null, Ejecutado = true, Mensaje = "Audio eliminado exitosamente." };
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "AudioExamen.EliminarAudioExamen - Error. idAudio: {IdAudio}, codExamen: {CodExamen}", idArchivoAudio, codExamen);
+                new LogApp("AudioExamen.EliminarAudioExamen - Error. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen + ". Exception: " + ex.ToString(), "logAudios.log");
                 LogError(ex, "EliminarAudioExamen");
                 return new ResponseApp() { Data = null, Ejecutado = false, Mensaje = "Error al eliminar audio." };
             }
@@ -184,7 +183,7 @@ namespace MultiRisWeb.Web.Examen
         {
             if (HttpContext.Current.Session["id_usuario"] == null)
             {
-                Log.Warning("AudioExamen.UploadAudio - Acceso no autorizado. IP: {IP}", Request.UserHostAddress);
+                new LogApp("AudioExamen.UploadAudio - Acceso no autorizado. IP: " + Request.UserHostAddress, "logAudios.log");
                 Response.StatusCode = 401;
                 Response.Write("401|Sesión expirada.");
                 Response.End();
@@ -201,11 +200,11 @@ namespace MultiRisWeb.Web.Examen
                 int idInstitucion = int.Parse(Request.Form["idInstitucion"]);
                 long idRisExamen = long.Parse(Request.Form["idRisExamen"]);
 
-                Log.Information("AudioExamen.UploadAudio - Inicio. codExamen: {CodExamen}, usuario: {IdUsuario}, tamano: {Tamano} bytes", codExamen, idUsuario, file?.ContentLength ?? 0);
+                new LogApp("AudioExamen.UploadAudio - Inicio. codExamen: " + codExamen + ", usuario: " + idUsuario + ", tamano: " + (file?.ContentLength ?? 0) + " bytes", "logAudios.log");
 
                 if (file == null || file.ContentLength == 0)
                 {
-                    Log.Warning("AudioExamen.UploadAudio - Archivo vacio. codExamen: {CodExamen}, usuario: {IdUsuario}", codExamen, idUsuario);
+                    new LogApp("AudioExamen.UploadAudio - Archivo vacio. codExamen: " + codExamen + ", usuario: " + idUsuario, "logAudios.log");
                     Response.Write("400|No se recibió ningún archivo.");
                     Response.End();
                     return;
@@ -214,7 +213,7 @@ namespace MultiRisWeb.Web.Examen
                 // Validar tamaño
                 if (file.ContentLength > TamanoMaximoBytes)
                 {
-                    Log.Warning("AudioExamen.UploadAudio - Archivo excede tamano maximo. codExamen: {CodExamen}, tamano: {Tamano} bytes, usuario: {IdUsuario}", codExamen, file.ContentLength, idUsuario);
+                    new LogApp("AudioExamen.UploadAudio - Archivo excede tamano maximo. codExamen: " + codExamen + ", tamano: " + file.ContentLength + " bytes, usuario: " + idUsuario, "logAudios.log");
                     Response.Write("413|El archivo excede el tamaño máximo de 10MB.");
                     Response.End();
                     return;
@@ -224,7 +223,7 @@ namespace MultiRisWeb.Web.Examen
                 string extension = Path.GetExtension(file.FileName).ToLowerInvariant();
                 if (!ExtensionesPermitidas.Contains(extension))
                 {
-                    Log.Warning("AudioExamen.UploadAudio - Extension no permitida. codExamen: {CodExamen}, extension: {Extension}, usuario: {IdUsuario}", codExamen, extension, idUsuario);
+                    new LogApp("AudioExamen.UploadAudio - Extension no permitida. codExamen: " + codExamen + ", extension: " + extension + ", usuario: " + idUsuario, "logAudios.log");
                     Response.Write("415|Formato de audio no permitido. Formatos válidos: " + string.Join(", ", ExtensionesPermitidas));
                     Response.End();
                     return;
@@ -233,7 +232,7 @@ namespace MultiRisWeb.Web.Examen
                 // Validar magic bytes
                 if (!ValidarMagicBytes(file.InputStream, extension))
                 {
-                    Log.Warning("AudioExamen.UploadAudio - Magic bytes invalidos. codExamen: {CodExamen}, extension: {Extension}, usuario: {IdUsuario}, IP: {IP}", codExamen, extension, idUsuario, Request.UserHostAddress);
+                    new LogApp("AudioExamen.UploadAudio - Magic bytes invalidos. codExamen: " + codExamen + ", extension: " + extension + ", usuario: " + idUsuario + ", IP: " + Request.UserHostAddress, "logAudios.log");
                     Response.Write("415|El archivo no corresponde a un formato de audio válido.");
                     Response.End();
                     return;
@@ -252,7 +251,7 @@ namespace MultiRisWeb.Web.Examen
                 if (!Directory.Exists(rutaCarpeta))
                 {
                     Directory.CreateDirectory(rutaCarpeta);
-                    Log.Information("AudioExamen.UploadAudio - Directorio creado. ruta: {Ruta}", rutaCarpeta);
+                    new LogApp("AudioExamen.UploadAudio - Directorio creado. ruta: " + rutaCarpeta, "logAudios.log");
                 }
 
                 string rutaCompleta = ObtenerRutaAudio(aetitle, codExamen, nombreArchivo);
@@ -279,18 +278,18 @@ namespace MultiRisWeb.Web.Examen
                 {
                     // Límite alcanzado, borrar archivo recién guardado
                     try { File.Delete(rutaCompleta); } catch { }
-                    Log.Warning("AudioExamen.UploadAudio - Limite de audios alcanzado. codExamen: {CodExamen}, usuario: {IdUsuario}", codExamen, idUsuario);
+                    new LogApp("AudioExamen.UploadAudio - Limite de audios alcanzado. codExamen: " + codExamen + ", usuario: " + idUsuario, "logAudios.log");
                     Response.Write("422|Se alcanzó el límite máximo de " + MaximoAudiosPorExamen + " audios por examen.");
                 }
                 else
                 {
-                    Log.Information("AudioExamen.UploadAudio - Exito. codExamen: {CodExamen}, archivo: {Archivo}, id_audio: {IdAudio}, tamano: {Tamano} bytes, usuario: {IdUsuario}", codExamen, nombreOriginal, resultado, file.ContentLength, idUsuario);
+                    new LogApp("AudioExamen.UploadAudio - Exito. codExamen: " + codExamen + ", archivo: " + nombreOriginal + ", id_audio: " + resultado + ", tamano: " + file.ContentLength + " bytes, usuario: " + idUsuario, "logAudios.log");
                     Response.Write("200|" + resultado.ToString());
                 }
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "AudioExamen.UploadAudio - Error. usuario: {IdUsuario}", Session["id_usuario"]);
+                new LogApp("AudioExamen.UploadAudio - Error. usuario: " + Session["id_usuario"] + ". Exception: " + ex.ToString(), "logAudios.log");
                 LogError(ex, "UploadAudio");
                 Response.Write("500|Error al subir audio: " + ex.Message);
             }

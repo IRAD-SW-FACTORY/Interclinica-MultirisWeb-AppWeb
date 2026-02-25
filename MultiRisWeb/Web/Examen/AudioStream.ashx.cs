@@ -1,6 +1,6 @@
 using MultiRisWeb.Data.DataAccess;
 using MultiRisWeb.Data.Domain;
-using Serilog;
+using MultiRisWeb.Util;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -34,7 +34,7 @@ namespace MultiRisWeb.Web.Examen
                 // Validar sesión
                 if (context.Session == null || context.Session["id_usuario"] == null)
                 {
-                    Log.Warning("AudioStream - Acceso no autorizado. IP: {IP}", context.Request.UserHostAddress);
+                    new LogApp("AudioStream - Acceso no autorizado. IP: " + context.Request.UserHostAddress, "logAudios.log");
                     context.Response.StatusCode = 401;
                     context.Response.End();
                     return;
@@ -54,13 +54,13 @@ namespace MultiRisWeb.Web.Examen
                     string.IsNullOrEmpty(codExamen) ||
                     string.IsNullOrEmpty(instParam) || !int.TryParse(instParam, out idInstitucion))
                 {
-                    Log.Warning("AudioStream - Parametros invalidos. id: {Id}, cod: {Cod}, inst: {Inst}, usuario: {IdUsuario}", idParam, codExamen, instParam, idUsuario);
+                    new LogApp("AudioStream - Parametros invalidos. id: " + idParam + ", cod: " + codExamen + ", inst: " + instParam + ", usuario: " + idUsuario, "logAudios.log");
                     context.Response.StatusCode = 400;
                     context.Response.End();
                     return;
                 }
 
-                Log.Information("AudioStream - Inicio. idAudio: {IdAudio}, codExamen: {CodExamen}, usuario: {IdUsuario}", idArchivoAudio, codExamen, idUsuario);
+                new LogApp("AudioStream - Inicio. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen + ", usuario: " + idUsuario, "logAudios.log");
 
                 // Obtener metadatos del audio desde BD
                 var dt = RisArchivoAudioDataAccess.Get(codExamen, idInstitucion);
@@ -69,7 +69,7 @@ namespace MultiRisWeb.Web.Examen
 
                 if (audio == null)
                 {
-                    Log.Warning("AudioStream - Audio no encontrado en BD. idAudio: {IdAudio}, codExamen: {CodExamen}", idArchivoAudio, codExamen);
+                    new LogApp("AudioStream - Audio no encontrado en BD. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen, "logAudios.log");
                     context.Response.StatusCode = 404;
                     context.Response.End();
                     return;
@@ -83,7 +83,7 @@ namespace MultiRisWeb.Web.Examen
 
                 if (!File.Exists(rutaArchivo))
                 {
-                    Log.Warning("AudioStream - Archivo no encontrado en disco. idAudio: {IdAudio}, ruta: {Ruta}", idArchivoAudio, rutaArchivo);
+                    new LogApp("AudioStream - Archivo no encontrado en disco. idAudio: " + idArchivoAudio + ", ruta: " + rutaArchivo, "logAudios.log");
                     context.Response.StatusCode = 404;
                     context.Response.End();
                     return;
@@ -118,7 +118,7 @@ namespace MultiRisWeb.Web.Examen
                     if (end >= fileLength) end = fileLength - 1;
                     if (start > end)
                     {
-                        Log.Warning("AudioStream - Range invalido. idAudio: {IdAudio}, start: {Start}, end: {End}, fileLength: {FileLength}", idArchivoAudio, start, end, fileLength);
+                        new LogApp("AudioStream - Range invalido. idAudio: " + idArchivoAudio + ", start: " + start + ", end: " + end + ", fileLength: " + fileLength, "logAudios.log");
                         context.Response.StatusCode = 416;
                         context.Response.AddHeader("Content-Range", "bytes */" + fileLength);
                         context.Response.End();
@@ -127,7 +127,7 @@ namespace MultiRisWeb.Web.Examen
 
                     long contentLength = end - start + 1;
 
-                    Log.Information("AudioStream - Streaming parcial (206). idAudio: {IdAudio}, bytes: {Start}-{End}/{Total}, usuario: {IdUsuario}", idArchivoAudio, start, end, fileLength, idUsuario);
+                    new LogApp("AudioStream - Streaming parcial (206). idAudio: " + idArchivoAudio + ", bytes: " + start + "-" + end + "/" + fileLength + ", usuario: " + idUsuario, "logAudios.log");
 
                     context.Response.StatusCode = 206;
                     context.Response.AddHeader("Content-Range", "bytes " + start + "-" + end + "/" + fileLength);
@@ -142,7 +142,7 @@ namespace MultiRisWeb.Web.Examen
                 else
                 {
                     // Respuesta completa
-                    Log.Information("AudioStream - Streaming completo (200). idAudio: {IdAudio}, tamano: {Tamano} bytes, usuario: {IdUsuario}", idArchivoAudio, fileLength, idUsuario);
+                    new LogApp("AudioStream - Streaming completo (200). idAudio: " + idArchivoAudio + ", tamano: " + fileLength + " bytes, usuario: " + idUsuario, "logAudios.log");
 
                     context.Response.StatusCode = 200;
                     context.Response.ContentType = contentType;
@@ -154,16 +154,15 @@ namespace MultiRisWeb.Web.Examen
                     context.Response.TransmitFile(rutaArchivo);
                 }
 
-                Log.Information("AudioStream - Exito. idAudio: {IdAudio}", idArchivoAudio);
+                new LogApp("AudioStream - Exito. idAudio: " + idArchivoAudio, "logAudios.log");
             }
             catch (HttpException)
             {
-                // Cliente desconectado, ignorar
-                Log.Debug("AudioStream - Cliente desconectado durante streaming");
+                // Cliente desconectado, ignorar (no logueamos para evitar spam en logs)
             }
             catch (Exception ex)
             {
-                Log.Error(ex, "AudioStream - Error al transmitir audio");
+                new LogApp("AudioStream - Error al transmitir audio. Exception: " + ex.ToString(), "logAudios.log");
                 try
                 {
                     context.Response.StatusCode = 500;
