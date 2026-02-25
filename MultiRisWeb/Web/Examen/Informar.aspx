@@ -67,6 +67,8 @@
     <link href="../css/multiselect/jquery.multiselect.css" rel="stylesheet" />
     <link href="../css/multiselect/jquery.multiselect.filter.css" rel="stylesheet" />
 
+    <link href="../css/audioExamen.css" rel="stylesheet" />
+
     <script type="text/javascript" src="../js/notify.js" charset="UTF-8"></script>
 
     <script>
@@ -362,13 +364,16 @@
                         <select id="ddlPlantilla" class="form-control2" style="min-width: 300px !important; background-color: #676C6F !important; color: #ffffff !important" onchange="SeleccionarPlantilla(this.value)"></select>
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div style="float: left; width: 131px; margin-left: 0px;" class="pt-4">
                             <input type="button" class="btn btn-gris" style="width: 110px !important" value="Crear Plantilla" onclick="AbrirInsertOrUpdatePlantilla()" />
                         </div>
                         <div style="float: left; width: 131px; margin-left: 0px;" class="pt-4">
                             <input type="button" id="btnActualizarPlantilla" class="btn btn-clear" style="width: 110px !important; display: none" value="Actualizar Plantilla" onclick="UpdatePlantilla()" />
                         </div>
+                    </div>
+                    <div class="col-md-1 pt-4 text-right">
+                        <input type="button" id="btnAbrirAudios" class="btn btn-gris" style="width: 110px !important; font-size: 13px;" value="&#9835; AUDIOS" />
                     </div>
 
                     <main>
@@ -811,6 +816,27 @@
                 </div>
             </div>
         </div>
+
+        <!-- Panel flotante de audios -->
+        <div id="panelAudio">
+            <div class="audio-panel-header">
+                <span>&#9835; AUDIOS</span>
+                <div class="audio-panel-header-actions">
+                    <button type="button" onclick="minimizarPanelAudio()" title="Minimizar">&#9472;</button>
+                    <button type="button" onclick="cerrarPanelAudio()" title="Cerrar">&times;</button>
+                </div>
+            </div>
+            <div class="audio-panel-body">
+                <div id="audioListaContenido">
+                    <div class="audio-lista-vacia">No hay audios para este examen.</div>
+                </div>
+            </div>
+            <div id="audioReproductor"></div>
+            <div class="audio-panel-footer">
+                <label for="audioFileInput">&#128228; Subir Audio <span id="audioContadorUpload">0/10</span></label>
+                <input type="file" id="audioFileInput" accept=".mp3,.wav,.ogg,.m4a,.mp4,.wma,.aac" onchange="subirAudio(this)" />
+            </div>
+        </div>
     </form>
 
     <script type="text/javascript" src="../../vocali/js/main.js?v9" charset="UTF-8"></script>
@@ -829,6 +855,7 @@
     <script src="../js/multiselect/jquery.multiselect.filter.min.js"></script>
     <script src="../js/multiselect/jquery.multiselect.min.js"></script>
     <script src="../js/InformarSession.js"></script>
+    <script type="text/javascript" src="../js/audioExamen.js"></script>
     <script type="text/javascript">
         //setInterval(() => AbrirModalAutoGuardarInforme(), 300000);
 
@@ -945,6 +972,13 @@
                 var filename = $('input[type=file]').val().split('\\').pop();
 
                 $('.custom-file-upload').text(filename);
+            });
+
+            $('#btnAbrirAudios').on('click', function () {
+                var codExamen = $('#hddCod').val();
+                var idInstitucion = parseInt($('#hddInstitucion').val());
+                var idRisExamen = parseInt($('#risExamen').val());
+                abrirPanelAudio(codExamen, idInstitucion, idRisExamen);
             });
         });
     </script>
