@@ -832,10 +832,7 @@
                 </div>
             </div>
             <div id="audioReproductor"></div>
-            <div class="audio-panel-footer">
-                <label for="audioFileInput">&#128228; Subir Audio <span id="audioContadorUpload">0/10</span></label>
-                <input type="file" id="audioFileInput" accept=".mp3,.wav,.ogg,.m4a,.mp4,.wma,.aac" onchange="subirAudio(this)" />
-            </div>
+            <div id="audioFooterContainer" class="audio-panel-footer"></div>
         </div>
     </form>
 
@@ -978,7 +975,8 @@
                 var codExamen = $('#hddCod').val();
                 var idInstitucion = parseInt($('#hddInstitucion').val());
                 var idRisExamen = parseInt($('#risExamen').val());
-                abrirPanelAudio(codExamen, idInstitucion, idRisExamen);
+                var idEstadoExamen = parseInt($('#val_estado').val()) || 0;
+                abrirPanelAudio(codExamen, idInstitucion, idRisExamen, idEstadoExamen);
             });
         });
     </script>

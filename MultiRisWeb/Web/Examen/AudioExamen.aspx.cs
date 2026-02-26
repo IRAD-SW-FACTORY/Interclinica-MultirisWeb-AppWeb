@@ -132,6 +132,13 @@ namespace MultiRisWeb.Web.Examen
             try
             {
                 int idUsuario = int.Parse(HttpContext.Current.Session["id_usuario"].ToString());
+
+                if (ExamenEstaValidado(codExamen))
+                {
+                    new LogApp("AudioExamen.EliminarAudioExamen - Examen validado, operacion no permitida. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen + ", usuario: " + idUsuario, "logAudios.log");
+                    return new ResponseApp() { Data = null, Ejecutado = false, Mensaje = "No se pueden eliminar audios. El examen se encuentra validado." };
+                }
+
                 new LogApp("AudioExamen.EliminarAudioExamen - Inicio. idAudio: " + idArchivoAudio + ", codExamen: " + codExamen + ", usuario: " + idUsuario, "logAudios.log");
 
                 var dt = RisArchivoAudioDataAccess.Delete(idArchivoAudio, idUsuario);
@@ -201,6 +208,14 @@ namespace MultiRisWeb.Web.Examen
                 long idRisExamen = long.Parse(Request.Form["idRisExamen"]);
 
                 new LogApp("AudioExamen.UploadAudio - Inicio. codExamen: " + codExamen + ", usuario: " + idUsuario + ", tamano: " + (file?.ContentLength ?? 0) + " bytes", "logAudios.log");
+
+                if (ExamenEstaValidado(codExamen))
+                {
+                    new LogApp("AudioExamen.UploadAudio - Examen validado, operacion no permitida. codExamen: " + codExamen + ", usuario: " + idUsuario, "logAudios.log");
+                    Response.Write("403|No se pueden subir audios. El examen se encuentra validado.");
+                    Response.End();
+                    return;
+                }
 
                 if (file == null || file.ContentLength == 0)
                 {
@@ -416,6 +431,24 @@ namespace MultiRisWeb.Web.Examen
                            .Replace("?", "_").Replace("\"", "_").Replace("<", "_").Replace(">", "_").Replace("|", "_");
 
             return nombre;
+        }
+
+        #endregion
+
+        #region Validación de Estado
+
+        private static bool ExamenEstaValidado(string codExamen)
+        {
+            try
+            {
+                var examen = RisExamenDataAccess.GetByCodExamen(codExamen);
+                return examen != null && examen.id_estado_examen == (int)MultiRisWeb.Data.Enum.EstadoExamen.Validado;
+            }
+            catch (Exception ex)
+            {
+                new LogApp("AudioExamen.ExamenEstaValidado - Error al consultar estado. codExamen: " + codExamen + ". Exception: " + ex.ToString(), "logAudios.log");
+                return false;
+            }
         }
 
         #endregion

@@ -66,7 +66,8 @@
                 var idRisExamen = parseInt(parts[1]);
                 var idInstitucion = parseInt(parts[2]);
                 var codExamen = parts[3];
-                abrirPanelAudio(codExamen, idInstitucion, idRisExamen);
+                var idEstadoExamen = parseInt(parts[4]) || 0;
+                abrirPanelAudio(codExamen, idInstitucion, idRisExamen, idEstadoExamen);
             });
 
             var perfil = $("#hddPerfil").val();
@@ -797,6 +798,7 @@
 
                         totalRegister(totalR, typeCall);
                         myComment();
+                        myAudio();
                     } else {
                         $('.data_info_n').text('Sin registros para la consulta');
                     }
@@ -1192,6 +1194,45 @@
                 }
             }
 
+            function myAudio() {
+                var table = $('#gData').DataTable();
+
+                $("#gData tbody tr").each(function (index) {
+                    var examen = $(this).find("td").eq(0).find('b').attr('id').split('-')[1];
+                    var row = $(this);
+
+                    if (examen != '') {
+                        var codExamen = $('#cdE-' + examen).text();
+                        var idInstitucion = $('#cmm-' + examen).text().split(',')[6];
+                        var rowData = table.row(row).data();
+                        var idEstadoExamen = rowData ? rowData[35] : '0';
+
+                        if (codExamen != '' && idInstitucion != '') {
+                            (function (eExamen, eCodExamen, eIdInstitucion, eIdEstadoExamen, eRow) {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "../Examen/AudioExamen.aspx/ListarAudioExamen",
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    data: JSON.stringify({ codExamen: eCodExamen, idInstitucion: parseInt(eIdInstitucion) }),
+                                    async: true,
+                                    success: function (arg) {
+                                        if (arg.d.Ejecutado && arg.d.Data && arg.d.Data.length > 0) {
+                                            var blqElement = eRow.find('b[id^="blq-"]');
+                                            var audioIcon = '&nbsp; <span class="audioExamen" id="audio-' + eExamen + '-' + eIdInstitucion + '-' + eCodExamen + '-' + eIdEstadoExamen + '" style="cursor:pointer" title="Audios (' + arg.d.Data.length + ')">';
+                                            audioIcon += '<img src="../img/volume.png" class="css-col-com" style="width:16px;height:16px" />';
+                                            audioIcon += '</span>';
+                                            blqElement.before(audioIcon);
+                                        }
+                                    },
+                                    error: function () { }
+                                });
+                            })(examen, codExamen, idInstitucion, idEstadoExamen, row);
+                        }
+                    }
+                });
+            }
+
             function totalRegister(dTotal, sw) {
                 if (sw == 1)
                     $.ajax({
@@ -1326,7 +1367,7 @@
                                     dropdown += '<li>';
                                     dropdown += '<a title="Audios" style="color:white; font-size: 12px; text-decoration: none !important;" href="#" CssClass="form-control-ddl">';
                                     dropdown += '<img style="width: 12px; margin: -10px 0 -5px 10px" src="../img/circulo.png" />';
-                                    dropdown += '<span class="audioExamen" id="audio-' + row[1] + '-' + row[10].split(',')[2] + '-' + row[34] + '" style="margin: -5px 0 -5px 5px">Audios</span>';
+                                    dropdown += '<span class="audioExamen" id="audio-' + row[1] + '-' + row[10].split(',')[2] + '-' + row[34] + '-' + row[35] + '" style="margin: -5px 0 -5px 5px">Audios</span>';
                                     dropdown += '</a>';
                                     dropdown += '</li>';
                                     if (row[12] == "Validado") {
@@ -4264,10 +4305,7 @@
             </div>
         </div>
         <div id="audioReproductor"></div>
-        <div class="audio-panel-footer">
-            <label for="audioFileInput">&#128228; Subir Audio <span id="audioContadorUpload">0/10</span></label>
-            <input type="file" id="audioFileInput" accept=".mp3,.wav,.ogg,.m4a,.mp4,.wma,.aac" onchange="subirAudio(this)" />
-        </div>
+        <div id="audioFooterContainer" class="audio-panel-footer"></div>
     </div>
 
     <!--<script src="../js/evitarReenvio.js"></script>-->

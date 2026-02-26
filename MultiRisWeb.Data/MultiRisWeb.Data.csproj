@@ -7,7 +7,7 @@
     <ProjectGuid>{59408DD6-BE26-49D1-9FE8-8261DE39A420}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>MultiRisWeb.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <FileAlignment>512</FileAlignment>
     <RootNamespace>MultiRisWeb.Data</RootNamespace>
@@ -77,6 +77,7 @@
     <Compile Include="DataAccess\FiltroUsuarioAsignadoDataAccess.cs" />
     <Compile Include="DataAccess\LogControlAccesoDataAccess.cs" />
     <Compile Include="DataAccess\LogMeddreamsDataAccess.cs" />
+    <Compile Include="DataAccess\RisArchivoAudioDataAccess.cs" />
     <Compile Include="Domain\ArchivoDomain.cs" />
     <Compile Include="Domain\CanalDomain.cs" />
     <Compile Include="Domain\CategoriaDomain.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Domain\InformeOITDomain.cs" />
     <Compile Include="Domain\LogControlAccesoDomain.cs" />
     <Compile Include="Domain\LogMeddreamsDomain.cs" />
+    <Compile Include="Domain\RisArchivoAudioDomain.cs" />
     <Compile Include="Util\AgeUtil.cs" />
     <Compile Include="Util\EanCodeUtil.cs" />
     <Compile Include="Util\LoginUtil.cs" />

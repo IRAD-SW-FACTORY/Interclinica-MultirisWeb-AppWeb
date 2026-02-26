@@ -7,7 +7,7 @@
     <ProjectGuid>{F6EA81C5-107C-4C14-BF38-E2E159D6A647}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>MultiRisWeb.Encrypt</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <FileAlignment>512</FileAlignment>
     <RootNamespace>MultiRisWeb.Encrypt.Util</RootNamespace>

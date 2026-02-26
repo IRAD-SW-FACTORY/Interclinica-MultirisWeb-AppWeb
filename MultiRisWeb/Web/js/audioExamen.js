@@ -6,6 +6,7 @@ var audioExamenState = {
     codExamen: '',
     idInstitucion: 0,
     idRisExamen: 0,
+    idEstadoExamen: 0,
     audios: [],
     indiceActual: -1,
     audioElement: null,
@@ -17,12 +18,13 @@ var velocidades = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0];
 
 // ??? 1. INICIALIZACIÓN Y PANEL ???
 
-function abrirPanelAudio(codExamen, idInstitucion, idRisExamen) {
-    audioExamenState.codExamen = codExamen;
-    audioExamenState.idInstitucion = idInstitucion;
-    audioExamenState.idRisExamen = idRisExamen;
-    audioExamenState.indiceActual = -1;
-    audioExamenState.velocidad = 1.0;
+function abrirPanelAudio(codExamen, idInstitucion, idRisExamen, idEstadoExamen) {
+audioExamenState.codExamen = codExamen;
+audioExamenState.idInstitucion = idInstitucion;
+audioExamenState.idRisExamen = idRisExamen;
+audioExamenState.idEstadoExamen = idEstadoExamen || 0;
+audioExamenState.indiceActual = -1;
+audioExamenState.velocidad = 1.0;
 
     if (audioExamenState.audioElement) {
         audioExamenState.audioElement.pause();
@@ -108,9 +110,19 @@ function cargarListaAudios() {
     });
 }
 
+function esExamenValidado() {
+    return audioExamenState.idEstadoExamen === 3;
+}
+
 function subirAudio(fileInput) {
     var file = fileInput.files[0];
     if (!file) return;
+
+    if (esExamenValidado()) {
+        alert('No se pueden subir audios. El examen se encuentra validado.');
+        fileInput.value = '';
+        return;
+    }
 
     var formData = new FormData();
     formData.append("audioFile", file);
@@ -150,7 +162,12 @@ function subirAudio(fileInput) {
 }
 
 function eliminarAudio(idAudio) {
-    if (!confirm("Eliminar este audio?")) return;
+if (esExamenValidado()) {
+    alert('No se pueden eliminar audios. El examen se encuentra validado.');
+    return;
+}
+
+if (!confirm("Eliminar este audio?")) return;
 
     $.ajax({
         type: "POST",
@@ -347,7 +364,9 @@ function renderizarListaAudios() {
             html += '<div class="audio-item-nombre" title="' + escapeHtml(a.nombre_original) + '">' + (i + 1) + '. ' + escapeHtml(a.nombre_original) + '</div>';
             html += '<div class="audio-item-meta">' + formatearTamano(a.tamano_bytes) + ' &bull; ' + a.username + ' &bull; ' + a.fecha_creacion + '</div>';
             html += '</div>';
-            html += '<button type="button" class="audio-item-eliminar" onclick="event.stopPropagation();eliminarAudio(' + a.id_audio + ')" title="Eliminar">&times;</button>';
+            if (!esExamenValidado()) {
+                html += '<button type="button" class="audio-item-eliminar" onclick="event.stopPropagation();eliminarAudio(' + a.id_audio + ')" title="Eliminar">&times;</button>';
+            }
             html += '</div>';
         }
     }
@@ -419,8 +438,19 @@ function renderizarReproductorDeshabilitado() {
 }
 
 function renderizarContadorUpload() {
-    var count = audioExamenState.audios.length;
-    $('#audioContadorUpload').text(count + '/10');
+var count = audioExamenState.audios.length;
+var footer = $('#audioFooterContainer');
+footer.empty();
+
+    if (!esExamenValidado()) {
+        footer.html(
+            '<label for="audioFileInput">&#128228; Subir Audio <span id="audioContadorUpload">' + count + '/10</span></label>' +
+            '<input type="file" id="audioFileInput" accept=".mp3,.wav,.ogg,.m4a,.mp4,.wma,.aac" onchange="subirAudio(this)" />'
+        );
+        footer.show();
+    } else {
+        footer.hide();
+    }
 }
 
 // ??? 5. UTILIDADES ???
