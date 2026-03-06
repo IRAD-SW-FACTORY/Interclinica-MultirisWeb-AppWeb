@@ -16,3 +16,9 @@ D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\D
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.CoreCompileInputs.cache
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.dll
 D:\IradSoftwareFactory\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.pdb
+C:\projects\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.dll
+C:\projects\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\bin\Debug\MultiRisWeb.Encrypt.pdb
+C:\projects\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.AssemblyReference.cache
+C:\projects\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.csproj.CoreCompileInputs.cache
+C:\projects\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.dll
+C:\projects\Interclinica-MultirisWeb-AppWeb\MultiRisWeb.Encrypt\obj\Debug\MultiRisWeb.Encrypt.pdb

@@ -1,3 +1,26 @@
 MultiRisWeb.Data/bin/
 MultiRisWeb/obj/
 MultiRisWeb/bin/
+SQL
+
+# Build artifacts
+**/obj/
+**/bin/
+*.dll
+*.pdb
+*.cache
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+
+# Logs
+*.log
+
+# User data
+**/Audios/
+
+# NuGet packages
+packages/*/
+!packages/packages.config
