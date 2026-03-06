@@ -124,10 +124,6 @@
     <Content Include="ErrorPage.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\001_CREAR_TABLA_ARCHIVO_AUDIO_EXAMEN.sql" />
-    <Content Include="Scripts\002_CREAR_SP_INSERTA_AUDIO_EXAMEN.sql" />
-    <Content Include="Scripts\003_CREAR_SP_LISTA_AUDIO_EXAMEN.sql" />
-    <Content Include="Scripts\004_CREAR_SP_ELIMINA_AUDIO_EXAMEN.sql" />
     <Content Include="vocali\common\common.css" />
     <Content Include="vocali\common\common.js" />
     <Content Include="vocali\common\custom-elements\loginForm.js" />
@@ -3347,6 +3343,7 @@
     <Content Include="Web\img\urgente.jpg" />
     <Content Include="Web\img\user.png" />
     <Content Include="Web\img\visor.sl.png" />
+    <Content Include="Web\img\volume.png" />
     <Content Include="Web\Institucion\ListaInstitucion.aspx" />
     <Content Include="Web\js\Addendum.js" />
     <Content Include="Web\js\AddendumExamenPrevio.js" />
